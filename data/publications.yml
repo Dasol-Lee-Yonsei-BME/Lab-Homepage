@@ -1,0 +1,468 @@
+# ================================================================
+# BNSL PUBLICATION DATA
+# - year has NO lower limit. 2020, 2019, 2015, ... are all supported.
+# - Every publication MUST have image.
+# - impact_factor / jcr_percent / jcr_category / jcr_year are optional.
+# - If a metric is empty or null, that badge is simply not shown.
+# - highlight: true puts the publication into the Home highlight candidates.
+#
+# Copy template:
+# - id: 2020-example-paper
+#   year: 2020
+#   authors: "Dasol Lee, ..."
+#   title: "Paper title"
+#   journal: "Journal Name"
+#   date: "2020.05.10"
+#   url: "https://doi.org/..."
+#   image: "assets/images/publications/2020-example-paper.jpg"
+#   highlight: false
+#   impact_factor: 5.0
+#   jcr_percent: 12
+#   jcr_category: "Optics"
+#   jcr_year: 2019
+# ================================================================
+
+- id: 2026-01
+  year: 2026
+  authors: Semere Araya Asefa, Bibhatsu Kuiri, Dasol Lee
+  title: Angularly tunable circular dichroism in a bilayer plasmonic metasurface via interlayer coupling
+  journal: ACS Omega
+  date: 2026.05.06
+  url: https://pubs.acs.org/
+  image: assets/images/publications/2026-01.svg
+  highlight: false
+  impact_factor: 4.3
+  jcr_percent: 34
+  jcr_category: Chemistry, Multidisciplinary
+  jcr_year: null
+- id: 2026-02
+  year: 2026
+  authors: Changhwan Hyeon et al.
+  title: Multifunctional bilayer radiative cooling dressing for regenerative wound healing under heat stress
+  journal: Microsystems & Nanoengineering
+  date: 2026.04.13
+  url: https://www.nature.com/
+  image: assets/images/publications/2026-02.svg
+  highlight: true
+  impact_factor: 9.9
+  jcr_percent: 1
+  jcr_category: Instruments & Instrumentation
+  jcr_year: null
+- id: 2026-03
+  year: 2026
+  authors: Harit Keawmuang et al.
+  title: 'Recent advances in radiative cooling: From fundamentals to commercial applications'
+  journal: ACS Applied Materials & Interfaces
+  date: 2026.04.12
+  url: https://pubs.acs.org/
+  image: assets/images/publications/2026-03.svg
+  highlight: false
+  impact_factor: 8.2
+  jcr_percent: 18
+  jcr_category: Materials Science, Multidisciplinary
+  jcr_year: null
+- id: 2026-04
+  year: 2026
+  authors: Seokgyu Kwon et al.
+  title: Multifunctional nanofiber composites integrating pH-responsiveness and passive daytime radiative cooling
+  journal: Nanophotonics
+  date: 2026.04.01
+  url: https://www.degruyter.com/
+  image: assets/images/publications/2026-04.svg
+  highlight: false
+  impact_factor: 6.6
+  jcr_percent: 15
+  jcr_category: Optics
+  jcr_year: null
+- id: 2026-05
+  year: 2026
+  authors: Kyung-Hyun Yu, Dasol Lee
+  title: Unveiling the local origin of circular dichroism in chiral metasurfaces (News & Views)
+  journal: 'Light: Advanced Manufacturing'
+  date: 2026.03.19
+  url: https://www.light-am.com/
+  image: assets/images/publications/2026-05.svg
+  highlight: false
+  impact_factor: 10.6
+  jcr_percent: 7
+  jcr_category: Optics
+  jcr_year: null
+- id: 2026-06
+  year: 2026
+  authors: Seokgyu Kwon et al.
+  title: Advances in electrospun nanofibers for biomedical engineering
+  journal: Fibers and Polymers
+  date: '2026.02'
+  url: https://link.springer.com/
+  image: assets/images/publications/2026-06.svg
+  highlight: false
+  impact_factor: 2.3
+  jcr_percent: 28
+  jcr_category: Materials Science, Textiles
+  jcr_year: 2024
+- id: 2025-07
+  year: 2025
+  authors: Minseo Jeong et al.
+  title: Hydrophobic radiative cooling using Zein-functionalized polyvinyl alcohol nanofibers with dielectric nanoparticles
+  journal: Small
+  date: 2025.11.14
+  url: https://onlinelibrary.wiley.com/
+  image: assets/images/publications/2025-07.svg
+  highlight: false
+  impact_factor: 12.1
+  jcr_percent: 8
+  jcr_category: Physics, Applied
+  jcr_year: 2024
+- id: 2025-08
+  year: 2025
+  authors: Juhoon Baek et al.
+  title: A multilayer-based visibly transparent radiative cooler with enhanced solar selectivity
+  journal: Advanced Optical Materials
+  date: 2025.10.24
+  url: https://onlinelibrary.wiley.com/
+  image: assets/images/publications/2025-08.svg
+  highlight: false
+  impact_factor: 7.2
+  jcr_percent: 12
+  jcr_category: Optics
+  jcr_year: 2024
+- id: 2025-09
+  year: 2025
+  authors: Sangmin Shim et al.
+  title: Numerical demonstration of switchable binary-state metasurface for spin Hall effect of circularly polarized light
+  journal: Scientific Reports
+  date: 2025.07.21
+  url: https://www.nature.com/
+  image: assets/images/publications/2025-09.svg
+  highlight: false
+  impact_factor: 3.9
+  jcr_percent: 18
+  jcr_category: Multidisciplinary Sciences
+  jcr_year: 2024
+- id: 2025-10
+  year: 2025
+  authors: Changhwan Hyeon et al.
+  title: Thermal protection of wearable devices under outdoor conditions using radiative cooling films
+  journal: Optical Materials
+  date: 2025.06.19
+  url: https://www.sciencedirect.com/
+  image: assets/images/publications/2025-10.svg
+  highlight: false
+  impact_factor: 4.2
+  jcr_percent: 23
+  jcr_category: Optics
+  jcr_year: 2024
+- id: 2025-11
+  year: 2025
+  authors: Younghwan Yang et al.
+  title: Nanofabrication for Nanophotonics (mega-review)
+  journal: ACS Nano
+  date: 2025.03.28
+  url: https://pubs.acs.org/
+  image: assets/images/publications/2025-11.svg
+  highlight: false
+  impact_factor: 16.1
+  jcr_percent: 7
+  jcr_category: Chemistry, Multidisciplinary
+  jcr_year: 2024
+- id: 2025-12
+  year: 2025
+  authors: Jinkyeong Lee et al.
+  title: Real-time observation of the spin Hall effect of light using metasurface-enabled single-shot weak measurements
+  journal: Nature Communications
+  date: 2025.03.19
+  url: https://www.nature.com/
+  image: assets/images/publications/2025-12.svg
+  highlight: true
+  impact_factor: 15.7
+  jcr_percent: 7
+  jcr_category: Multidisciplinary Sciences
+  jcr_year: 2024
+- id: 2025-13
+  year: 2025
+  authors: Semere Araya Asefa et al.
+  title: Design of bilayer crescent chiral metasurfaces for enhanced chiroptical response
+  journal: Sensors
+  date: 2025.02.03
+  url: https://www.mdpi.com/
+  image: assets/images/publications/2025-13.svg
+  highlight: false
+  impact_factor: 3.5
+  jcr_percent: 30
+  jcr_category: Instruments & Instrumentation
+  jcr_year: 2024
+- id: 2024-14
+  year: 2024
+  authors: Geon Lee et al.
+  title: Integrated triboelectric nanogenerator and radiative cooler for all-weather transparent glass surfaces
+  journal: Nature Communications
+  date: 2024.08.02
+  url: https://www.nature.com/
+  image: assets/images/publications/2024-14.svg
+  highlight: false
+  impact_factor: 15.7
+  jcr_percent: 6
+  jcr_category: Multidisciplinary Sciences
+  jcr_year: 2023
+- id: 2024-15
+  year: 2024
+  authors: Jeonghoon Choi et al.
+  title: Experimental observation of the spin Hall effect of light using compact weak measurement
+  journal: Nanophotonics
+  date: 2024.07.11
+  url: https://www.degruyter.com/
+  image: assets/images/publications/2024-15.svg
+  highlight: false
+  impact_factor: 6.6
+  jcr_percent: 12
+  jcr_category: Optics
+  jcr_year: 2023
+- id: 2024-16
+  year: 2024
+  authors: Minkyung Kim et al.
+  title: Nonlocal metasurfaces-enabled analog light localization for imaging and lithography
+  journal: Laser & Photonics Reviews
+  date: 2024.03.12
+  url: https://onlinelibrary.wiley.com/
+  image: assets/images/publications/2024-16.svg
+  highlight: false
+  impact_factor: 10.0
+  jcr_percent: 7
+  jcr_category: Optics
+  jcr_year: 2023
+- id: 2024-17
+  year: 2024
+  authors: Myeongcheol Go et al.
+  title: Ultrabroadband absorptive refractory plasmonics for photocatalytic hydrogen evolution reactions
+  journal: NPG Asia Materials
+  date: 2024.01.19
+  url: https://www.nature.com/
+  image: assets/images/publications/2024-17.svg
+  highlight: false
+  impact_factor: 8.3
+  jcr_percent: 15
+  jcr_category: Materials Science, Multidisciplinary
+  jcr_year: 2023
+- id: 2024-18
+  year: 2024
+  authors: Sunae So et al.
+  title: 'Radiative cooling for energy sustainability: From fundamentals to fabrication methods towards commercialization'
+  journal: Advanced Science
+  date: 2024.01.12
+  url: https://onlinelibrary.wiley.com/
+  image: assets/images/publications/2024-18.svg
+  highlight: false
+  impact_factor: 14.1
+  jcr_percent: 7
+  jcr_category: Materials Science, Multidisciplinary
+  jcr_year: 2023
+- id: 2023-19
+  year: 2023
+  authors: Dasol Lee, Seokgyu Kwon, Minkyung Kim
+  title: 'ViBA Rad: Visualization and basic analysis tools for radiative cooling'
+  journal: SoftwareX
+  date: '2023.12'
+  url: https://www.sciencedirect.com/
+  image: assets/images/publications/2023-19.svg
+  highlight: false
+  impact_factor: 2.4
+  jcr_percent: 35
+  jcr_category: Computer Science, Software Engineering
+  jcr_year: 2022
+- id: 2023-20
+  year: 2023
+  authors: Semere Araya Asefa et al.
+  title: 'Chiral metasurfaces: a review of the fundamentals and research advances'
+  journal: Applied Sciences
+  date: 2023.09.22
+  url: https://www.mdpi.com/
+  image: assets/images/publications/2023-20.svg
+  highlight: false
+  impact_factor: 2.5
+  jcr_percent: 47
+  jcr_category: Engineering, Multidisciplinary
+  jcr_year: 2022
+- id: 2023-21
+  year: 2023
+  authors: Myeongcheol Go et al.
+  title: Facile fabrication of titanium nitride nanoring broadband absorbers in the visible to near-infrared by shadow sphere
+    lithography
+  journal: ACS Applied Materials & Interfaces
+  date: '2023.01'
+  url: https://pubs.acs.org/
+  image: assets/images/publications/2023-21.svg
+  highlight: false
+  impact_factor: 8.2
+  jcr_percent: 16
+  jcr_category: Materials Science, Multidisciplinary
+  jcr_year: 2022
+- id: 2023-22
+  year: 2023
+  authors: Minkyung Kim et al.
+  title: 'Spin Hall effect of light: fundamentals to recent advancements'
+  journal: Laser & Photonics Reviews
+  date: '2023.01'
+  url: https://onlinelibrary.wiley.com/
+  image: assets/images/publications/2023-22.svg
+  highlight: false
+  impact_factor: 10.0
+  jcr_percent: 8
+  jcr_category: Optics
+  jcr_year: 2022
+- id: 2023-23
+  year: 2023
+  authors: Minkyung Kim, Dasol Lee
+  title: Strengthened spin Hall effect of circularly polarized light enabled by a single layered dielectric metasurface
+  journal: Materials
+  date: '2023.01'
+  url: https://www.mdpi.com/
+  image: assets/images/publications/2023-23.svg
+  highlight: false
+  impact_factor: 3.2
+  jcr_percent: 25
+  jcr_category: Metallurgy & Metallurgical Engineering
+  jcr_year: 2022
+- id: 2022-24
+  year: 2022
+  authors: Minkyung Kim, Dasol Lee
+  title: Revealing a one-dimensional optically cloaked surface using spin Hall effect of light
+  journal: Optics Express
+  date: 2022.12.05
+  url: https://opg.optica.org/
+  image: assets/images/publications/2022-24.svg
+  highlight: false
+  impact_factor: 3.3
+  jcr_percent: 28
+  jcr_category: Optics
+  jcr_year: 2021
+- id: 2022-25
+  year: 2022
+  authors: Minkyung Kim et al.
+  title: Nanophotonic-assisted precision enhancement of weak measurement using spin Hall effect of light
+  journal: Nanophotonics
+  date: '2022.09'
+  url: https://www.degruyter.com/
+  image: assets/images/publications/2022-25.svg
+  highlight: false
+  impact_factor: 6.6
+  jcr_percent: 11
+  jcr_category: Optics
+  jcr_year: 2021
+- id: 2022-26
+  year: 2022
+  authors: Minkyung Kim, Dasol Lee, Junsuk Rho
+  title: Incident-polarization-independent spin Hall effect of light reaching half beam waist
+  journal: Laser & Photonics Reviews
+  date: '2022.06'
+  url: https://onlinelibrary.wiley.com/
+  image: assets/images/publications/2022-26.svg
+  highlight: false
+  impact_factor: 10.0
+  jcr_percent: 6
+  jcr_category: Optics
+  jcr_year: 2021
+- id: 2022-27
+  year: 2022
+  authors: Dongwoo Chae et al.
+  title: Selectively emissive fluoropolymer film for passive daytime radiative cooling
+  journal: Optical Materials
+  date: '2022.06'
+  url: https://www.sciencedirect.com/
+  image: assets/images/publications/2022-27.svg
+  highlight: false
+  impact_factor: 4.2
+  jcr_percent: 29
+  jcr_category: Optics
+  jcr_year: 2021
+- id: 2022-28
+  year: 2022
+  authors: Minkyung Kim et al.
+  title: 'Generalized analytic formula of the spin Hall effect of light: shift enhancement and interface-independence'
+  journal: Nanophotonics
+  date: 2022.05.19
+  url: https://www.degruyter.com/
+  image: assets/images/publications/2022-28.svg
+  highlight: false
+  impact_factor: 6.6
+  jcr_percent: 11
+  jcr_category: Optics
+  jcr_year: 2021
+- id: 2022-29
+  year: 2022
+  authors: Sunae So et al.
+  title: Highly suppressed solar absorption in daytime radiative cooler designed by genetic algorithm
+  journal: Nanophotonics
+  date: '2022.05'
+  url: https://www.degruyter.com/
+  image: assets/images/publications/2022-29.svg
+  highlight: false
+  impact_factor: 6.6
+  jcr_percent: 11
+  jcr_category: Optics
+  jcr_year: 2021
+- id: 2022-30
+  year: 2022
+  authors: Minkyung Kim et al.
+  title: Reaching the highest efficiency of spin Hall effect of light in the near-infrared using all-dielectric metasurfaces
+  journal: Nature Communications
+  date: 2022.04.19
+  url: https://www.nature.com/
+  image: assets/images/publications/2022-30.svg
+  highlight: false
+  impact_factor: 15.7
+  jcr_percent: 8
+  jcr_category: Multidisciplinary Sciences
+  jcr_year: 2021
+- id: 2022-31
+  year: 2022
+  authors: Dasol Lee et al.
+  title: 'Hyperbolic metamaterials: fusing artificial structures to natural 2D materials'
+  journal: eLight
+  date: 2022.01.10
+  url: https://elight.springeropen.com/
+  image: assets/images/publications/2022-31.svg
+  highlight: false
+  impact_factor: 32.1
+  jcr_percent: 2
+  jcr_category: Optics
+  jcr_year: 2023
+- id: 2021-32
+  year: 2021
+  authors: Hanlyun Cho et al.
+  title: Experimental demonstration of broadband negative refraction at visible frequencies by critical layer thickness analysis
+    in a vertical hyperbolic metamaterial
+  journal: Nanophotonics
+  date: '2021.11'
+  url: https://www.degruyter.com/
+  image: assets/images/publications/2021-32.svg
+  highlight: false
+  impact_factor: 6.6
+  jcr_percent: 9
+  jcr_category: Optics
+  jcr_year: 2020
+- id: 2021-33
+  year: 2021
+  authors: Dasol Lee, Minkyung Kim, Junsuk Rho
+  title: 'Next-generation imaging techniques: functional and miniaturized optical lenses based on metamaterials and metasurfaces'
+  journal: Micromachines
+  date: 2021.09.23
+  url: https://www.mdpi.com/
+  image: assets/images/publications/2021-33.svg
+  highlight: false
+  impact_factor: 3.0
+  jcr_percent: 36
+  jcr_category: Instruments & Instrumentation
+  jcr_year: 2020
+- id: 2021-34
+  year: 2021
+  authors: Minkyung Kim et al.
+  title: Total reflection-induced efficiency enhancement of the spin Hall effect of light
+  journal: ACS Photonics
+  date: 2021.09.01
+  url: https://pubs.acs.org/
+  image: assets/images/publications/2021-34.svg
+  highlight: false
+  impact_factor: 6.7
+  jcr_percent: 10
+  jcr_category: Optics
+  jcr_year: 2020

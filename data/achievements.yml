@@ -1,0 +1,79 @@
+patents:
+- year: 2026
+  status: Pending
+  title: pH responsive radiative cooling material, and manufacturing method for the same
+  people: Dasol Lee, Seokgyu Kwon
+  number: KR 10-2026-0043656
+- year: 2026
+  status: Pending
+  title: Medical dressing, and manufacturing method for the same
+  people: Dasol Lee, Changhwan Hyeon
+  number: KR 10-2026-0013740
+- year: 2026
+  status: Pending
+  title: Membrane for radiative cooling, and manufacturing method for the same
+  people: Dasol Lee, Minseo Jeong
+  number: KR 10-2026-0010693
+- year: 2025
+  status: Registered
+  title: Light-localizable analog device
+  people: Minkyung Kim, Dasol Lee
+  number: KR 10-2877416
+- year: 2025
+  status: Pending
+  title: Real-time measurement system for spin Hall effect of light
+  people: Minkyung Kim, Junsuk Rho, Dasol Lee, et al.
+  number: KR 10-2025-0051048
+- year: 2021
+  status: Registered
+  title: Dielectric based metasurface hologram device and manufacturing method of same and display device having same
+  people: I. Kim, D. Lee, J. Rho
+  number: US 11,042,119
+awards:
+- year: 2024
+  title: Best Student Presentation Award
+  recipient: Minseo Jeong
+  organization: KSMTE Annual Autumn Conference 2024
+- year: 2024
+  title: Poster Award · Gold & Silver
+  recipient: Changhwan Hyeon & Kyung-Hyun Yu
+  organization: IBEC 2024
+- year: 2023
+  title: Poster Award
+  recipient: Minseo Jeong
+  organization: IBEC 2023
+- year: 2019
+  title: Forbes 30 Under 30 Asia · Healthcare & Science
+  recipient: Dasol Lee
+  organization: Forbes
+conferences:
+- year: 2026
+  type: Invited Talk
+  title: Radiative cooling materials for biomedical thermal management
+  event: UK-Korea Focal Point Workshop on Flat Optics for Structured and Entangled Light
+  location: Heriot-Watt University, United Kingdom
+  date: 2026.07.10
+- year: 2025
+  type: Oral
+  title: Chiral metasurface research
+  event: SPIE Digital Optical Technologies
+  location: Munich, Germany
+  date: 2025.06.23–26
+- year: 2024
+  type: Invited Talk
+  title: Invited research presentation
+  event: Photonics Conference 2024
+  location: Republic of Korea
+  date: 2024.11.27
+- year: 2024
+  type: Invited Talk
+  title: Invited research presentation
+  event: Department of Biomedical Engineering, Seoul National University
+  location: Seoul, Republic of Korea
+  date: 2024.06.05
+- year: 2024
+  type: Invited Talk
+  title: Invited research presentation
+  event: PIERS 2024
+  location: ''
+  date: 2024.04.22

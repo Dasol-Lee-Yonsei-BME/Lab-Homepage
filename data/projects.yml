@@ -1,0 +1,36 @@
+- status: Ongoing
+  title: 광 스핀 홀 효과 기반의 고감도 멀티모달 센서 개발
+  title_en: High-sensitivity multimodal sensor based on the spin Hall effect of light
+  agency: National Research Foundation of Korea · Excellent Young Researcher Program
+  period: 2025.03.01 – 2030.02.28
+  area: sensing
+  highlight: true
+  highlight_order: 2
+- status: Ongoing
+  title: 표적 깊이 적응형 Photobiomodulation 치료 플랫폼 개발 및 전임상 검증
+  title_en: Target-depth-adaptive photobiomodulation treatment platform and preclinical validation
+  agency: Gangwon RISE
+  period: 2026.03.01 – 2027.02.28
+  area: systems
+  highlight: false
+- status: Completed
+  title: 복사 냉각 기반의 웨어러블 두부 저온 요법 소재 개발
+  title_en: Wearable material for cranial hypothermia based on radiative cooling
+  agency: National Research Foundation of Korea · Basic Research
+  period: 2022.06.01 – 2025.02.28
+  area: thermal
+  highlight: false
+- status: Completed
+  title: 광시야 내시경 적용을 위한 빔스티어링 기법 연구
+  title_en: Beam-steering methods for wide-field endoscopic applications
+  agency: Korea Institute of Science and Technology · Contract Research
+  period: 2024.01.01 – 2024.12.31
+  area: systems
+  highlight: false
+- status: Completed
+  title: 바이오메디컬 이미징 응용을 위한 메타표면 기반의 소형화된 광 패턴 변조기 연구
+  title_en: Miniaturized metasurface light-pattern modulator for biomedical imaging
+  agency: Gangwon Regional Innovation Platform
+  period: 2023.06.01 – 2023.12.31
+  area: imaging
+  highlight: false

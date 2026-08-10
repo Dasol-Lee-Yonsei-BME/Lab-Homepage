@@ -1,0 +1,24 @@
+- id: imaging
+  number: '01'
+  title: Nanophotonic Imaging
+  short: Functional and miniaturized optical imaging platforms enabled by metasurfaces and nanophotonics.
+  description: We develop next-generation optical devices and functional imaging platforms based on nanophotonics, including super-resolution imaging, light localization, compact optical elements, and microscopy-compatible metasurface systems.
+  image: assets/images/research/imaging.svg
+- id: sensing
+  number: '02'
+  title: Optical & Bio Sensing
+  short: Ultra-sensitive sensing using spin-dependent light–matter interactions and engineered optical interfaces.
+  description: We study the spin Hall effect of light and related weak-measurement concepts for sensing minute changes at optical interfaces, with a focus on compact and highly sensitive biomedical sensing platforms.
+  image: assets/images/research/sensing.svg
+- id: thermal
+  number: '03'
+  title: Thermal Photonics
+  short: Passive radiative cooling materials translated toward biomedical thermal management and wearable systems.
+  description: We investigate radiative cooling materials and structures that reject heat as thermal radiation without external energy input, and translate them toward wearable devices, wound management, and biomedical thermal treatment.
+  image: assets/images/research/thermal.svg
+- id: systems
+  number: '04'
+  title: Optical Systems & Applications
+  short: Optical architectures, numerical simulation, beam control, and translational biomedical photonics.
+  description: We connect optical structures with system-level implementation through numerical simulation, beam steering and modulation, optical instrumentation, and biomedical applications.
+  image: assets/images/research/systems.svg
