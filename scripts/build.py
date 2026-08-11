@@ -70,7 +70,7 @@ for x in r:
     h+=f'<section class="research-feature" id="{x["id"]}"><div class="feature-image">{img(x["image"],x["title"])}</div><div class="feature-copy"><div class="num">{x["number"]}</div><h2>{x["title"]}</h2><p>{x["description"]}</p></div></section>'
 h+='<section class="section" style="margin-top:75px"><div class="section-head"><div><div class="label">Research & Projects</div><h2>Current Projects</h2></div></div><div class="project-list">'
 for p in projs:
-    h+=f'<div class="project"><div class="status">{p["status"]}</div><div><h3>{p["title_en"]}</h3><p>{p["title"]}</p><p>{p["agency"]} · {p["period"]}</p></div></div>'
+    h+=f'<div class="project"><div class="status">{p["status"]}</div><div><h3>{p['title']}</h3><p>{p["agency"]} · {p["period"]}</p></div></div>'
 h+='</div></section></main>'+foot();(OUT/'research.html').write_text(h,encoding='utf-8')
 # people
 pe=D['people'];h=head('People','People')+pagehero('People','Principal Investigator, current members, and alumni of BNSL.')+'<main><section class="section"><div class="pi">'+img(pe['pi']['photo'],pe['pi']['name'])+f'<div><div class="eyebrow">Principal Investigator</div><h2>{pe["pi"]["name"]}</h2><div class="role">{pe["pi"]["title"]}</div><p>{pe["pi"]["department"]}</p><p>{pe["pi"]["bio"]}</p><p><b>Office</b> {pe["pi"]["office"]}<br><b>Email</b> {pe["pi"]["email"]}</p><h3>Education</h3><ul>'+''.join(f'<li>{x}</li>' for x in pe['pi']['education'])+'</ul></div></div></section><section class="section"><div class="section-head"><div><div class="label">Team</div><h2>Current Members</h2></div></div><div class="member-grid">'
