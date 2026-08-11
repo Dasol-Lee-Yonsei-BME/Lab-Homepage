@@ -49,7 +49,7 @@ for p in pubs:
     if p.get('highlight'): hl.append(('Publication',p['title'],p['journal'],p['image']))
 for p in projs:
     if p.get('highlight'): hl.append(('Research Project',p['title_en'],p['agency'],None))
-<h1>{s['hero_title']}</h1><div class="ko">{s['lab_name']}</div><div class="ko">{s['korean_name']}</div>
+h= head('Home','Home')+f'''<section class="hero"><div class="hero-inner"><div><div class="eyebrow">{s['university']} · {s['department']}</div><h1>{s['hero_title']}</h1><div class="ko">{s['lab_name']}</div><div class="ko">{s['korean_name']}</div><p class="lead">{s['hero_lead']}</p><a class="btn" href="research.html">Explore our research →</a></div><div class="hero-art">{img(s['hero_image'],'BNSL')}<div class="hero-badge">BIO-IMAGING · BIO-SENSING · OPTICAL SYSTEMS</div></div></div></section><main><div class="intro-copy">{s['intro']}</div><section class="section"><div class="section-head"><div><div class="label">What we explore</div><h2>Research Areas</h2></div><a href="research.html">Explore Research →</a></div><div class="research-grid">'''
 for x in r:
     h+=f'<a class="research-card" href="research.html#{x["id"]}">{img(x["image"],x["title"])}<div class="research-overlay"></div><div class="research-copy"><div class="num">{x["number"]}</div><h3>{x["title"]}</h3><p>{x["short"]}</p></div></a>'
 h+='</div></section><section class="section"><div class="section-head"><div><div class="label">Selected</div><h2>Highlights</h2></div></div><div class="highlights">'
