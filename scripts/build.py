@@ -384,8 +384,13 @@ def format_authors(author_text):
         )
 
     # Author-role symbols are displayed as superscripts.
+    # When a first/co-first author is also a corresponding author,
+    # keep the dagger, comma, and asterisk together in one superscript.
+    combined_marker = '__AUTHOR_DAGGER_STAR__'
+    rendered = rendered.replace('†,*', combined_marker)
     rendered = rendered.replace('†', '<sup>†</sup>')
     rendered = rendered.replace('*', '<sup>*</sup>')
+    rendered = rendered.replace(combined_marker, '<sup>†,*</sup>')
 
     return rendered
 
