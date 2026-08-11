@@ -1,5 +1,6 @@
 from pathlib import Path
 import html
+import re
 import shutil
 from datetime import datetime
 
@@ -22,6 +23,7 @@ r = D['research']
 pubs = D['publications']
 projs = D['projects']
 news = D['news']
+ac = D['achievements']
 SHORT_NAME = s.get('short_name', 'SOL')
 
 
@@ -202,23 +204,152 @@ def pagehero(title, text):
 
 
 def parse_news_date(value):
-    text = str(value).strip()
-    for fmt in ('%Y.%m.%d', '%Y-%m-%d', '%Y/%m/%d'):
-        try:
-            return datetime.strptime(text, fmt)
-        except ValueError:
-            pass
-    raise SystemExit(
-        f'News date must be YYYY.MM.DD, YYYY-MM-DD, or YYYY/MM/DD: {text}'
-    )
+    """Return a sortable date while preserving flexible display dates.
+
+    Accepted examples: 2026.07.10, 2025.11.30-12.05, 2026.02, 2024.11.
+    Ranges are sorted by their first date; month-only records use day 1.
+    """
+    text = str(value or '').strip()
+    compact = re.sub(r'\s+', '', text)
+
+    # Full date at the beginning of the string, including date ranges.
+    m = re.match(r'^(\d{4})[./-](\d{1,2})[./-](\d{1,2})', compact)
+    if m:
+        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+
+    # Month-only date.
+    m = re.match(r'^(\d{4})[./-](\d{1,2})(?:\D|$)', compact)
+    if m:
+        return datetime(int(m.group(1)), int(m.group(2)), 1)
+
+    # Year-only fallback.
+    m = re.match(r'^(\d{4})$', compact)
+    if m:
+        return datetime(int(m.group(1)), 1, 1)
+
+    raise SystemExit(f'Unsupported News date: {text}')
 
 
+def make_news_item(date, category, title, summary='', link='', source='manual'):
+    item = {
+        'date': str(date),
+        'category': str(category),
+        'title': str(title),
+        'summary': str(summary or ''),
+        'link': str(link or ''),
+        'source': source,
+    }
+    item['_date_obj'] = parse_news_date(item['date'])
+    return item
+
+
+# Standalone news.yml records.
+news_items = []
 for n in news:
     if not n.get('title') or not n.get('category') or not n.get('date'):
         raise SystemExit(f'News requires date, category, and title: {n}')
-    n['_date_obj'] = parse_news_date(n['date'])
+    news_items.append(make_news_item(
+        n['date'], n['category'], n['title'], n.get('summary', ''), n.get('link', ''), 'manual'
+    ))
 
-news_sorted = sorted(news, key=lambda n: n['_date_obj'], reverse=True)
+# Publication highlights automatically become News items.
+for p in pubs:
+    if not p.get('highlight'):
+        continue
+    title = p.get('news_title') or p.get('title', '')
+    summary = p.get('news_summary') or f'Published in {p.get("journal", "")}.'.strip()
+    news_items.append(make_news_item(
+        p.get('date', p.get('year', '')),
+        'Publication Highlight',
+        title,
+        summary,
+        f'publications.html#year-{p.get("year", "")}',
+        'publication',
+    ))
+
+# Highlighted research projects also become News items.
+# The first date in the project period is used as the News date.
+for p in projs:
+    if not p.get('highlight'):
+        continue
+    start_date = str(p.get('period', '')).split('–', 1)[0].split('-', 1)[0].strip()
+    title = p.get('news_title') or p.get('title', '')
+    summary = p.get('news_summary') or ' · '.join(
+        x for x in [p.get('agency', ''), p.get('period', '')] if x
+    )
+    news_items.append(make_news_item(
+        start_date or p.get('year', ''),
+        'Project Highlight',
+        title,
+        summary,
+        'research.html',
+        'project',
+    ))
+
+
+def add_achievement_news(items, category, anchor, title_fn, summary_fn):
+    for a in items:
+        if not a.get('news'):
+            continue
+        title = a.get('news_title') or title_fn(a)
+        summary = a.get('news_summary') or summary_fn(a)
+        news_items.append(make_news_item(
+            a.get('date', a.get('year', '')),
+            a.get('news_category') or category,
+            title,
+            summary,
+            f'achievements.html#{anchor}',
+            'achievement',
+        ))
+
+
+# Patents and technology transfer.
+add_achievement_news(
+    ac.get('patents', []), 'Patent', 'patents',
+    lambda a: a.get('title_ko') or a.get('title_en') or 'Patent update',
+    lambda a: f'{a.get("status", "")} · {a.get("jurisdiction", "")} {a.get("number", "")}'.strip(' ·'),
+)
+add_achievement_news(
+    ac.get('technology_transfer', []), 'Technology Transfer', 'patents',
+    lambda a: a.get('title', 'Technology transfer'),
+    lambda a: a.get('description', ''),
+)
+
+# Awards & honors.
+for award_group in ('pi', 'students'):
+    add_achievement_news(
+        ac.get('awards', {}).get(award_group, []), 'Award & Honor', 'awards',
+        lambda a: a.get('title', 'Award'),
+        lambda a: ' · '.join(x for x in [a.get('recipient', ''), a.get('organization', '')] if x),
+    )
+
+# Conferences: PI international/domestic and students.
+pi_confs = ac.get('conferences', {}).get('pi', {})
+for scope in ('international', 'domestic'):
+    add_achievement_news(
+        pi_confs.get(scope, []), 'Conference', 'conferences',
+        lambda a: a.get('title', 'Conference activity'),
+        lambda a: ' · '.join(x for x in [a.get('type', ''), a.get('event', ''), a.get('location', '')] if x),
+    )
+add_achievement_news(
+    ac.get('conferences', {}).get('students', []), 'Conference', 'conferences',
+    lambda a: a.get('title', 'Conference activity'),
+    lambda a: ' · '.join(x for x in [a.get('type', ''), a.get('event', '')] if x),
+)
+
+# Talks and academic service.
+add_achievement_news(
+    ac.get('talks', []), 'Talk', 'talks',
+    lambda a: a.get('title') or a.get('host') or a.get('institution') or 'Invited talk',
+    lambda a: ' · '.join(x for x in [a.get('host', ''), a.get('institution', '')] if x),
+)
+add_achievement_news(
+    ac.get('academic_service', []), 'Academic Service', 'academic-service',
+    lambda a: a.get('role', 'Academic service'),
+    lambda a: a.get('event', ''),
+)
+
+news_sorted = sorted(news_items, key=lambda n: n['_date_obj'], reverse=True)
 
 
 # Highlights
@@ -543,8 +674,6 @@ h += '</main>' + foot()
 # Achievements
 # --------------------------------------------------
 
-ac = D['achievements']
-
 
 def ach_link(url, label='View link'):
     if not url:
@@ -741,7 +870,7 @@ h = (
     head('News', 'News')
     + pagehero(
         'News',
-        'Publications, awards, conferences, people, projects, and laboratory updates.'
+        'Selected updates from publication highlights, achievements, people, media, and laboratory life.'
     )
     + '<main>'
 )
@@ -756,11 +885,12 @@ for y in news_years:
             if n.get('summary')
             else ''
         )
-        arrow = (
-            f'<a class="news-row-arrow" href="{href(n["link"])}">↗</a>'
-            if n.get('link')
-            else '<span class="news-row-arrow muted">—</span>'
-        )
+        if n.get('link'):
+            external = str(n['link']).startswith(('http://', 'https://'))
+            target = ' target="_blank" rel="noopener"' if external else ''
+            arrow = f'<a class="news-row-arrow" href="{href(n["link"])}"{target}>↗</a>'
+        else:
+            arrow = '<span class="news-row-arrow muted">—</span>'
         h += f'''<article class="news-row"><div class="news-row-date">{esc(n['date'])}</div><div class="news-row-body"><div class="news-meta">{esc(n['category'])}</div><h3>{esc(n['title'])}</h3>{summary}</div>{arrow}</article>'''
     h += '</div></section>'
 
