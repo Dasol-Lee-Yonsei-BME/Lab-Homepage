@@ -37,7 +37,7 @@
   issue: '19'
   pages: 28053-28061
   date: 2026.05.06
-  url: ''
+  url: 'https://pubs.acs.org/acsodf/article/11/19/28053/5070370/Angularly-Tunable-Circular-Dichroism-in-a-Bilayer'
   image: ''
   highlight: false
   impact_factor: 4.3
@@ -54,7 +54,7 @@
   issue: '-'
   pages: '128'
   date: 2026.04.13
-  url: ''
+  url: 'https://www.nature.com/articles/s41378-026-01188-2.epdf?sharing_token=t8inn7LvcL26ynDPIXxpD9RgN0jAjWel9jnR3ZoTv0Ngmdl21JA8bJ-7LFxp2CfxxOL_DHElEmk2GKJSTt1bu8q4qvjJSSUTDvif00JChRkcpFuzE2RPu8VJRRffYCKomY_-TdC9DTg9sr5biy8KXiMsWeuJcyB9U9vFXO2QhVA%3D'
   image: assets/images/publications/2026-02.png
   highlight: true
   home_highlight: true
@@ -89,7 +89,7 @@
   issue: '7'
   pages: e70036
   date: 2026.04.01
-  url: ''
+  url: 'https://onlinelibrary.wiley.com/doi/10.1002/nap2.70036'
   image: ''
   highlight: true
   impact_factor: 6.6
@@ -106,7 +106,7 @@
   issue: '23'
   pages: '-'
   date: 2026.03.19
-  url: ''
+  url: 'https://www.light-am.com/article/doi/10.37188/lam.2026.023'
   image: ''
   highlight: true
   impact_factor: 10.6
@@ -123,7 +123,7 @@
   issue: '2'
   pages: 565-599
   date: '2026.02'
-  url: ''
+  url: 'https://link.springer.com/article/10.1007/s12221-025-01219-1'
   image: ''
   highlight: false
   impact_factor: 2.3
@@ -140,7 +140,7 @@
   issue: '45'
   pages: e07295
   date: 2025.11.14
-  url: ''
+  url: 'https://onlinelibrary.wiley.com/doi/10.1002/smll.202507295'
   image: ''
   highlight: true
   home_highlight: true
@@ -158,7 +158,7 @@
   issue: '30'
   pages: e01509
   date: 2025.10.24
-  url: ''
+  url: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/adom.202501509'
   image: ''
   highlight: true
   impact_factor: 7.2
@@ -175,7 +175,7 @@
   issue: '-'
   pages: '26507'
   date: 2025.07.21
-  url: ''
+  url: 'https://www.nature.com/articles/s41598-025-12349-0?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20250722&utm_content=10.1038/s41598-025-12349-0'
   image: ''
   highlight: true
   impact_factor: 3.9
@@ -192,7 +192,7 @@
   issue: '-'
   pages: '117258'
   date: 2025.06.19
-  url: ''
+  url: 'https://www.sciencedirect.com/science/article/abs/pii/S0925346725006184'
   image: ''
   highlight: true
   impact_factor: 4.2
@@ -209,7 +209,7 @@
   issue: '13'
   pages: 12491-12605
   date: 2025.03.28
-  url: ''
+  url: 'https://pubs.acs.org/doi/10.1021/acsnano.4c10964'
   image: ''
   highlight: true
   impact_factor: 16.1
@@ -226,7 +226,7 @@
   issue: '-'
   pages: '2699'
   date: 2025.03.19
-  url: ''
+  url: 'https://www.nature.com/articles/s41467-025-56728-7'
   image: ''
   highlight: true
   home_highlight: true
@@ -244,7 +244,7 @@
   issue: '3'
   pages: '915'
   date: 2025.02.03
-  url: ''
+  url: 'https://www.mdpi.com/1424-8220/25/3/915'
   image: ''
   highlight: false
   impact_factor: 3.5
@@ -261,7 +261,7 @@
   issue: '-'
   pages: '6537'
   date: 2024.08.02
-  url: ''
+  url: 'https://www.nature.com/articles/s41467-024-50872-2'
   image: ''
   highlight: true
   impact_factor: 15.7
@@ -278,7 +278,7 @@
   issue: '20'
   pages: 3877-3882
   date: 2024.07.11
-  url: ''
+  url: 'https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2024-0217/html'
   image: ''
   highlight: true
   impact_factor: 6.6
@@ -295,7 +295,7 @@
   issue: '7'
   pages: '2300718'
   date: 2024.03.12
-  url: ''
+  url: 'https://onlinelibrary.wiley.com/doi/10.1002/lpor.202300718'
   image: ''
   highlight: true
   impact_factor: 10.0
@@ -312,7 +312,7 @@
   issue: '-'
   pages: '4'
   date: 2024.01.19
-  url: ''
+  url: 'https://www.nature.com/articles/s41427-023-00523-7'
   image: ''
   highlight: true
   impact_factor: 8.3
@@ -329,7 +329,7 @@
   issue: '2'
   pages: '2305067'
   date: 2024.01.12
-  url: ''
+  url: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202305067'
   image: ''
   highlight: true
   impact_factor: 14.1
@@ -346,7 +346,7 @@
   issue: '-'
   pages: '101562'
   date: '2023.12'
-  url: ''
+  url: 'https://www.sciencedirect.com/science/article/pii/S2352711023002583'
   image: ''
   highlight: false
   impact_factor: 2.4
@@ -363,7 +363,7 @@
   issue: '19'
   pages: '10590'
   date: 2023.09.22
-  url: ''
+  url: 'https://www.mdpi.com/2076-3417/13/19/10590'
   image: ''
   highlight: false
   impact_factor: 2.5
@@ -380,7 +380,7 @@
   issue: '2'
   pages: 3266-3273
   date: '2023.01'
-  url: ''
+  url: 'https://pubs.acs.org/doi/full/10.1021/acsami.2c17875'
   image: ''
   highlight: true
   impact_factor: 8.2
@@ -397,7 +397,7 @@
   issue: '1'
   pages: '2200046'
   date: '2023.01'
-  url: ''
+  url: 'https://onlinelibrary.wiley.com/doi/10.1002/lpor.202200046'
   image: ''
   highlight: true
   impact_factor: 10.0
@@ -414,7 +414,7 @@
   issue: '1'
   pages: '283'
   date: '2023.01'
-  url: ''
+  url: 'https://www.mdpi.com/1996-1944/16/1/283'
   image: ''
   highlight: false
   impact_factor: 3.2
@@ -431,7 +431,7 @@
   issue: '25'
   pages: 45130-45142
   date: 2022.12.05
-  url: ''
+  url: 'https://opg.optica.org/oe/viewmedia.cfm?uri=oe-30-25-45130&html=true'
   image: ''
   highlight: false
   impact_factor: 3.3
@@ -448,7 +448,7 @@
   issue: '20'
   pages: 4591-4600
   date: '2022.09'
-  url: ''
+  url: 'https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2022-0447/html'
   image: ''
   highlight: false
   impact_factor: 6.6
@@ -465,7 +465,7 @@
   issue: '6'
   pages: '2100510'
   date: '2022.06'
-  url: ''
+  url: 'https://onlinelibrary.wiley.com/doi/10.1002/lpor.202100510'
   image: ''
   highlight: false
   impact_factor: 10.0
@@ -482,7 +482,7 @@
   issue: '-'
   pages: '112273'
   date: '2022.06'
-  url: ''
+  url: 'https://www.sciencedirect.com/science/article/abs/pii/S092534672200307X'
   image: ''
   highlight: false
   impact_factor: 4.2
@@ -499,7 +499,7 @@
   issue: '11'
   pages: 2803-2809
   date: 2022.05.19
-  url: ''
+  url: 'https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2021-0794/html'
   image: ''
   highlight: false
   impact_factor: 6.6
@@ -516,7 +516,7 @@
   issue: '9'
   pages: 2107-2115
   date: '2022.05'
-  url: ''
+  url: 'https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2021-0436/html'
   image: ''
   highlight: false
   impact_factor: 6.6
@@ -533,7 +533,7 @@
   issue: '-'
   pages: '2036'
   date: 2022.04.19
-  url: ''
+  url: 'https://www.nature.com/articles/s41467-022-29771-x'
   image: ''
   highlight: true
   impact_factor: 15.7
@@ -550,7 +550,7 @@
   issue: '-'
   pages: '1'
   date: 2022.01.10
-  url: ''
+  url: 'https://link.springer.com/article/10.1186/s43593-021-00008-6'
   image: ''
   highlight: true
   impact_factor: 32.1
@@ -567,7 +567,7 @@
   issue: '15'
   pages: 3871-3877
   date: '2021.11'
-  url: ''
+  url: 'https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2021-0337/html'
   image: ''
   highlight: false
   impact_factor: 6.6
@@ -584,7 +584,7 @@
   issue: '19'
   pages: '2100609'
   date: '2021.10'
-  url: ''
+  url: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/adom.202100609'
   image: ''
   highlight: false
   impact_factor: null
@@ -601,7 +601,7 @@
   issue: '10'
   pages: '1142'
   date: 2021.09.23
-  url: ''
+  url: 'https://www.mdpi.com/2072-666X/12/10/1142'
   image: ''
   highlight: false
   impact_factor: 3.0
@@ -618,7 +618,7 @@
   issue: '9'
   pages: 2705-2712
   date: 2021.09.01
-  url: ''
+  url: 'https://pubs.acs.org/apchd5/article-abstract/8/9/2705/597806/Total-Reflection-Induced-Efficiency-Enhancement-of?redirectedFrom=fulltext'
   image: ''
   highlight: true
   impact_factor: 6.7
@@ -635,7 +635,7 @@
   issue: '5'
   pages: '7300608'
   date: '2021.09'
-  url: ''
+  url: 'https://ieeexplore.ieee.org/document/9380216'
   image: ''
   highlight: false
   impact_factor: null
@@ -652,7 +652,7 @@
   issue: '13'
   pages: '2002226'
   date: 2021.07.05
-  url: ''
+  url: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/adom.202002226'
   image: ''
   highlight: false
   impact_factor: null
@@ -669,7 +669,7 @@
   issue: '-'
   pages: '2100138'
   date: 2021.07.01
-  url: ''
+  url: 'https://onlinelibrary.wiley.com/doi/10.1002/lpor.202100138'
   image: ''
   highlight: false
   impact_factor: null
@@ -686,7 +686,7 @@
   issue: '14'
   pages: 21458-21472
   date: 2021.06.23
-  url: ''
+  url: 'https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-29-14-21458&id=452710'
   image: ''
   highlight: false
   impact_factor: null
