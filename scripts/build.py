@@ -48,6 +48,53 @@ PUBLICATION_YEARS = sorted({p['year'] for p in pubs}, reverse=True)
 CSS = (ROOT / 'assets' / 'style.css').read_text(encoding='utf-8')
 
 
+# People-page layout refinements. These rules are appended to the shared CSS
+# so the People page can be updated without editing assets/style.css separately.
+PEOPLE_CSS = r'''
+.people-major-section { margin-bottom: 110px; }
+.people-major-section > .section-head { margin-bottom: 42px; }
+.people-major-section .pi { padding-bottom: 46px; border-bottom: 0; }
+
+.people-cv { margin-top: 58px; }
+.people-cv-section { padding: 34px 0 10px; border-top: 1px solid var(--line); }
+.people-cv-section:first-child { border-top: 1px solid #9aacbb; }
+.people-cv-section .cv-heading {
+  margin: 0 0 18px;
+  color: var(--navy2);
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+.people-cv .record {
+  grid-template-columns: minmax(230px, 260px) minmax(0, 1fr);
+  gap: 28px;
+  padding: 20px 0;
+}
+.people-cv .record-year {
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.people-cv .record h3 { margin: 0 0 4px; }
+.people-cv .record p { margin: 2px 0; }
+
+@media (max-width: 760px) {
+  .people-major-section { margin-bottom: 78px; }
+  .people-major-section > .section-head { margin-bottom: 28px; }
+  .people-cv { margin-top: 40px; }
+  .people-cv-section { padding-top: 28px; }
+  .people-cv-section .cv-heading { font-size: 23px; }
+  .people-cv .record {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 18px 0;
+  }
+  .people-cv .record-year { white-space: normal; }
+}
+'''
+CSS += PEOPLE_CSS
+
+
 def img(path, alt=''):
     return f'<img src="{href(path)}" alt="{href(alt)}">'
 
@@ -169,15 +216,30 @@ pe = D['people']
 pi = pe['pi']
 
 
-def external_link(url, label='View link ↗'):
+def external_link(url, label='View link'):
     if not url:
         return ''
-    return f'<a class="pub-link" href="{href(url)}" target="_blank" rel="noopener">{esc(label)}</a>'
+    return f'<a class="pub-link" href="{href(url)}" target="_blank" rel="noopener">{esc(label)} &#8599;</a>'
 
 
 def cv_record(period, title, organization, link=''):
-    period_text = esc(period) if period else '—'
+    period_text = esc(period) if period else '\u2014'
     return f'''<div class="record"><div class="record-year">{period_text}</div><div><h3>{esc(title)}</h3><p>{esc(organization)}</p>{external_link(link)}</div></div>'''
+
+
+def cv_section(title, items, year_key='period', title_key='title', org_key='organization'):
+    if not items:
+        return ''
+    out = f'<div class="people-cv-section"><h3 class="cv-heading">{esc(title)}</h3>'
+    for item in items:
+        out += cv_record(
+            item.get(year_key, ''),
+            item.get(title_key, ''),
+            item.get(org_key, ''),
+            item.get('link', '')
+        )
+    out += '</div>'
+    return out
 
 
 h = (
@@ -189,10 +251,11 @@ h = (
     + '<main>'
 )
 
-h += '<section class="section"><div class="pi">'
+# 01 - Principal Investigator
+h += '''<section class="section people-major-section"><div class="section-head"><div><div class="label">01 &middot; Principal Investigator</div><h2>Principal Investigator</h2></div></div>'''
+h += '<div class="pi">'
 h += img(pi['photo'], pi['name'])
 h += '<div>'
-h += '<div class="eyebrow">Principal Investigator</div>'
 h += f'<h2>{esc(pi["name"])}</h2>'
 h += f'<div class="role">{esc(pi["title"])}</div>'
 h += f'<p>{esc(pi["department"])}</p>'
@@ -202,66 +265,30 @@ h += (
     f'<br><b>Tel</b> {esc(pi["phone"])}'
     f'<br><b>Email</b> {esc(pi["email"])}</p>'
 )
-h += external_link(pi.get('scholar', ''), 'Google Scholar ↗')
-h += '</div></div></section>'
+h += external_link(pi.get('scholar', ''), 'Google Scholar')
+h += '</div></div>'
 
-# Academic Appointments
-h += '<section class="achievement-section"><h2>Academic Appointments</h2>'
-for item in pi.get('appointments', []):
-    h += cv_record(
-        item.get('period', ''),
-        item.get('title', ''),
-        item.get('organization', ''),
-        item.get('link', '')
-    )
-h += '</section>'
+# PI curriculum vitae
+h += '<div class="people-cv">'
+h += cv_section('Academic Appointments', pi.get('appointments', []))
+h += cv_section('Academic Leadership', pi.get('leadership', []))
+h += cv_section('Academic Service', pi.get('service', []))
+h += cv_section(
+    'Education',
+    pi.get('education', []),
+    year_key='year',
+    title_key='degree',
+    org_key='institution'
+)
+h += cv_section(
+    'Honors & Awards',
+    pi.get('honors', []),
+    year_key='year'
+)
+h += '</div></section>'
 
-# Academic Leadership
-h += '<section class="achievement-section"><h2>Academic Leadership</h2>'
-for item in pi.get('leadership', []):
-    h += cv_record(
-        item.get('period', ''),
-        item.get('title', ''),
-        item.get('organization', ''),
-        item.get('link', '')
-    )
-h += '</section>'
-
-# Academic Service
-h += '<section class="achievement-section"><h2>Academic Service</h2>'
-for item in pi.get('service', []):
-    h += cv_record(
-        item.get('period', ''),
-        item.get('title', ''),
-        item.get('organization', ''),
-        item.get('link', '')
-    )
-h += '</section>'
-
-# Education
-h += '<section class="achievement-section"><h2>Education</h2>'
-for item in pi.get('education', []):
-    h += cv_record(
-        item.get('year', ''),
-        item.get('degree', ''),
-        item.get('institution', ''),
-        item.get('link', '')
-    )
-h += '</section>'
-
-# Honors & Awards
-h += '<section class="achievement-section"><h2>Honors & Awards</h2>'
-for item in pi.get('honors', []):
-    h += cv_record(
-        item.get('year', ''),
-        item.get('title', ''),
-        item.get('organization', ''),
-        item.get('link', '')
-    )
-h += '</section>'
-
-# Current Members
-h += '''<section class="section"><div class="section-head"><div><div class="label">Team</div><h2>Current Members</h2></div></div><div class="member-grid">'''
+# 02 - Team
+h += '''<section class="section people-major-section"><div class="section-head"><div><div class="label">02 &middot; Team</div><h2>Current Members</h2></div></div><div class="member-grid">'''
 
 for p in pe.get('current', []):
     email_line = f'<p>{esc(p["email"])}</p>' if p.get('email') else ''
@@ -269,8 +296,8 @@ for p in pe.get('current', []):
 
 h += '</div></section>'
 
-# Alumni
-h += '''<section class="section"><div class="section-head"><div><div class="label">Alumni</div><h2>Where they are now</h2></div></div>'''
+# 03 - Alumni
+h += '''<section class="section people-major-section"><div class="section-head"><div><div class="label">03 &middot; Alumni</div><h2>Alumni</h2></div></div>'''
 
 for a in pe.get('alumni', []):
     h += f'''<div class="alumni-row"><strong>{esc(a['name'])}</strong><span>{esc(a['period'])}</span><span>{esc(a.get('next', ''))}</span></div>'''
