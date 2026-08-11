@@ -18,6 +18,10 @@
 #   url: "https://doi.org/10.xxxx/xxxxx"
 # If url is empty, the VIEW PAPER button is hidden.
 #
+# News integration:
+#   highlight: true  -> automatically appears in the News page and Home Recent News.
+#   Optional news_title / news_summary can override the automatically generated News text.
+#
 # JCR convention:
 #   jcr_year uses the preceding year's JCR for each publication year.
 # ================================================================
@@ -62,9 +66,9 @@
   title: 'Recent advances in radiative cooling: From fundamentals to commercial applications (mega-review)'
   journal: ACS Applied Materials & Interfaces
   issn: 1944-8252
-  volume: '18'
-  issue: '15'
-  pages: '21363-21423'
+  volume: '-'
+  issue: '-'
+  pages: '-'
   date: 2026.04.12
   url: ''
   image: assets/images/publications/2026-03.svg
