@@ -128,9 +128,18 @@ PUBLICATION_CSS = r'''
 }
 .pub-card.has-image {
   grid-template-columns:190px minmax(0,1fr);
+  align-items:start;
 }
 .pub-card.has-image > img {
-  min-height:190px;
+  display:block;
+  width:100%;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:top center;
+  align-self:start;
+  background:#fff;
 }
 @media (max-width:760px) {
   .pub-card.long-authors { grid-column:auto; }
@@ -139,7 +148,11 @@ PUBLICATION_CSS = r'''
 }
 @media (max-width:520px) {
   .pub-card.has-image { grid-template-columns:1fr; }
-  .pub-card.has-image > img { aspect-ratio:16/9; min-height:0; }
+  .pub-card.has-image > img {
+    width:100%;
+    height:auto !important;
+    aspect-ratio:auto !important;
+  }
 }
 '''
 CSS += PUBLICATION_CSS
