@@ -1,31 +1,69 @@
-- date: 2026.07.10
-  category: Invited Talk
-  title: Prof. Lee delivered an invited talk at the UK-Korea Focal Point Workshop on Flat Optics for Structured and Entangled Light.
+# ================================================================
+# SOL STANDALONE NEWS
+#
+# Keep only news that is NOT already represented by Publications or
+# Achievements. Publication/project highlights and achievements marked news: true
+# are merged into the News page automatically by scripts/build.py.
+# ================================================================
 
 - date: 2026.07.06
   category: People
-  title: Congratulations to alumnus Changhwan on beginning his new journey as a researcher at NEW&NEW Co., Ltd.
+  title: Congratulations to alumnus Changhwan Hyeon on beginning his new journey as Associate Researcher at NEW&NEW Co., Ltd.
 
-- date: 2026.05.06
-  category: Publication
-  title: A first-authored journal paper by Semere has been published in ACS Omega.
-
-- date: 2026.04.13
-  category: Publication
-  title: A first-authored paper has been published in Microsystems & Nanoengineering.
-
-- date: 2026.03.19
-  category: Publication
-  title: "A News & Views article by Kyung-Hyun has been published in Light: Advanced Manufacturing."
+- date: 2026.04.20
+  category: People
+  title: Congratulations to alumnus Seokgyu Kwon on beginning his new journey as Associate Researcher at T&L Co., Ltd.
 
 - date: 2026.03.01
   category: People
-  title: Congratulations to alumni Sangmin and Minseo on their new research journeys at GIST and KAIST.
+  title: Congratulations to alumni Sangmin Shim and Minseo Jeong on their new research journeys at GIST and KAIST.
+  summary: Sangmin joined the Department of Mechanical and Robotics Engineering at GIST as a Postdoctoral Researcher, and Minseo began his Ph.D. in the School of Electrical Engineering at KAIST.
 
-- date: 2025.03.19
-  category: Publication
-  title: A first-authored journal paper has been published in Nature Communications.
+- date: 2026.02.27
+  category: Media
+  title: SOL research was featured in Yonsei Mirae News No. 19 and 「여기 연세인」.
+  summary: The feature introduced our research in optical and biomedical sensing and smart thermal-management materials.
+  link: https://external.yonsei.ac.kr/external/life/people.do?article.offset=0&articleLimit=10&articleNo=73605&mode=view
 
-- date: 2025.03.01
-  category: Project
-  title: Prof. Lee has been awarded the Excellent Young Researcher grant from the National Research Foundation of Korea.
+- date: 2025.09.11
+  category: Media
+  title: Our laboratory research was featured in BME Spectrum (Vol. 2025, No. 1).
+  link: https://ymet.yonsei.ac.kr/ymet/board/data.do?articleNo=70971&mode=view
+
+- date: 2025.09.01
+  category: People
+  title: Congratulations to Ph.D. alumnus Semere Araya Asefa on joining Soonchunhyang University as a Postdoctoral Researcher.
+  summary: Department of Display Materials Engineering, Soonchunhyang University.
+
+- date: 2025.08.29
+  category: People
+  title: Congratulations to Dr. Semere Araya Asefa, the first Ph.D. graduate of our laboratory.
+
+- date: 2025.08.26
+  category: Guest Seminar
+  title: Prof. Myeongsu Seong gave a guest talk on photoacoustic microscopy.
+  summary: "Topic: Photoacoustic microscopy for visualization of stents in multiple scenarios."
+
+- date: 2024.09.01
+  category: People
+  title: Lawrence Naatey Terkper joined our laboratory as an M.S. student.
+
+- date: 2024.03.01
+  category: People
+  title: Changhwan Hyeon and Kyung-Hyun Yu joined our laboratory as M.S. students.
+
+- date: 2023.03.01
+  category: People
+  title: Seokgyu Kwon and Minseo Jeong joined our laboratory as B.S./M.S. students.
+
+- date: 2022.03.01
+  category: People
+  title: Sangmin Shim joined our laboratory as an M.S./Ph.D. student.
+
+- date: 2021.09.01
+  category: People
+  title: Semere Araya Asefa joined our laboratory as a Ph.D. student.
+
+- date: 2021.08.30
+  category: Lab
+  title: Prof. Dasol Lee joined the Department of Biomedical Engineering at Yonsei University as an Assistant Professor.
