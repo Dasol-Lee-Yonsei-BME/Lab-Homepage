@@ -1,3 +1,13 @@
+# ================================================================
+# SOL ACHIEVEMENTS DATA
+#
+# News integration:
+#   Add news: true to any achievement that should also appear in the
+#   News page and Home Recent News.
+#   Optional fields: news_category, news_title, news_summary.
+#   Records without news: true stay only in Achievements.
+# ================================================================
+
 patents:
 - year: 2021
   scope: International
@@ -201,36 +211,50 @@ awards:
     recipient: Changhwan Hyeon
     organization: 2025 MRS Fall Meeting & Exhibit
     detail: Poster nomination
+    news: true
+    news_category: Conference
+    news_title: SOL students presented at the 2025 MRS Fall Meeting & Exhibit
+    news_summary: Changhwan, Minseo, and Seokgyu presented their research, including oral presentations and a poster nominated for the Best Poster Award.
   - year: 2025
     date: 2025.01.22
     title: Grand Prize · 1st Place
     recipient: Changhwan Hyeon
     organization: BK startup competition
     detail: ''
+    news: true
+    news_title: Changhwan Hyeon won the Grand Prize in the BK startup competition
   - year: 2024
     date: 2024.12.12
     title: Best Student Presentation Award
     recipient: Minseo Jeong
     organization: KSMTE Annual Autumn Conference 2024
     detail: Poster award
+    news: true
+    news_title: Minseo Jeong received the Best Student Presentation Award at KSMTE 2024
   - year: 2024
     date: 2024.11.09
     title: Poster Award · Gold & Silver
     recipient: Changhwan Hyeon & Kyung-Hyun Yu
     organization: IBEC 2024
     detail: Legacy site reports Gold & Silver awards without assigning the individual colors.
+    news: true
+    news_title: Changhwan Hyeon and Kyung-Hyun Yu received Gold & Silver poster awards at IBEC 2024
   - year: 2024
     date: 2024.02.19
     title: Excellence Award · 2nd Place
     recipient: Changhwan Hyeon
     organization: BK startup competition
     detail: ''
+    news: true
+    news_title: Changhwan Hyeon won the Excellence Award in the BK startup competition
   - year: 2023
     date: 2023.11.11
     title: Poster Award
     recipient: Minseo Jeong
     organization: IBEC 2023
     detail: ''
+    news: true
+    news_title: Minseo Jeong received a poster award at IBEC 2023
   - year: 2023
     date: 2023.10.28
     title: Participation Prize
@@ -247,6 +271,8 @@ conferences:
       event: UK-Korea Focal Point Workshop on Flat Optics for Structured and Entangled Light
       location: Heriot-Watt University, United Kingdom
       type: Invited Talk
+      news: true
+      news_title: Prof. Lee delivered an invited talk at the UK-Korea Focal Point Workshop
     - year: 2024
       date: 2024.04.21-25
       authors: D. Lee
@@ -254,6 +280,8 @@ conferences:
       event: PIERS 2024
       location: Chengdu, China
       type: Invited Talk
+      news: true
+      news_title: Prof. Lee delivered an invited talk at PIERS 2024
     - year: 2021
       date: '2021.11'
       authors: D. Lee
@@ -367,6 +395,8 @@ conferences:
       event: 2026년도 대한의용생체공학회 춘계학술대회
       location: Republic of Korea
       type: Plenary Talk
+      news: true
+      news_title: Prof. Lee delivered a plenary talk at the 2026 KOSOMBE Spring Conference
     - year: 2025
       date: '2025.10'
       authors: D. Lee
@@ -381,6 +411,8 @@ conferences:
       event: Photonics Conference 2024 (PC 2024)
       location: Republic of Korea
       type: Invited Talk
+      news: true
+      news_title: Prof. Lee delivered an invited talk at Photonics Conference 2024
     - year: 2024
       date: '2024.10'
       authors: D. Lee
@@ -388,6 +420,8 @@ conferences:
       event: 2024년도 대한금속·재료학회 추계학술대회
       location: Republic of Korea
       type: Invited Talk
+      news: true
+      news_title: Prof. Lee delivered an invited talk at the 2024 Korean Institute of Metals and Materials Fall Meeting
     - year: 2022
       date: '2022.12'
       authors: D. Lee
