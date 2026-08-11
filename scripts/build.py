@@ -35,8 +35,6 @@ def href(value):
 
 # Publications validation
 for p in pubs:
-    if not p.get('image'):
-        raise SystemExit(f"Publication image is required: {p.get('title')}")
     try:
         p['year'] = int(p['year'])
     except (TypeError, ValueError, KeyError):
@@ -93,6 +91,42 @@ PEOPLE_CSS = r'''
 }
 '''
 CSS += PEOPLE_CSS
+
+
+# Publications-page refinements. Kept here so only build.py and
+# data/publications.yml need to be replaced for this update.
+PUBLICATION_CSS = r'''
+.pub-legend {
+  display:flex; flex-wrap:wrap; gap:10px 22px; align-items:center;
+  margin:0 0 34px; padding:16px 18px; border:1px solid var(--line);
+  background:#fbfdff; color:#536575; font-size:13px;
+}
+.pub-legend strong { color:var(--navy2); }
+.lab-author { color:var(--blue); font-weight:700; }
+.pi-author {
+  color:var(--ink); font-weight:800; text-decoration:underline;
+  text-decoration-thickness:1.5px; text-underline-offset:2px;
+}
+.pub-tools { margin-bottom:48px; }
+.pub-tools .chip { text-decoration:none; cursor:pointer; transition:.18s ease; }
+.pub-tools .chip:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
+.pub-year { scroll-margin-top:105px; }
+.pub-card.long-authors { grid-column:1 / -1; }
+.pub-authors { line-height:1.55; }
+.pub-placeholder {
+  width:100%; height:100%; min-height:170px; display:flex; flex-direction:column;
+  justify-content:flex-end; padding:20px; background:linear-gradient(145deg,#edf4f9,#dfeaf2);
+  color:var(--navy2); border-right:1px solid var(--line);
+}
+.pub-placeholder span { font-size:12px; letter-spacing:.14em; color:var(--blue); font-weight:800; }
+.pub-placeholder strong { margin-top:6px; font-size:17px; line-height:1.25; }
+.pub-placeholder small { margin-top:9px; font-size:10px; letter-spacing:.14em; color:#788894; }
+@media (max-width:760px) {
+  .pub-card.long-authors { grid-column:auto; }
+  .pub-placeholder { min-height:180px; border-right:0; border-bottom:1px solid var(--line); }
+}
+'''
+CSS += PUBLICATION_CSS
 
 
 def img(path, alt=''):
@@ -310,6 +344,43 @@ h += '</section></main>' + foot()
 # Publications
 # --------------------------------------------------
 
+# Names verified from the current/alumni list on the legacy BNSL site.
+# Add a new student here once they appear as an author on a publication.
+LAB_AUTHORS = [
+    'Kyung-Hyun Yu',
+    'Jihoon Yang',
+    'Marjona Murodkhuja Kizi Kiyomova',
+    'Wooju Choi',
+    'Semere Araya Asefa',
+    'Sangmin Shim',
+    'Seokgyu Kwon',
+    'Minseo Jeong',
+    'Changhwan Hyeon',
+    'Lawrence Naatey Terkper',
+]
+
+
+def format_authors(author_text):
+    rendered = esc(author_text)
+
+    # Lab students/alumni are blue.
+    for name in sorted(LAB_AUTHORS, key=len, reverse=True):
+        safe = esc(name)
+        rendered = rendered.replace(
+            safe,
+            f'<span class="lab-author">{safe}</span>'
+        )
+
+    # PI stays black, bold and underlined. Older papers use the abbreviated form.
+    for name in ('Dasol Lee', 'D. Lee'):
+        safe = esc(name)
+        rendered = rendered.replace(
+            safe,
+            f'<span class="pi-author">{safe}</span>'
+        )
+
+    return rendered
+
 
 def publication_metrics(p):
     chips = []
@@ -325,24 +396,76 @@ def publication_metrics(p):
     return ''.join(chips)
 
 
+def publication_visual(p):
+    if p.get('image'):
+        return img(p['image'], p['title'])
+    return (
+        '<div class="pub-placeholder">'
+        f'<span>{esc(p["year"])}</span>'
+        f'<strong>{esc(p["journal"])}</strong>'
+        '<small>ARCHIVE IMAGE PLACEHOLDER</small>'
+        '</div>'
+    )
+
+
+legend = f'''<div class="pub-legend">
+<span><strong>†</strong> First / co-first author</span>
+<span><strong>*</strong> Corresponding author</span>
+<span><span class="lab-author">Blue author</span> = {esc(SHORT_NAME)} student / alumnus</span>
+<span><span class="pi-author">Dasol Lee</span> = PI</span>
+</div>'''
+
 h = (
     head('Publications', 'Publications')
     + pagehero(
         'Publications',
-        'Our publications are organized by year and presented with representative images and journal information.'
+        'Peer-reviewed journal papers from our laboratory and prior research.'
     )
-    + '<main><div class="pub-tools">'
-    + ''.join(f'<span class="chip">{y}</span>' for y in PUBLICATION_YEARS)
-    + '</div>'
+    + '<main>'
+    + legend
+    + '<nav class="pub-tools" aria-label="Publication years">'
+    + ''.join(
+        f'<a class="chip" href="#year-{y}">{y}</a>'
+        for y in PUBLICATION_YEARS
+    )
+    + '</nav>'
 )
 
 for y in PUBLICATION_YEARS:
-    h += f'<h2 class="pub-year">{y}</h2><div class="pub-grid">'
+    h += f'<h2 class="pub-year" id="year-{y}">{y}</h2><div class="pub-grid">'
     year_pubs = [x for x in pubs if x['year'] == y]
     year_pubs.sort(key=lambda x: str(x.get('date', '')), reverse=True)
+
     for p in year_pubs:
         metrics = publication_metrics(p)
-        h += f'''<article class="pub-card">{img(p['image'], p['title'])}<div class="pub-copy"><div class="pub-journal">{esc(p['journal'])}</div><h3>{esc(p['title'])}</h3><div class="pub-authors">{esc(p['authors'])}</div><div class="pub-metrics">{metrics}</div><div class="pub-date">{esc(p['date'])}</div><a class="pub-link" href="{href(p['url'])}">VIEW PAPER ↗</a></div></article>'''
+        authors_html = format_authors(p.get('authors', ''))
+        citation = p.get('citation', '')
+        journal_label = esc(p['journal'])
+        if citation:
+            journal_label += f' · {esc(citation)}'
+
+        link_html = ''
+        if p.get('url'):
+            link_html = (
+                f'<a class="pub-link" href="{href(p["url"])}" '
+                'target="_blank" rel="noopener">VIEW PAPER &#8599;</a>'
+            )
+
+        card_class = 'pub-card long-authors' if len(str(p.get('authors', ''))) > 420 else 'pub-card'
+
+        h += (
+            f'<article class="{card_class}">'
+            f'{publication_visual(p)}'
+            '<div class="pub-copy">'
+            f'<div class="pub-journal">{journal_label}</div>'
+            f'<h3>{esc(p["title"])}</h3>'
+            f'<div class="pub-authors">{authors_html}</div>'
+            f'<div class="pub-metrics">{metrics}</div>'
+            f'<div class="pub-date">{esc(p["date"])}</div>'
+            f'{link_html}'
+            '</div></article>'
+        )
+
     h += '</div>'
 
 h += '</main>' + foot()
