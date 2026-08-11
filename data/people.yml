@@ -1,52 +1,105 @@
 pi:
   name: Dasol Lee, Ph.D.
-  title: Associate Professor (effective September 1, 2026)
-  department: Department of Biomedical Engineering · Yonsei University (Mirae Campus)
+  title: Associate Professor
+  department: Department of Biomedical Engineering · Yonsei University Mirae Campus
   office: Room 207, Baekun Hall
+  phone: +82-33-760-2464
   email: dasol@yonsei.ac.kr
+  scholar: https://scholar.google.com/citations?hl=ko&user=o1WEf7wAAAAJ
   photo: assets/images/people/dasol-lee.svg
-  bio: Principal Investigator of BNSL. Research interests span nanophotonics, biomedical imaging, optical sensing, metasurfaces, and radiative cooling.
+  bio: Principal Investigator
+
+  appointments:
+    - title: Associate Professor
+      organization: Department of Biomedical Engineering, Yonsei University Mirae Campus
+      period: September 1, 2026 – Present
+    - title: Assistant Professor
+      organization: Department of Biomedical Engineering, Yonsei University Mirae Campus
+      period: August 30, 2021 – August 31, 2026
+    - title: PIURI Postdoctoral Fellow
+      organization: Pohang University of Science and Technology (POSTECH)
+      period: March 1, 2021 – August 27, 2021
+
+  leadership:
+    - title: Director
+      organization: Education and Research Center of NBIT-integrated Medical System for Personalized Healthcare (맞춤형 NBIT 융복합 의료기기 교육연구단), BK21 FOUR Program
+      period: September 1, 2026 – Present
+
+  service:
+    - title: Committee Member
+      organization: Education Committee, The Korean Society of Medical & Biological Engineering (KOSOMBE)
+      period: January 1, 2026 – Present
+    - title: Guest Editor
+      organization: 'Special Issue "META 2025", Nanophotonics'
+      period: ''
+      link: https://nanophotonics-journal.com/specialissues/
+    - title: Peer Reviewer
+      organization: "Selected journals include Nature Communications, Light: Science & Applications, Advanced Science, Advanced Functional Materials, ACS Photonics, and Nanophotonics."
+      period: ''
+
   education:
-  - Ph.D., Mechanical Engineering, POSTECH, 2021
-  - M.S., Bio-medical Science & Engineering, GIST, 2015
-  - B.S., Biomedical Engineering, Yonsei University Mirae Campus, 2013
+    - degree: Ph.D., Mechanical Engineering
+      institution: Pohang University of Science and Technology (POSTECH)
+      year: '2021'
+    - degree: M.S., Bio-medical Science & Engineering
+      institution: Gwangju Institute of Science and Technology (GIST)
+      year: '2015'
+    - degree: B.S., Biomedical Engineering
+      institution: Yonsei University Mirae Campus
+      year: '2013'
+
+  honors:
+    - title: Forbes 30 Under 30 Asia 2019 (Healthcare & Science)
+      organization: Forbes, USA
+      year: '2019'
+      link: https://www.forbes.com/under30/list/2019/asia/
+
 current:
-- name: Kyung-Hyun Yu
-  role: M.S./Ph.D. Student
-  interest: Optical imaging systems · Spin Hall effect of light
-  email: ykh5924@yonsei.ac.kr
-  photo: assets/images/people/kyung-hyun-yu.svg
-- name: Jihoon Yang
-  role: M.S./Ph.D. Student
-  interest: Optical imaging systems
-  email: ''
-  photo: assets/images/people/jihoon-yang.svg
-- name: Marjona Kiyomova
-  role: M.S. Student
-  interest: Functional biomedical dressing · Radiative cooling · Electrospinning
-  email: qiyomovamarjona@yonsei.ac.kr
-  photo: assets/images/people/marjona-kiyomova.svg
-- name: Wooju Choi
-  role: Undergraduate Researcher
-  interest: Radiative cooling · Electrospinning
-  email: chldnwn@yonsei.ac.kr
-  photo: assets/images/people/wooju-choi.svg
+  - name: Kyung-Hyun Yu
+    role: M.S./Ph.D. Student
+    interest: Optical imaging systems · Spin Hall effect of light
+    email: ykh5924@yonsei.ac.kr
+    photo: assets/images/people/kyung-hyun-yu.svg
+
+  - name: Jihoon Yang
+    role: M.S./Ph.D. Student
+    interest: Optical imaging systems
+    email: ''
+    photo: assets/images/people/jihoon-yang.svg
+
+  - name: Marjona Kiyomova
+    role: M.S. Student
+    interest: Functional biomedical dressing · Radiative cooling · Electrospinning
+    email: qiyomovamarjona@yonsei.ac.kr
+    photo: assets/images/people/marjona-kiyomova.svg
+
+  - name: Wooju Choi
+    role: Undergraduate Researcher
+    interest: Radiative cooling · Electrospinning
+    email: chldnwn@yonsei.ac.kr
+    photo: assets/images/people/wooju-choi.svg
+
 alumni:
-- name: Semere Araya Asefa, Ph.D.
-  period: Ph.D. · 2025
-  next: Postdoctoral researcher, Soonchunhyang University
-- name: Sangmin Shim, Ph.D.
-  period: Ph.D. · 2026
-  next: Postdoctoral researcher, GIST
-- name: Seokgyu Kwon, M.S.
-  period: M.S. · 2026
-  next: Associate Researcher, T&L Co., Ltd.
-- name: Minseo Jeong, M.S.
-  period: M.S. · 2026
-  next: Ph.D. student, KAIST
-- name: Changhwan Hyeon, M.S.
-  period: M.S. · 2026
-  next: Researcher, NEW&NEW Co., Ltd.
-- name: Lawrence Naatey Terkper, M.S.
-  period: M.S. · 2026
-  next: ''
+  - name: Semere Araya Asefa, Ph.D.
+    period: Ph.D. · 2025
+    next: Postdoctoral researcher, Soonchunhyang University
+
+  - name: Sangmin Shim, Ph.D.
+    period: Ph.D. · 2026
+    next: Postdoctoral researcher, GIST
+
+  - name: Seokgyu Kwon, M.S.
+    period: M.S. · 2026
+    next: Associate Researcher, T&L Co., Ltd.
+
+  - name: Minseo Jeong, M.S.
+    period: M.S. · 2026
+    next: Ph.D. student, KAIST
+
+  - name: Changhwan Hyeon, M.S.
+    period: M.S. · 2026
+    next: Researcher, NEW&NEW Co., Ltd.
+
+  - name: Lawrence Naatey Terkper, M.S.
+    period: M.S. · 2026
+    next: ''
