@@ -3,25 +3,25 @@
   title: Optical Imaging
   short: Advanced optical imaging systems for high-resolution, compact, and functional biomedical applications.
   description: We develop optical imaging technologies and systems for biomedical applications, ranging from high-resolution and microscopy-based imaging to compact and functional imaging platforms enabled by advanced optical design and nanophotonics.
-  image: assets/images/research/imaging.svg
+  image: assets/images/research/optical-imaging.png
 
 - id: sensing
   number: '02'
   title: Optical Sensing
   short: Highly sensitive optical sensing based on light–matter interactions and advanced optical measurement.
   description: We explore optical sensing technologies that detect subtle changes in biological and physical environments. Our research includes spin-dependent light–matter interactions, weak-measurement approaches, and engineered optical interfaces for sensitive and compact sensing systems.
-  image: assets/images/research/sensing.svg
+  image: assets/images/research/optical-sensing.png
 
 - id: thermal
   number: '03'
   title: Thermal Photonics
   short: Controlling thermal radiation for passive cooling and biomedical thermal management.
   description: We investigate optical materials and structures that control thermal radiation for passive cooling and temperature management. Our goal is to translate these concepts into energy-free and wearable approaches for biomedical thermal management and related healthcare applications.
-  image: assets/images/research/thermal.svg
+  image: assets/images/research/thermal-photonics.png
 
 - id: systems
   number: '04'
   title: Optical Systems
   short: Integrating optical design, simulation, and instrumentation into functional systems and applications.
   description: We bridge fundamental optical concepts with system-level implementation through optical design, numerical simulation, beam control, instrumentation, and system integration, with applications spanning biomedical imaging, sensing, and emerging optical technologies.
-  image: assets/images/research/systems.svg
+  image: assets/images/research/optical-systems.png
