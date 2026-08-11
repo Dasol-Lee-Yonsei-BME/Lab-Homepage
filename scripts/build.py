@@ -568,13 +568,14 @@ h = (
     head('Achievements', 'Achievements')
     + pagehero(
         'Achievements',
-        'Patents, awards & honors, conference activities, and invited talks of our laboratory.'
+        'Patents, awards & honors, conference activities, invited talks, and academic service of our laboratory.'
     )
     + '<main><div class="tabs achievement-tabs">'
       '<a class="tablink" href="#patents">Patents</a>'
       '<a class="tablink" href="#awards">Awards & Honors</a>'
       '<a class="tablink" href="#conferences">Conferences</a>'
       '<a class="tablink" href="#talks">Talks</a>'
+      '<a class="tablink" href="#academic-service">Academic Service</a>'
       '</div>'
 )
 
@@ -712,6 +713,21 @@ for a in ac.get('talks', []):
     )
     h += ach_record(a.get('date', a.get('year', '')), body)
 h += '</div></section>'
+
+# Academic Service
+service_items = ac.get('academic_service', [])
+if service_items:
+    h += '<section id="academic-service" class="achievement-section"><h2>Academic Service</h2>'
+    h += f'<div class="ach-group"><div class="ach-group-head"><h3>Principal Investigator</h3><span>{len(service_items)} records</span></div>'
+    for a in service_items:
+        detail = f'<p>{esc(a["detail"])}</p>' if a.get('detail') else ''
+        body = (
+            f'<h4>{esc(a.get("role", ""))}</h4>'
+            f'<p class="ach-people">{esc(a.get("event", ""))}</p>'
+            f'{detail}'
+        )
+        h += ach_record(a.get('date', a.get('year', '')), body)
+    h += '</div></section>'
 
 h += '</main>' + foot()
 (OUT / 'achievements.html').write_text(h, encoding='utf-8')
