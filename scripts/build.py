@@ -119,17 +119,27 @@ PUBLICATION_CSS = r'''
 .pub-journal .pub-issn { font-weight:600; opacity:.78; letter-spacing:0; }
 .pub-biblio { margin-top:8px; color:#778694; font-size:12px; line-height:1.45; }
 .pub-metrics { margin-top:10px; }
-.pub-placeholder {
-  width:100%; height:100%; min-height:170px; display:flex; flex-direction:column;
-  justify-content:flex-end; padding:20px; background:linear-gradient(145deg,#edf4f9,#dfeaf2);
-  color:var(--navy2); border-right:1px solid var(--line);
+.pub-card.no-image {
+  grid-template-columns:1fr;
+  min-height:0;
 }
-.pub-placeholder span { font-size:12px; letter-spacing:.14em; color:var(--blue); font-weight:800; }
-.pub-placeholder strong { margin-top:6px; font-size:17px; line-height:1.25; }
-.pub-placeholder small { margin-top:9px; font-size:10px; letter-spacing:.14em; color:#788894; }
+.pub-card.no-image .pub-copy {
+  padding:21px 22px 22px;
+}
+.pub-card.has-image {
+  grid-template-columns:190px minmax(0,1fr);
+}
+.pub-card.has-image > img {
+  min-height:190px;
+}
 @media (max-width:760px) {
   .pub-card.long-authors { grid-column:auto; }
-  .pub-placeholder { min-height:180px; border-right:0; border-bottom:1px solid var(--line); }
+  .pub-card.has-image { grid-template-columns:145px minmax(0,1fr); }
+  .pub-card.no-image { grid-template-columns:1fr; }
+}
+@media (max-width:520px) {
+  .pub-card.has-image { grid-template-columns:1fr; }
+  .pub-card.has-image > img { aspect-ratio:16/9; min-height:0; }
 }
 '''
 CSS += PUBLICATION_CSS
@@ -615,15 +625,10 @@ def publication_biblio(p):
 
 
 def publication_visual(p):
-    if p.get('image'):
-        return img(p['image'], p['title'])
-    return (
-        '<div class="pub-placeholder">'
-        f'<span>{esc(p["year"])}</span>'
-        f'<strong>{esc(p["journal"])}</strong>'
-        '<small>ARCHIVE IMAGE PLACEHOLDER</small>'
-        '</div>'
-    )
+    # Publication images are optional. If image is blank, no image column is rendered.
+    if not p.get('image'):
+        return ''
+    return img(p['image'], p['title'])
 
 
 legend = f'''<div class="pub-legend">
@@ -669,7 +674,10 @@ for y in PUBLICATION_YEARS:
                 'target="_blank" rel="noopener">VIEW PAPER &#8599;</a>'
             )
 
-        card_class = 'pub-card long-authors' if len(str(p.get('authors', ''))) > 420 else 'pub-card'
+        card_classes = ['pub-card', 'has-image' if p.get('image') else 'no-image']
+        if len(str(p.get('authors', ''))) > 420:
+            card_classes.append('long-authors')
+        card_class = ' '.join(card_classes)
 
         h += (
             f'<article class="{card_class}">'
