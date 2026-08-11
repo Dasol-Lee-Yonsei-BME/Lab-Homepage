@@ -18,9 +18,10 @@
 #   url: "https://doi.org/10.xxxx/xxxxx"
 # If url is empty, the VIEW PAPER button is hidden.
 #
-# News integration:
-#   highlight: true  -> automatically appears in the News page and Home Recent News.
-#   Optional news_title / news_summary can override the automatically generated News text.
+# News / Home integration:
+#   highlight: true       -> automatically appears in the News page and Home Recent News.
+#   home_highlight: true  -> appears in the Home Selected Highlights section (maximum 3 shown).
+#   The two flags are independent. Optional news_title / news_summary can override News text.
 #
 # JCR convention:
 #   jcr_year uses the preceding year's JCR for each publication year.
@@ -56,6 +57,7 @@
   url: ''
   image: assets/images/publications/2026-02.svg
   highlight: true
+  home_highlight: true
   impact_factor: 9.9
   jcr_percent: 1
   jcr_category: Instruments & Instrumentation
@@ -89,7 +91,7 @@
   date: 2026.04.01
   url: ''
   image: assets/images/publications/2026-04.svg
-  highlight: true
+  highlight: false
   impact_factor: 6.6
   jcr_percent: 15
   jcr_category: Optics
@@ -106,7 +108,7 @@
   date: 2026.03.19
   url: ''
   image: assets/images/publications/2026-05.svg
-  highlight: true
+  highlight: false
   impact_factor: 10.6
   jcr_percent: 7
   jcr_category: Optics
@@ -141,6 +143,7 @@
   url: ''
   image: assets/images/publications/2025-07.svg
   highlight: true
+  home_highlight: true
   impact_factor: 12.1
   jcr_percent: 8
   jcr_category: Physics, Applied
@@ -157,7 +160,7 @@
   date: 2025.10.24
   url: ''
   image: assets/images/publications/2025-08.svg
-  highlight: true
+  highlight: false
   impact_factor: 7.2
   jcr_percent: 12
   jcr_category: Optics
@@ -174,7 +177,7 @@
   date: 2025.07.21
   url: ''
   image: assets/images/publications/2025-09.svg
-  highlight: true
+  highlight: false
   impact_factor: 3.9
   jcr_percent: 18
   jcr_category: Multidisciplinary Sciences
@@ -191,7 +194,7 @@
   date: 2025.06.19
   url: ''
   image: assets/images/publications/2025-10.svg
-  highlight: true
+  highlight: false
   impact_factor: 4.2
   jcr_percent: 23
   jcr_category: Optics
@@ -208,7 +211,7 @@
   date: 2025.03.28
   url: ''
   image: assets/images/publications/2025-11.svg
-  highlight: true
+  highlight: false
   impact_factor: 16.1
   jcr_percent: 7
   jcr_category: Chemistry, Multidisciplinary
@@ -226,6 +229,7 @@
   url: ''
   image: assets/images/publications/2025-12.svg
   highlight: true
+  home_highlight: true
   impact_factor: 15.7
   jcr_percent: 7
   jcr_category: Multidisciplinary Sciences
@@ -259,7 +263,7 @@
   date: 2024.08.02
   url: ''
   image: assets/images/publications/2024-14.svg
-  highlight: true
+  highlight: false
   impact_factor: 15.7
   jcr_percent: 6
   jcr_category: Multidisciplinary Sciences
@@ -276,7 +280,7 @@
   date: 2024.07.11
   url: ''
   image: assets/images/publications/2024-15.svg
-  highlight: true
+  highlight: false
   impact_factor: 6.6
   jcr_percent: 12
   jcr_category: Optics
@@ -293,7 +297,7 @@
   date: 2024.03.12
   url: ''
   image: assets/images/publications/2024-16.svg
-  highlight: true
+  highlight: false
   impact_factor: 10.0
   jcr_percent: 7
   jcr_category: Optics
@@ -310,7 +314,7 @@
   date: 2024.01.19
   url: ''
   image: assets/images/publications/2024-17.svg
-  highlight: true
+  highlight: false
   impact_factor: 8.3
   jcr_percent: 15
   jcr_category: Materials Science, Multidisciplinary
@@ -327,7 +331,7 @@
   date: 2024.01.12
   url: ''
   image: assets/images/publications/2024-18.svg
-  highlight: true
+  highlight: false
   impact_factor: 14.1
   jcr_percent: 7
   jcr_category: Materials Science, Multidisciplinary
@@ -378,7 +382,7 @@
   date: '2023.01'
   url: ''
   image: assets/images/publications/2023-21.svg
-  highlight: true
+  highlight: false
   impact_factor: 8.2
   jcr_percent: 16
   jcr_category: Materials Science, Multidisciplinary
@@ -395,7 +399,7 @@
   date: '2023.01'
   url: ''
   image: assets/images/publications/2023-22.svg
-  highlight: true
+  highlight: false
   impact_factor: 10.0
   jcr_percent: 8
   jcr_category: Optics
@@ -531,7 +535,7 @@
   date: 2022.04.19
   url: ''
   image: assets/images/publications/2022-30.svg
-  highlight: true
+  highlight: false
   impact_factor: 15.7
   jcr_percent: 8
   jcr_category: Multidisciplinary Sciences
@@ -548,7 +552,7 @@
   date: 2022.01.10
   url: ''
   image: assets/images/publications/2022-31.svg
-  highlight: true
+  highlight: false
   impact_factor: 32.1
   jcr_percent: 2
   jcr_category: Optics
@@ -616,7 +620,7 @@
   date: 2021.09.01
   url: ''
   image: assets/images/publications/2021-34.svg
-  highlight: true
+  highlight: false
   impact_factor: 6.7
   jcr_percent: 10
   jcr_category: Optics
