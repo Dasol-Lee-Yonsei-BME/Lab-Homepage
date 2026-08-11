@@ -137,8 +137,8 @@ PUBLICATION_CSS = r'''
   min-height:0 !important;
   max-height:none !important;
   object-fit:contain !important;
-  object-position:top center;
-  align-self:start;
+  object-position:center center;
+  align-self:center;
   background:#fff;
 }
 @media (max-width:760px) {
