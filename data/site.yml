@@ -1,12 +1,13 @@
-lab_name: Bio-Nanophotonics System Laboratory
-short_name: BNSL
-korean_name: 바이오 나노포토닉스 시스템 연구실
+lab_name: System Optics Laboratory
+short_name: SOL
+korean_name: 시스템광학 연구실
 university: Yonsei University
 department: Department of Biomedical Engineering
 campus: Mirae Campus
-hero_title: Bio-Nanophotonics System Laboratory
-hero_lead: We explore next-generation bio-nanophotonics for imaging, sensing, thermal management, and optical systems.
-intro: The Bio-Nanophotonics System Laboratory (BNSL) at Yonsei University led by Prof. Dasol Lee investigates innovative next-generation research focusing on bio-nanophotonics. Our main research fields include nanophotonics-based imaging platforms, ultra-sensitive optical sensors, passive radiative cooling for biomedical thermal management, and advanced optical systems.
+hero_title: SOL
+hero)subtitle: System Optics Laboratory
+hero_lead: "Exploring new possibilities of light through imaging, sensing, and optical systems."
+intro: "System Optics Lab explores the science and engineering of light to create new ways of seeing, sensing, and interacting with the world. We develop optical technologies and systems across imaging, sensing, and thermal applications, with the goal of translating fundamental ideas into meaningful solutions for biomedical and emerging applications."
 email: dasol@yonsei.ac.kr
 phone: +82-33-760-2464
 address: Yonsei University Mirae Campus, Wonju, Republic of Korea
