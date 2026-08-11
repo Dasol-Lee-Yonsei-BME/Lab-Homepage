@@ -1,36 +1,48 @@
 - status: Ongoing
   title: 광 스핀 홀 효과 기반의 고감도 멀티모달 센서 개발
-  title_en: High-sensitivity multimodal sensor based on the spin Hall effect of light
-  agency: National Research Foundation of Korea · Excellent Young Researcher Program
+  title_en: ""
+  agency: 과학기술정보통신부 · 한국연구재단 · 우수신진연구
   period: 2025.03.01 – 2030.02.28
   area: sensing
   highlight: true
   highlight_order: 2
+
 - status: Ongoing
   title: 표적 깊이 적응형 Photobiomodulation 치료 플랫폼 개발 및 전임상 검증
-  title_en: Target-depth-adaptive photobiomodulation treatment platform and preclinical validation
-  agency: Gangwon RISE
+  title_en: ""
+  agency: 강원지역혁신중심 대학지원체계 (RISE)
   period: 2026.03.01 – 2027.02.28
   area: systems
   highlight: false
+
 - status: Completed
   title: 복사 냉각 기반의 웨어러블 두부 저온 요법 소재 개발
-  title_en: Wearable material for cranial hypothermia based on radiative cooling
-  agency: National Research Foundation of Korea · Basic Research
+  title_en: Development of wearable material for cranial hypothermia based on radiative cooling
+  agency: 과학기술정보통신부 · 한국연구재단 · 개인기초연구사업
   period: 2022.06.01 – 2025.02.28
   area: thermal
   highlight: false
+
 - status: Completed
   title: 광시야 내시경 적용을 위한 빔스티어링 기법 연구
-  title_en: Beam-steering methods for wide-field endoscopic applications
-  agency: Korea Institute of Science and Technology · Contract Research
+  title_en: ""
+  agency: 한국과학기술연구원 · 위탁연구과제
   period: 2024.01.01 – 2024.12.31
   area: systems
   highlight: false
+
 - status: Completed
   title: 바이오메디컬 이미징 응용을 위한 메타표면 기반의 소형화된 광 패턴 변조기 연구
-  title_en: Miniaturized metasurface light-pattern modulator for biomedical imaging
-  agency: Gangwon Regional Innovation Platform
+  title_en: Miniaturized light pattern modulator using metasurface for biomedical imaging application
+  agency: 과학기술정보통신부 · 한국연구재단 · 강원지역혁신플랫폼
   period: 2023.06.01 – 2023.12.31
   area: imaging
+  highlight: false
+
+- status: Completed
+  title: 나노포토닉스 시스템 기반의 초소형 고민감도 스마트 의료용 센서 개발
+  title_en: Nanophotonics system based ultracompact, high-sensitivity smart medical sensors
+  agency: 과학기술정보통신부 · 한국연구재단 · 강원지역혁신플랫폼
+  period: 2022.09.01 – 2023.02.28
+  area: sensing
   highlight: false
