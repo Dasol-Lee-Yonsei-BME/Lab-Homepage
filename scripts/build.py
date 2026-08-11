@@ -354,7 +354,8 @@ news_sorted = sorted(news_items, key=lambda n: n['_date_obj'], reverse=True)
 
 # Home Selected Highlights
 # `highlight: true` controls News integration for publications/projects.
-# `home_highlight: true` independently controls the three cards shown here.
+# `home_highlight: true` independently marks items as eligible for Home Highlights.
+# Eligible items are sorted by date, and only the latest three are displayed.
 hl = []
 for p in pubs:
     if p.get('home_highlight'):
@@ -364,16 +365,21 @@ for p in pubs:
             p['journal'],
             p.get('image', ''),
             f'publications.html#year-{p.get("year", "")}',
+            parse_news_date(p.get('date', p.get('year', ''))),
         ))
 for p in projs:
     if p.get('home_highlight'):
+        start_date = str(p.get('period', '')).split('–', 1)[0].split('-', 1)[0].strip()
         hl.append((
             'Research Project',
             p['title'],
             p['agency'],
             None,
             'research.html',
+            parse_news_date(start_date or p.get('year', '')),
         ))
+
+hl = sorted(hl, key=lambda item: item[5], reverse=True)[:3]
 
 
 # --------------------------------------------------
@@ -388,9 +394,9 @@ for x in r:
 h += '''</div></section><section class="section"><div class="section-head"><div><div class="label">Selected</div><h2>Highlights</h2></div></div><div class="highlights">'''
 
 if hl:
-    kind, title, meta, image, link = hl[0]
+    kind, title, meta, image, link, _date_obj = hl[0]
     h += f'''<a class="highlight-main" href="{href(link)}">{img(image, title) if image else ''}<div class="highlight-body"><div class="kicker">{esc(kind)}</div><h3>{esc(title)}</h3><p>{esc(meta)}</p></div></a><div class="highlight-side">'''
-    for kind, title, meta, image, link in hl[1:3]:
+    for kind, title, meta, image, link, _date_obj in hl[1:]:
         h += f'''<a class="highlight-small" href="{href(link)}"><div class="kicker">{esc(kind)}</div><h3>{esc(title)}</h3><p>{esc(meta)}</p></a>'''
     h += '</div>'
 
