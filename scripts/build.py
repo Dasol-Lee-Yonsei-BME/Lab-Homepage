@@ -113,6 +113,10 @@ PUBLICATION_CSS = r'''
 .pub-year { scroll-margin-top:105px; }
 .pub-card.long-authors { grid-column:1 / -1; }
 .pub-authors { line-height:1.55; }
+.pub-authors sup { font-size:.72em; line-height:0; vertical-align:super; margin-left:1px; }
+.pub-journal .pub-issn { font-weight:600; opacity:.78; letter-spacing:0; }
+.pub-biblio { margin-top:8px; color:#778694; font-size:12px; line-height:1.45; }
+.pub-metrics { margin-top:10px; }
 .pub-placeholder {
   width:100%; height:100%; min-height:170px; display:flex; flex-direction:column;
   justify-content:flex-end; padding:20px; background:linear-gradient(145deg,#edf4f9,#dfeaf2);
@@ -379,6 +383,10 @@ def format_authors(author_text):
             f'<span class="pi-author">{safe}</span>'
         )
 
+    # Author-role symbols are displayed as superscripts.
+    rendered = rendered.replace('†', '<sup>†</sup>')
+    rendered = rendered.replace('*', '<sup>*</sup>')
+
     return rendered
 
 
@@ -391,9 +399,24 @@ def publication_metrics(p):
     if p.get('jcr_category'):
         label = esc(p['jcr_category'])
         if p.get('jcr_year') not in (None, ''):
-            label += f' · {esc(p["jcr_year"])}'
+            label += f' / {esc(p["jcr_year"])}'
         chips.append(f'<span class="metric category">{label}</span>')
     return ''.join(chips)
+
+
+def publication_month(value):
+    text = str(value or '').strip()
+    if len(text) >= 7:
+        return text[:7]
+    return text or '-'
+
+
+def publication_biblio(p):
+    volume = str(p.get('volume') or '-').strip() or '-'
+    issue = str(p.get('issue') or '-').strip() or '-'
+    pages = str(p.get('pages') or '-').strip() or '-'
+    month = publication_month(p.get('date', ''))
+    return f'{esc(volume)}({esc(issue)}), {esc(pages)} · {esc(month)}'
 
 
 def publication_visual(p):
@@ -412,7 +435,6 @@ legend = f'''<div class="pub-legend">
 <span><strong>†</strong> First / co-first author</span>
 <span><strong>*</strong> Corresponding author</span>
 <span><span class="lab-author">Blue author</span> = {esc(SHORT_NAME)} student / alumnus</span>
-<span><span class="pi-author">Dasol Lee</span> = PI</span>
 </div>'''
 
 h = (
@@ -439,10 +461,11 @@ for y in PUBLICATION_YEARS:
     for p in year_pubs:
         metrics = publication_metrics(p)
         authors_html = format_authors(p.get('authors', ''))
-        citation = p.get('citation', '')
+        biblio_html = publication_biblio(p)
+
         journal_label = esc(p['journal'])
-        if citation:
-            journal_label += f' · {esc(citation)}'
+        if p.get('issn'):
+            journal_label += f' <span class="pub-issn">(ISSN {esc(p["issn"])})</span>'
 
         link_html = ''
         if p.get('url'):
@@ -460,8 +483,8 @@ for y in PUBLICATION_YEARS:
             f'<div class="pub-journal">{journal_label}</div>'
             f'<h3>{esc(p["title"])}</h3>'
             f'<div class="pub-authors">{authors_html}</div>'
+            f'<div class="pub-biblio">{biblio_html}</div>'
             f'<div class="pub-metrics">{metrics}</div>'
-            f'<div class="pub-date">{esc(p["date"])}</div>'
             f'{link_html}'
             '</div></article>'
         )
