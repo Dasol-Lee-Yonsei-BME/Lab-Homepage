@@ -7,16 +7,19 @@
 # The website automatically colors verified SOL students/alumni blue.
 # Dasol Lee (and D. Lee in older citation styles) is automatically bold + underlined.
 #
+# Bibliographic fields shown on each card:
+#   journal (ISSN)
+#   title
+#   authors
+#   volume(issue), pages · YYYY.MM
+# If an issue, volume, or page/article number is unavailable, use "-".
+#
 # Easy paper-link editing:
 #   url: "https://doi.org/10.xxxx/xxxxx"
 # If url is empty, the VIEW PAPER button is hidden.
 #
-# Image editing:
-#   image: "assets/images/publications/your-image.jpg"
-# If image is empty, the site automatically shows a neutral archive placeholder.
-#
 # JCR convention:
-#   jcr_year is stored as the preceding calendar year (paper year - 1).
+#   jcr_year uses the preceding year's JCR for each publication year.
 # ================================================================
 
 - id: 2026-01
@@ -24,7 +27,10 @@
   authors: Semere Araya Asefa†,*, Bibhatsu Kuiri, Dasol Lee
   title: Angularly tunable circular dichroism in a bilayer plasmonic metasurface via interlayer coupling
   journal: ACS Omega
-  citation: 11(19), 28053-28061
+  issn: 2470-1343
+  volume: '11'
+  issue: '19'
+  pages: 28053-28061
   date: 2026.05.06
   url: ''
   image: assets/images/publications/2026-01.svg
@@ -38,7 +44,10 @@
   authors: Changhwan Hyeon†, Han Lee, Woo-Seung Kim, So-Min Kim, Ki-Ju Kwon, Juhoon Baek, Minkyung Kim, Ki-Jong Rhee, Sunghee Hyun*, Dasol Lee*
   title: Multifunctional bilayer radiative cooling dressing for regenerative wound healing under heat stress
   journal: Microsystems & Nanoengineering
-  citation: 12, 128
+  issn: 2055-7434
+  volume: '12'
+  issue: '-'
+  pages: '128'
   date: 2026.04.13
   url: ''
   image: assets/images/publications/2026-02.svg
@@ -52,7 +61,10 @@
   authors: Harit Keawmuang†, Junkyeong Park, Heon Lee, Seokju Choi, Sunae So, Changhyeon Lim, Trevon Badloe, Changhwan Hyeon, Minseo Jeong, Dasol Lee, Ya Huang, Siming Zhao, Rufan Zhang, Juhoon Baek, Minkyung Kim, Fei Xie, Longnan Li, Wei Li, Xuzhe Zhao, Jiachen Li, Kaichen Dong, Saichao Dang, Qiaoqiang Gan, Shaowen Cao, Yi Long, Hyunkyu Kwak, Do Hyeon Kim, Young Min Song, Jung Bin Yang, Dong Rip Kim, Yansu Hou, Jia Zhu, Bin Zhu, Shengxi Bai, Kaixin Lin, Chi Yan Tso, Seonggon Kim, Yong Tae Kang, Qingsong Fan, Qizhang Li, Po-Chun Hsu, and Junsuk Rho*
   title: 'Recent advances in radiative cooling: From fundamentals to commercial applications (mega-review)'
   journal: ACS Applied Materials & Interfaces
-  citation: ''
+  issn: 1944-8252
+  volume: '-'
+  issue: '-'
+  pages: '-'
   date: 2026.04.12
   url: ''
   image: assets/images/publications/2026-03.svg
@@ -66,7 +78,10 @@
   authors: Seokgyu Kwon†, Minseo Jeong, Changhwan Hyeon, Juhoon Baek, Minkyung Kim*, Dasol Lee*
   title: Multifunctional nanofiber composites integrating pH-responsiveness and passive daytime radiative cooling
   journal: Nanophotonics
-  citation: 15(7), e70036
+  issn: 2192-8614
+  volume: '15'
+  issue: '7'
+  pages: e70036
   date: 2026.04.01
   url: ''
   image: assets/images/publications/2026-04.svg
@@ -80,7 +95,10 @@
   authors: Kyung-Hyun Yu†, Dasol Lee*
   title: Unveiling the local origin of circular dichroism in chiral metasurfaces (News & Views)
   journal: 'Light: Advanced Manufacturing'
-  citation: 7(23)
+  issn: 2831-4093
+  volume: '7'
+  issue: '23'
+  pages: '-'
   date: 2026.03.19
   url: ''
   image: assets/images/publications/2026-05.svg
@@ -94,7 +112,10 @@
   authors: Seokgyu Kwon†, Sangmin Shim†, Kyung-Hyun Yu, Myeongsu Seong*, Dasol Lee*
   title: Advances in electrospun nanofibers for biomedical engineering
   journal: Fibers and Polymers
-  citation: 27(2), 565-599
+  issn: 1875-0052
+  volume: '27'
+  issue: '2'
+  pages: 565-599
   date: '2026.02'
   url: ''
   image: assets/images/publications/2026-06.svg
@@ -108,7 +129,10 @@
   authors: Minseo Jeong†, Seokgyu Kwon, Changhwan Hyeon, Juhoon Baek, Myeongsu Seong, Minkyung Kim*, Dasol Lee*
   title: Hydrophobic radiative cooling using Zein-functionalized polyvinyl alcohol nanofibers with dielectric nanoparticles
   journal: Small
-  citation: 21(45), e07295
+  issn: 1613-6829
+  volume: '21'
+  issue: '45'
+  pages: e07295
   date: 2025.11.14
   url: ''
   image: assets/images/publications/2025-07.svg
@@ -122,7 +146,10 @@
   authors: Juhoon Baek†, Minseo Jeong†, Doyoon Lee, Huu Lam Phan*, Dasol Lee*, Minkyung Kim*
   title: A multilayer-based visibly transparent radiative cooler with enhanced solar selectivity
   journal: Advanced Optical Materials
-  citation: 13(30), e01509
+  issn: 2195-1071
+  volume: '13'
+  issue: '30'
+  pages: e01509
   date: 2025.10.24
   url: ''
   image: assets/images/publications/2025-08.svg
@@ -136,7 +163,10 @@
   authors: Sangmin Shim†, Kyung-Hyun Yu, Minkyung Kim*, Dasol Lee*
   title: Numerical demonstration of switchable binary-state metasurface for spin Hall effect of circularly polarized light
   journal: Scientific Reports
-  citation: 15, 26507
+  issn: 2045-2322
+  volume: '15'
+  issue: '-'
+  pages: '26507'
   date: 2025.07.21
   url: ''
   image: assets/images/publications/2025-09.svg
@@ -150,7 +180,10 @@
   authors: Changhwan Hyeon†, Minseo Jeong†, Seokgyu Kwon, Juhoon Baek, Myeongsu Seong, Minkyung Kim, Dasol Lee*
   title: Thermal protection of wearable devices under outdoor conditions using radiative cooling films
   journal: Optical Materials
-  citation: 167, 117258
+  issn: 1873-1252
+  volume: '167'
+  issue: '-'
+  pages: '117258'
   date: 2025.06.19
   url: ''
   image: assets/images/publications/2025-10.svg
@@ -164,7 +197,10 @@
   authors: Younghwan Yang, Youngsun Jeon, Zhaogang Dong, Joel K. W. Yang, Mahsa Haddadi Moghaddam, Dai Sik Kim, Dong Kyo Oh, Jihae Lee, Mario Hentschel, Harald Giessen, Dohyun Kang, Gyeongtae Kim, Takuo Tanaka, Yang Zhao, Johannes Bürger, Stefan A. Maier, Haoran Ren, Wooik Jung, Mansoo Choi, Gwangmin Bae, Haomin Chen, Seokwoo Jeon, Jaekyung Kim, Eunji Lee, Hyunjung Kang, Yujin Park, Dang Du Nguyen, Inki Kim, Pablo Cencilo-Abad, Debashis Chanda, Xinxin Jing, Na Liu, Irina V. Martynenko, Tim Liedl, Yuna Kwak, Jwa-Min Nam, Sang-Min Park, Teri W. Odom, Hye-Eun Lee, Ryeong Myeong Kim, Ki Tae Nam, Hyunah Kwon, Hyeon-Ho Jeong, Peer Fischer, Jiwon Yoon, Shin-Hyun Kim, Sangmin Shim, Dasol Lee, Luis A. Pérez, Xiaoyu Qi, Agustin Mihi, Hohyun Keum, Moonsub Shim, Seok Kim, Hanhwi Jang, Yeon Sik Jung, Christian Rossner, Tobias A. F. König, Andreas Fery, Zhiwei Li, Koray Aydin, Chad A. Mirkin, Junhwa Seong, Nara Jeon, Zhiyun Xu, Tian Gu, Juejun Hu, Hyunghan Kwon, Hojoong Jung, Hossein Alijan, Igor Aharonovich, Joohoon Kim, Junsuk Rho*
   title: Nanofabrication for nanophotonics (mega-review)
   journal: ACS Nano
-  citation: 19(13), 12491-12605
+  issn: 1936-086X
+  volume: '19'
+  issue: '13'
+  pages: 12491-12605
   date: 2025.03.28
   url: ''
   image: assets/images/publications/2025-11.svg
@@ -178,7 +214,10 @@
   authors: Jinkyeong Lee†, Jaekyung Kim†, Sangmin Shim†, Younghwan Yang, Jeonghoon Choi, Junsuk Rho*, Dasol Lee*, Minkyung Kim*
   title: Real-time observation of the spin Hall effect of light using metasurface-enabled single-shot weak measurements
   journal: Nature Communications
-  citation: 16, 2699
+  issn: 2041-1723
+  volume: '16'
+  issue: '-'
+  pages: '2699'
   date: 2025.03.19
   url: ''
   image: assets/images/publications/2025-12.svg
@@ -192,7 +231,10 @@
   authors: Semere Araya Asefa†, Myeongsu Seong*, Dasol Lee*
   title: Design of bilayer crescent chiral metasurfaces for enhanced chiroptical response
   journal: Sensors
-  citation: 25(3), 915
+  issn: 1424-8220
+  volume: '25'
+  issue: '3'
+  pages: '915'
   date: 2025.02.03
   url: ''
   image: assets/images/publications/2025-13.svg
@@ -206,7 +248,10 @@
   authors: Geon Lee†, Hyunjung Kang†, Jooyeong Yun†, Dongwoo Chae, Minsu Jeong, Minseo Jeong, Dasol Lee, Miso Kim, Heon Lee, and Junsuk Rho*
   title: Integrated triboelectric nanogenerator and radiative cooler for all-weather transparent glass surfaces
   journal: Nature Communications
-  citation: 15, 6537
+  issn: 2041-1723
+  volume: '15'
+  issue: '-'
+  pages: '6537'
   date: 2024.08.02
   url: ''
   image: assets/images/publications/2024-14.svg
@@ -220,7 +265,10 @@
   authors: Jeonghoon Choi†, Sangmin Shim, Yeseul Kim, Peng Tang, Guoqiang Li, Junsuk Rho, Dasol Lee*, Minkyung Kim*
   title: Experimental observation of the spin Hall effect of light using compact weak measurement
   journal: Nanophotonics
-  citation: 13(20), 3877-3882
+  issn: 2192-8614
+  volume: '13'
+  issue: '20'
+  pages: 3877-3882
   date: 2024.07.11
   url: ''
   image: assets/images/publications/2024-15.svg
@@ -234,7 +282,10 @@
   authors: Minkyung Kim†,*, Dasol Lee*, Jaekyung Kim, Junsuk Rho
   title: Nonlocal metasurfaces-enabled analog light localization for imaging and lithography
   journal: Laser & Photonics Reviews
-  citation: 18(7), 2300718
+  issn: 1863-8899
+  volume: '18'
+  issue: '7'
+  pages: '2300718'
   date: 2024.03.12
   url: ''
   image: assets/images/publications/2024-16.svg
@@ -248,7 +299,10 @@
   authors: Myeongcheol Go†, Inju Hong†, Dasol Lee†, Sanghun Kim, Junho Jang, Keon-Woo Kim, Sangmin Shim, Kijung Yong*, Junsuk Rho*, Jin Kon Kim*
   title: Ultrabroadband absorptive refractory plasmonics for photocatalytic hydrogen evolution reactions
   journal: NPG Asia Materials
-  citation: 16, 4
+  issn: 1884-4057
+  volume: '16'
+  issue: '-'
+  pages: '4'
   date: 2024.01.19
   url: ''
   image: assets/images/publications/2024-17.svg
@@ -262,7 +316,10 @@
   authors: Sunae So†, Jooyeong Yun†, Byoungsu Ko†, Dasol Lee†, Minkyung Kim, Jaebum Noh, Cherry Park, Junkyeong Park, Junsuk Rho*
   title: 'Radiative cooling for energy sustainability: From fundamentals to fabrication methods towards commercialization'
   journal: Advanced Science
-  citation: 11(2), 2305067
+  issn: 2198-3844
+  volume: '11'
+  issue: '2'
+  pages: '2305067'
   date: 2024.01.12
   url: ''
   image: assets/images/publications/2024-18.svg
@@ -276,7 +333,10 @@
   authors: Dasol Lee†,*, Seokgyu Kwon, Minkyung Kim*
   title: 'ViBA Rad: Visualization and basic analysis tools for radiative cooling'
   journal: SoftwareX
-  citation: 24, 101562
+  issn: 2352-7110
+  volume: '24'
+  issue: '-'
+  pages: '101562'
   date: '2023.12'
   url: ''
   image: assets/images/publications/2023-19.svg
@@ -290,7 +350,10 @@
   authors: Semere Araya Asefa†, Sangmin Shim, Myeongsu Seong*, Dasol Lee*
   title: 'Chiral metasurfaces: a review of the fundamentals and research advances'
   journal: Applied Sciences
-  citation: 13(19), 10590
+  issn: 2076-3417
+  volume: '13'
+  issue: '19'
+  pages: '10590'
   date: 2023.09.22
   url: ''
   image: assets/images/publications/2023-20.svg
@@ -304,7 +367,10 @@
   authors: Myeongcheol Go†, Dasol Lee†, Sanghoon Kim, Junho Jang, Keon-Woo Kim, Jaeyong Lee, Sangmin Shim, Jin Kon Kim*, Junsuk Rho*
   title: Facile fabrication of titanium nitride nanoring broadband absorbers in the visible to near-infrared by shadow sphere lithography
   journal: ACS Applied Materials & Interfaces
-  citation: 15(2), 3266-3273
+  issn: 1944-8252
+  volume: '15'
+  issue: '2'
+  pages: 3266-3273
   date: '2023.01'
   url: ''
   image: assets/images/publications/2023-21.svg
@@ -318,7 +384,10 @@
   authors: Minkyung Kim†, Younghwan Yang†, Dasol Lee†, Yeseul Kim, Junsuk Rho*
   title: 'Spin Hall effect of light: fundamentals to recent advancements'
   journal: Laser & Photonics Reviews
-  citation: 17(1), 2200046
+  issn: 1863-8899
+  volume: '17'
+  issue: '1'
+  pages: '2200046'
   date: '2023.01'
   url: ''
   image: assets/images/publications/2023-22.svg
@@ -332,7 +401,10 @@
   authors: Minkyung Kim†, Dasol Lee*
   title: Strengthened spin Hall effect of circularly polarized light enabled by a single layered dielectric metasurface
   journal: Materials
-  citation: 16(1), 283
+  issn: 1996-1944
+  volume: '16'
+  issue: '1'
+  pages: '283'
   date: '2023.01'
   url: ''
   image: assets/images/publications/2023-23.svg
@@ -346,7 +418,10 @@
   authors: Minkyung Kim†,*, Dasol Lee
   title: Revealing a one-dimensional optically cloaked surface using spin Hall effect of light
   journal: Optics Express
-  citation: 30(25), 45130-45142
+  issn: 1094-4087
+  volume: '30'
+  issue: '25'
+  pages: 45130-45142
   date: 2022.12.05
   url: ''
   image: assets/images/publications/2022-24.svg
@@ -360,7 +435,10 @@
   authors: Minkyung Kim†, Dasol Lee, Yeseul Kim, Junsuk Rho*
   title: Nanophotonic-assisted precision enhancement of weak measurement using spin Hall effect of light
   journal: Nanophotonics
-  citation: 11(20), 4591-4600
+  issn: 2192-8614
+  volume: '11'
+  issue: '20'
+  pages: 4591-4600
   date: '2022.09'
   url: ''
   image: assets/images/publications/2022-25.svg
@@ -374,7 +452,10 @@
   authors: Minkyung Kim†, Dasol Lee, Junsuk Rho*
   title: Incident-polarization-independent spin Hall effect of light reaching half beam waist
   journal: Laser & Photonics Reviews
-  citation: 16(6), 2100510
+  issn: 1863-8899
+  volume: '16'
+  issue: '6'
+  pages: '2100510'
   date: '2022.06'
   url: ''
   image: assets/images/publications/2022-26.svg
@@ -388,7 +469,10 @@
   authors: Dongwoo Chae†, Minkyung Kim, Hangyu Lim, Dasol Lee, Soomin Son, Jisung Ha, Junsuk Rho*, Heon Lee*
   title: Selectively emissive fluoropolymer film for passive daytime radiative cooling
   journal: Optical Materials
-  citation: 128, 112273
+  issn: 1873-1252
+  volume: '128'
+  issue: '-'
+  pages: '112273'
   date: '2022.06'
   url: ''
   image: assets/images/publications/2022-27.svg
@@ -402,7 +486,10 @@
   authors: Minkyung Kim†, Dasol Lee, Yeseul Kim, Junsuk Rho*
   title: 'Generalized analytic formula of the spin Hall effect of light: shift enhancement and interface-independence'
   journal: Nanophotonics
-  citation: 11(11), 2803-2809
+  issn: 2192-8614
+  volume: '11'
+  issue: '11'
+  pages: 2803-2809
   date: 2022.05.19
   url: ''
   image: assets/images/publications/2022-28.svg
@@ -416,7 +503,10 @@
   authors: Sunae So†, Younghwan Yang†, Soomin Son†, Dasol Lee, Dongwoo Chae, Heon Lee*, Junsuk Rho*
   title: Highly suppressed solar absorption in daytime radiative cooler designed by genetic algorithm
   journal: Nanophotonics
-  citation: 11(9), 2107-2115
+  issn: 2192-8614
+  volume: '11'
+  issue: '9'
+  pages: 2107-2115
   date: '2022.05'
   url: ''
   image: assets/images/publications/2022-29.svg
@@ -430,7 +520,10 @@
   authors: Minkyung Kim†, Dasol Lee†, Younghwan Yang†, Yeseul Kim, Junsuk Rho*
   title: Reaching the highest efficiency of spin Hall effect of light in the near-infrared using all-dielectric metasurfaces
   journal: Nature Communications
-  citation: 13, 2036
+  issn: 2041-1723
+  volume: '13'
+  issue: '-'
+  pages: '2036'
   date: 2022.04.19
   url: ''
   image: assets/images/publications/2022-30.svg
@@ -444,7 +537,10 @@
   authors: Dasol Lee†, Sunae So†, Guangwei Hu†, Minkyung Kim, Trevon Badloe, Hanlyun Cho, Jaekyung Kim, Hongyoon Kim, Cheng- Wei Qiu*, Junsuk Rho*
   title: 'Hyperbolic metamaterials: fusing artificial structures to natural 2D materials'
   journal: eLight
-  citation: 2, 1
+  issn: 2662-8643
+  volume: '2'
+  issue: '-'
+  pages: '1'
   date: 2022.01.10
   url: ''
   image: assets/images/publications/2022-31.svg
@@ -458,7 +554,10 @@
   authors: Hanlyun Cho†, Younghwan Yang, Dasol Lee, Sunae So, Junsuk Rho*
   title: Experimental demonstration of broadband negative refraction at visible frequencies by critical layer thickness analysis in a vertical hyperbolic metamaterial
   journal: Nanophotonics
-  citation: 10(15), 3871-3877
+  issn: 2192-8614
+  volume: '10'
+  issue: '15'
+  pages: 3871-3877
   date: '2021.11'
   url: ''
   image: assets/images/publications/2021-32.svg
@@ -472,7 +571,10 @@
   authors: I. Kim†, H. Jeong†, J. Kim, Y. Yang, D. Lee, T. Badloe, G. Kim, J. Rho*
   title: Dual-band operating metaholograms with heterogeneous meta-atoms in the visible and near-infrared
   journal: Advanced Optical Materials
-  citation: 9(19), 2100609
+  issn: 2195-1071
+  volume: '9'
+  issue: '19'
+  pages: '2100609'
   date: '2021.10'
   url: ''
   image: ''
@@ -486,7 +588,10 @@
   authors: Dasol Lee†, Minkyung Kim†, Junsuk Rho*
   title: 'Next-generation imaging techniques: functional and miniaturized optical lenses based on metamaterials and metasurfaces'
   journal: Micromachines
-  citation: 12(10), 1142
+  issn: 2072-666X
+  volume: '12'
+  issue: '10'
+  pages: '1142'
   date: 2021.09.23
   url: ''
   image: assets/images/publications/2021-33.svg
@@ -500,7 +605,10 @@
   authors: Minkyung Kim†, Dasol Lee†, Thi Hai-Yen Nguyen, Hee-Jo Lee, Gangil Byun, Junsuk Rho*
   title: Total reflection-induced efficiency enhancement of the spin Hall effect of light
   journal: ACS Photonics
-  citation: 8(9), 2705-2712
+  issn: 2330-4022
+  volume: '8'
+  issue: '9'
+  pages: 2705-2712
   date: 2021.09.01
   url: ''
   image: assets/images/publications/2021-34.svg
@@ -514,7 +622,10 @@
   authors: Y. Yang†, T. Lee†, M. Kim, C. Jung, T. Badloe, D. Lee, S. Lee, H. -J. Lee, J. Rho*
   title: Dynamic optical spin Hall effect in chitosan-coated all-dielectric metamaterials for a biosensing platform
   journal: IEEE Journal of Selected Topics in Quantum Electronics
-  citation: 27(5), 7300608
+  issn: 1558-4542
+  volume: '27'
+  issue: '5'
+  pages: '7300608'
   date: '2021.09'
   url: ''
   image: ''
@@ -528,7 +639,10 @@
   authors: M. Kim†, D. Lee†, S. Son†, Y. Yang, H. Lee*, J. Rho*
   title: Visibly transparent radiative cooler under direct sunlight
   journal: Advanced Optical Materials
-  citation: 9(13), 2002226
+  issn: 2195-1071
+  volume: '9'
+  issue: '13'
+  pages: '2002226'
   date: 2021.07.05
   url: ''
   image: ''
@@ -542,7 +656,10 @@
   authors: M. Kim, D. Lee, J. Rho*
   title: Spin Hall effect under arbitrarily polarized or unpolarized light
   journal: Laser & Photonics Reviews
-  citation: 15, 2100138
+  issn: 1863-8899
+  volume: '15'
+  issue: '-'
+  pages: '2100138'
   date: 2021.07.01
   url: ''
   image: ''
@@ -556,7 +673,10 @@
   authors: D. Lee†, M. Kim†, J. Lee, B. Ko, H. J. Park*, J. Rho*
   title: Angular selection of transmitted light and enhanced spontaneous emission in grating-coupled hyperbolic metamaterials
   journal: Optics Express
-  citation: 29(14), 21458-21472
+  issn: 1094-4087
+  volume: '29'
+  issue: '14'
+  pages: 21458-21472
   date: 2021.06.23
   url: ''
   image: ''
@@ -570,7 +690,10 @@
   authors: S. So†, D. Lee†, T. Badloe†, J. Rho*
   title: Inverse design of ultra-narrowband selective thermal emitters designed by artificial neural networks
   journal: Optical Materials Express
-  citation: 11(7), 1863-1873
+  issn: 2159-3930
+  volume: '11'
+  issue: '7'
+  pages: 1863-1873
   date: 2021.06.02
   url: ''
   image: ''
@@ -584,7 +707,10 @@
   authors: M. Kim†, D. Lee†, Y. Yang, J. Rho*
   title: Switchable diurnal radiative cooling by doped VO2
   journal: Opto-Electronic Advances
-  citation: 4(5), 200006
+  issn: 2097-3993
+  volume: '4'
+  issue: '5'
+  pages: '200006'
   date: 2021.05.20
   url: ''
   image: ''
@@ -598,7 +724,10 @@
   authors: D. Lee†, M. Go†, M. Kim, J. Jang, C. Choi, J. K. Kim*, J. Rho*
   title: Multiple-patterning colloidal lithography-implemented scalable manufacturing of heat-tolerant titanium nitride broadband absorbers in the visible to near-infrared
   journal: Microsystems & Nanoengineering
-  citation: 7(1), 14
+  issn: 2055-7434
+  volume: '7'
+  issue: '1'
+  pages: '14'
   date: 2021.03.02
   url: ''
   image: ''
@@ -612,7 +741,10 @@
   authors: M. Kim†, D. Lee†, H. Cho†, B. Min*, J. Rho*
   title: Spin Hall effect of light with near-unity efficiency in the microwave
   journal: Laser & Photonics Reviews
-  citation: 15(2), 2000393
+  issn: 1863-8899
+  volume: '15'
+  issue: '2'
+  pages: '2000393'
   date: '2021.02'
   url: ''
   image: ''
@@ -626,7 +758,10 @@
   authors: D. Lee†, M. Go†, S. Son†, M. Kim, T. Badloe, H. Lee*, J. K. Kim*, J. Rho*
   title: Sub-ambient daytime radiative cooling by silica-coated porous anodic aluminum oxide
   journal: Nano Energy
-  citation: 79, 105426
+  issn: 2211-3282
+  volume: '79'
+  issue: '-'
+  pages: '105426'
   date: '2021.01'
   url: ''
   image: ''
@@ -640,7 +775,10 @@
   authors: I. Kim, D. Lee, J. Rho*
   title: Demonstration of spin-multiplexed and direction-multiplexed all-dielectric visible metaholograms
   journal: Journal of Visualized Experiments
-  citation: 163, e61334
+  issn: 1940-087X
+  volume: '163'
+  issue: '-'
+  pages: e61334
   date: '2020.09'
   url: ''
   image: ''
@@ -654,7 +792,10 @@
   authors: M. Kim†, D. Lee†, B. Ko, J. Rho*
   title: Diffraction-induced enhancement of optical spin Hall effect in a dielectric grating
   journal: APL Photonics
-  citation: 5(6), 066106
+  issn: 2378-0967
+  volume: '5'
+  issue: '6'
+  pages: '066106'
   date: 2020.06.01
   url: ''
   image: ''
@@ -668,7 +809,10 @@
   authors: D. Lee†, J. Gwak†, T. Badloe, S. Palomba, J. Rho*
   title: 'Metasurfaces-based imaging and applications: from miniaturized optical components to functional imaging platforms'
   journal: Nanoscale Advances
-  citation: 2(2), 605-625
+  issn: 2516-0230
+  volume: '2'
+  issue: '2'
+  pages: 605-625
   date: 2020.02.01
   url: ''
   image: ''
@@ -682,7 +826,10 @@
   authors: G. Yoon†, J. Kim†, J. Mun, D. Lee, K. T. Nam, J. Rho*
   title: Wavelength-decoupled geometric metasurfaces by arbitrary dispersion control
   journal: Communications Physics
-  citation: 2, 129
+  issn: 2399-3650
+  volume: '2'
+  issue: '-'
+  pages: '129'
   date: 2019.10.18
   url: ''
   image: ''
@@ -696,7 +843,10 @@
   authors: M. Kim†, D. Lee†, T. H. Kim, Y. Yang, H. J. Park, J. Rho*
   title: Observation of enhanced optical spin Hall effect in a vertical hyperbolic metamaterial
   journal: ACS Photonics
-  citation: 6(10), 2530-2536
+  issn: 2330-4022
+  volume: '6'
+  issue: '10'
+  pages: 2530-2536
   date: '2019.10'
   url: ''
   image: ''
@@ -710,7 +860,10 @@
   authors: M. Kim†, W. Gao†, D. Lee, T. Ha, T. Kim, S. Zhang, J. Rho*
   title: Extremely broadband topological surface states in a photonic topological metamaterial
   journal: Advanced Optical Materials
-  citation: 7(20), 1900900
+  issn: 2195-1071
+  volume: '7'
+  issue: '20'
+  pages: '1900900'
   date: '2019.10'
   url: ''
   image: ''
@@ -724,7 +877,10 @@
   authors: D. Lee, Y. Yang, G. Yoon, M. Kim, J. Rho*
   title: Resolution enhancement of fluorescence microscopy using encoded patterns from all-dielectric metasurfaces
   journal: Applied Physics Letters
-  citation: 115(10), 101102
+  issn: 1077-3118
+  volume: '115'
+  issue: '10'
+  pages: '101102'
   date: 2019.09.02
   url: ''
   image: ''
@@ -738,7 +894,10 @@
   authors: D. Lee, M. Kim, J. Kim, H. Hong, T. Badloe, D. S. Kim, J. Rho*
   title: All-dielectric metasurface imaging platform applicable to laser scanning microscopy with enhanced axial resolution and wavelength selection
   journal: Optical Materials Express
-  citation: 9(8), 3248-3259
+  issn: 2159-3930
+  volume: '9'
+  issue: '8'
+  pages: 3248-3259
   date: 2019.08.01
   url: ''
   image: ''
@@ -752,7 +911,10 @@
   authors: M. Kim, D. Lee, D. Lee, J. Rho*
   title: Topologically nontrivial photonic nodal surface in a photonic metamaterial
   journal: Physical Review B
-  citation: 99(23), 235423
+  issn: 2469-9969
+  volume: '99'
+  issue: '23'
+  pages: '235423'
   date: 2019.06.20
   url: ''
   image: ''
@@ -766,7 +928,10 @@
   authors: G. Yoon, D. Lee, J. Rho*
   title: Demonstration of equal-intensity beam generation by dielectric metasurfaces
   journal: Journal of Visualized Experiments
-  citation: 148, e59066
+  issn: 1940-087X
+  volume: '148'
+  issue: '-'
+  pages: e59066
   date: '2019.06'
   url: ''
   image: ''
@@ -780,7 +945,10 @@
   authors: J. Mun†, D. Lee†, S. So†, T. Badloe, J. Rho*
   title: 'Surface-enhanced spectroscopy: Toward practical analysis probe'
   journal: Applied Spectroscopy Reviews
-  citation: 54(2), 142-175
+  issn: 1520-569X
+  volume: '54'
+  issue: '2'
+  pages: 142-175
   date: '2019.06'
   url: ''
   image: ''
@@ -794,7 +962,10 @@
   authors: M. A. Ansari†, I. Kim†, D. Lee, M. H. Waseem, M. Zubair, N. Mahmood, T. Badloe, S. Yerci*, T. Tauqeer*, M. Q. Mehmood*, J. Rho*
   title: A spin-encoded all-dielectric metahologram for visible light
   journal: Laser and Photonics Reviews
-  citation: 13(5), 1900065
+  issn: 1863-8899
+  volume: '13'
+  issue: '5'
+  pages: '1900065'
   date: '2019.05'
   url: ''
   image: ''
@@ -808,7 +979,10 @@
   authors: B. Ko, D. Lee, T. Badloe, J. Rho*
   title: 'Metamaterial-based radiative cooling: Towards energy free all-day cooling'
   journal: Energies
-  citation: 12(1), 89
+  issn: 1996-1073
+  volume: '12'
+  issue: '1'
+  pages: '89'
   date: 2019.01.01
   url: ''
   image: ''
@@ -822,7 +996,10 @@
   authors: N. Mahmood†, I. Kim†, M. Q. Mehmood†, H. Jeong†, A. Akbar, D. Lee, M. Saleem, M. Zubair, M. S. Anwar*, F. A. Tahir*, J. Rho*
   title: Polarisation insensitive multifunctional metasurfaces based on all-dielectric nanowaveguides
   journal: Nanoscale
-  citation: 10(38), 18323-18330
+  issn: 2040-3372
+  volume: '10'
+  issue: '38'
+  pages: 18323-18330
   date: 2018.10.14
   url: ''
   image: ''
@@ -836,7 +1013,10 @@
   authors: D. Lee, S. Y. Han, Y. Jung, D. M. Nguyen, G. Yoon, J. Mun, J. Chae, J. H. Lee, J. G. Ok, G. Y. Jung, H. J. Park, K. Kim*, J. Rho*
   title: Polarization-sensitive tunable absorber in visible and near-infrared regimes
   journal: Scientific Reports
-  citation: 8, 12393
+  issn: 2045-2322
+  volume: '8'
+  issue: '-'
+  pages: '12393'
   date: 2018.08.17
   url: ''
   image: ''
@@ -850,7 +1030,10 @@
   authors: G. Yoon, D. Lee, K. T. Nam, J. Rho*
   title: Crypto-display in dual-mode metasurfaces by simultaneous control of phase and spectral responses
   journal: ACS Nano
-  citation: 12(7), 6421-6428
+  issn: 1936-086X
+  volume: '12'
+  issue: '7'
+  pages: 6421-6428
   date: '2018.07'
   url: ''
   image: ''
@@ -864,7 +1047,10 @@
   authors: D. Lee†, Y. D. Kim†, M. Kim, S. So, H.-J. Choi, J. Mun, D. M. Nguyen, T. Badloe, J. Ok, K. Kim, H. Lee*, J. Rho*
   title: Realization of wafer-scale hyperlens device for sub-diffractional biomolecular imaging
   journal: ACS Photonics
-  citation: 5(7), 2549-2554
+  issn: 2330-4022
+  volume: '5'
+  issue: '7'
+  pages: 2549-2554
   date: '2018.07'
   url: ''
   image: ''
@@ -878,7 +1064,10 @@
   authors: G. Yoon, D. Lee, K. T. Nam, J. Rho*
   title: Geometric metasurface enabling polarization independent beam splitting
   journal: Scientific Reports
-  citation: 8, 9468
+  issn: 2045-2322
+  volume: '8'
+  issue: '-'
+  pages: '9468'
   date: 2018.06.21
   url: ''
   image: ''
@@ -892,7 +1081,10 @@
   authors: M. Kim†, I. Kim†, J. Jang†, D. Lee, K. T. Nam, J. Rho*
   title: Active color control in a metasurface by polarization rotation
   journal: Applied Sciences
-  citation: 8(6), 982
+  issn: 2076-3417
+  volume: '8'
+  issue: '6'
+  pages: '982'
   date: '2018.06'
   url: ''
   image: ''
@@ -906,7 +1098,10 @@
   authors: G. Yoon, D. Lee, K. T. Nam, J. Rho*
   title: 'Pragmatic metasurface hologram at visible wavelength: the balance between diffraction efficiency and fabrication compatibility'
   journal: ACS Photonics
-  citation: 5(5), 1643-1647
+  issn: 2330-4022
+  volume: '5'
+  issue: '5'
+  pages: 1643-1647
   date: '2018.05'
   url: ''
   image: ''
@@ -920,7 +1115,10 @@
   authors: S. So†, M. Kim†, D. Lee†, D. M. Nguyen, J. Rho*
   title: 'Overcoming diffraction limit: From microscopy to nanoscopy'
   journal: Applied Spectroscopy Reviews
-  citation: 53(2-4), 290-312
+  issn: 1520-569X
+  volume: '53'
+  issue: 2-4
+  pages: 290-312
   date: '2018.03'
   url: ''
   image: ''
@@ -934,7 +1132,10 @@
   authors: Z. Li†, I. Kim†, L. Zhang†, M. Q. Mehmood†, S. Anwar, M. Saleem, D. Lee, K. T. Nam, S. Zhang, B. Luk’yanchuk, G. Zhang*, J. Rho*, C.-W. Qiu*
   title: Dielectric meta-holograms enabled with dual magnetic resonances in visible light
   journal: ACS Nano
-  citation: 11(9), 9382-9389
+  issn: 1936-086X
+  volume: '11'
+  issue: '9'
+  pages: 9382-9389
   date: '2017.09'
   url: ''
   image: ''
@@ -948,7 +1149,10 @@
   authors: D. Lee†, M. Kim†, S. So†, I. Kim, G. Yoon, K. Kim, J. Rho*
   title: Demonstration of a hyperlens-integrated microscope and super-resolution imaging
   journal: Journal of Visualized Experiments
-  citation: 127, e55968
+  issn: 1940-087X
+  volume: '127'
+  issue: '-'
+  pages: e55968
   date: '2017.09'
   url: ''
   image: ''
@@ -962,7 +1166,10 @@
   authors: S. A. Jalil, M. Akram, G. Yoon, A. Khalid, D. Lee, N. Raeis-Hosseini, S. So, I. Kim, Q. S. Ahmed, J. Rho*, M. Q. Mehmood*
   title: High refractive index Ti3O5 films for dielectric metasurfaces
   journal: Chinese Physics Letters
-  citation: 34(8), 088102
+  issn: 1741-3540
+  volume: '34'
+  issue: '8'
+  pages: 088102
   date: '2017.07'
   url: ''
   image: ''
@@ -976,7 +1183,10 @@
   authors: D. M. Nguyen, D. Lee, J. Rho*
   title: Control of light absorbance using plasmonic grating based perfect absorber at visible and near-infrared wavelengths
   journal: Scientific Reports
-  citation: 7, 2611
+  issn: 2045-2322
+  volume: '7'
+  issue: '-'
+  pages: '2611'
   date: 2017.06.01
   url: ''
   image: ''
@@ -990,7 +1200,10 @@
   authors: M. Byun†, D. Lee†, M. Kim, Y. D. Kim, K. Kim, J. Ok, J. Rho*, H. Lee*
   title: Demonstration of nanoimprinted hyperlens array for high-throughput sub-diffraction imaging
   journal: Scientific Reports
-  citation: 7, 46314
+  issn: 2045-2322
+  volume: '7'
+  issue: '-'
+  pages: '46314'
   date: 2017.04.10
   url: ''
   image: ''
@@ -1004,7 +1217,10 @@
   authors: Y. Ryu†, Y. Shin†, D. Lee, J. Y. Altarejos, E. Chung*, H.-S. Kwon*
   title: Lensed fiber-optic probe design for efficient photon collection in scattering media
   journal: Biomedical Optics Express
-  citation: 6(1), 191-210
+  issn: 2156-7085
+  volume: '6'
+  issue: '1'
+  pages: 191-210
   date: 2015.01.01
   url: ''
   image: ''
