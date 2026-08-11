@@ -131,6 +131,45 @@ PUBLICATION_CSS = r'''
 }
 '''
 CSS += PUBLICATION_CSS
+# Achievements-page refinements. Kept here so the update only requires
+# scripts/build.py and data/achievements.yml.
+ACHIEVEMENTS_CSS = r'''
+.achievement-tabs { margin-bottom: 54px; }
+.achievement-tabs .tablink { text-decoration:none; transition:.18s ease; }
+.achievement-tabs .tablink:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
+.achievement-section { scroll-margin-top:105px; margin-bottom:96px; }
+.achievement-section > h2 { margin-bottom:30px; }
+.ach-group { margin-top:42px; }
+.ach-group:first-of-type { margin-top:26px; }
+.ach-group-head { display:flex; align-items:flex-end; justify-content:space-between; gap:18px; margin-bottom:10px; }
+.ach-group-head h3 { margin:0; color:var(--navy2); font-size:23px; line-height:1.25; }
+.ach-group-head span { color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.ach-subgroup { margin:24px 0 8px; color:var(--blue); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.ach-record { display:grid; grid-template-columns:125px minmax(0,1fr); gap:26px; padding:20px 0; border-bottom:1px solid var(--line); }
+.ach-date { color:var(--blue); font-weight:800; font-size:13px; line-height:1.45; white-space:nowrap; }
+.ach-record h4 { margin:0 0 6px; color:var(--ink); font-size:17px; line-height:1.4; }
+.ach-record p { margin:3px 0; color:var(--muted); font-size:13px; line-height:1.55; }
+.ach-secondary { color:#697b89 !important; font-style:italic; }
+.ach-people { color:#425563 !important; }
+.ach-meta { display:flex; flex-wrap:wrap; gap:7px 12px; align-items:center; margin-top:8px !important; }
+.ach-badge { display:inline-block; padding:4px 8px; border:1px solid #ccd8e1; background:#f8fbfd; color:var(--navy2); font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.ach-badge.pending { color:#76520d; background:#fffaf0; border-color:#e8d7ad; }
+.ach-badge.registered { color:#205f45; background:#f3faf6; border-color:#bed9cb; }
+.ach-badge.international { color:#285a8a; background:#f3f8fd; border-color:#bfd1e4; }
+.ach-note { margin-top:8px !important; color:#725615 !important; font-weight:700; }
+.ach-link { display:inline-block; margin-top:8px; color:var(--blue); font-size:12px; font-weight:800; text-decoration:none; }
+.ach-link:hover { text-decoration:underline; }
+.tech-transfer { margin-top:56px; padding-top:28px; border-top:1px solid #9aacbb; }
+.tech-transfer h3 { margin:0 0 10px; color:var(--navy2); font-size:23px; }
+@media (max-width:760px) {
+  .achievement-section { margin-bottom:72px; }
+  .ach-group-head { display:block; }
+  .ach-group-head span { display:block; margin-top:6px; }
+  .ach-record { grid-template-columns:1fr; gap:7px; padding:18px 0; }
+  .ach-date { white-space:normal; }
+}
+'''
+CSS += ACHIEVEMENTS_CSS
 
 
 def img(path, alt=''):
@@ -505,30 +544,174 @@ h += '</main>' + foot()
 # --------------------------------------------------
 
 ac = D['achievements']
+
+
+def ach_link(url, label='View link'):
+    if not url:
+        return ''
+    return (
+        f'<a class="ach-link" href="{href(url)}" target="_blank" '
+        f'rel="noopener">{esc(label)} &#8599;</a>'
+    )
+
+
+def ach_record(date, body):
+    return (
+        '<div class="ach-record">'
+        f'<div class="ach-date">{esc(date)}</div>'
+        f'<div>{body}</div>'
+        '</div>'
+    )
+
+
 h = (
     head('Achievements', 'Achievements')
     + pagehero(
         'Achievements',
-        'Patents, awards & honors, and conference activities of our laboratory.'
+        'Patents, awards & honors, conference activities, and invited talks of our laboratory.'
     )
-    + '<main><div class="tabs"><a class="tablink" href="#patents">Patents</a><a class="tablink" href="#awards">Awards & Honors</a><a class="tablink" href="#conferences">Conferences</a></div>'
+    + '<main><div class="tabs achievement-tabs">'
+      '<a class="tablink" href="#patents">Patents</a>'
+      '<a class="tablink" href="#awards">Awards & Honors</a>'
+      '<a class="tablink" href="#conferences">Conferences</a>'
+      '<a class="tablink" href="#talks">Talks</a>'
+      '</div>'
 )
 
-for key, title in [
-    ('patents', 'Patents'),
-    ('awards', 'Awards & Honors'),
-    ('conferences', 'Conferences'),
-]:
-    h += f'<section id="{key}" class="achievement-section"><h2>{title}</h2>'
-    for a in ac[key]:
-        if key == 'patents':
-            body = f'''<h3>{esc(a['title'])}</h3><p>{esc(a['people'])}</p><p>{esc(a['status'])} · {esc(a['number'])}</p>'''
-        elif key == 'awards':
-            body = f'''<h3>{esc(a['title'])}</h3><p>{esc(a['recipient'])} · {esc(a['organization'])}</p>'''
-        else:
-            body = f'''<h3>{esc(a['title'])}</h3><p>{esc(a['type'])} · {esc(a['event'])}</p><p>{esc(a['date'])} · {esc(a['location'])}</p>'''
-        h += f'''<div class="record"><div class="record-year">{esc(a['year'])}</div><div>{body}</div></div>'''
-    h += '</section>'
+# Patents
+h += '<section id="patents" class="achievement-section"><h2>Patents</h2>'
+
+patent_groups = [
+    ('International · Registered', [
+        x for x in ac.get('patents', [])
+        if x.get('scope') == 'International' and x.get('status') == 'Registered'
+    ]),
+    ('Domestic · Pending', [
+        x for x in ac.get('patents', [])
+        if x.get('scope') == 'Domestic' and x.get('status') == 'Pending'
+    ]),
+    ('Domestic · Registered', [
+        x for x in ac.get('patents', [])
+        if x.get('scope') == 'Domestic' and x.get('status') == 'Registered'
+    ]),
+]
+
+for group_title, items in patent_groups:
+    if not items:
+        continue
+    h += f'<div class="ach-group"><div class="ach-group-head"><h3>{esc(group_title)}</h3><span>{len(items)} records</span></div>'
+    for a in items:
+        main_title = a.get('title_ko') or a.get('title_en') or '-'
+        secondary = ''
+        if a.get('title_ko') and a.get('title_en'):
+            secondary = f'<p class="ach-secondary">{esc(a["title_en"])}</p>'
+        status_class = str(a.get('status', '')).lower()
+        body = (
+            f'<h4>{esc(main_title)}</h4>'
+            f'{secondary}'
+            f'<p class="ach-people">{esc(a.get("people", ""))}</p>'
+            '<p class="ach-meta">'
+            f'<span class="ach-badge {status_class}">{esc(a.get("status", ""))}</span>'
+            f'<span>{esc(a.get("jurisdiction", ""))} {esc(a.get("number", ""))}</span>'
+            f'<span>{esc(a.get("date_label", "Date"))} · {esc(a.get("date", ""))}</span>'
+            '</p>'
+        )
+        h += ach_record(a.get('date', a.get('year', '')), body)
+    h += '</div>'
+
+transfers = ac.get('technology_transfer', [])
+if transfers:
+    h += '<div class="tech-transfer"><h3>Technology Transfer</h3>'
+    for a in transfers:
+        body = (
+            f'<h4>{esc(a.get("title", ""))}</h4>'
+            f'<p>{esc(a.get("description", ""))}</p>'
+            f'<p class="ach-people">{esc(a.get("parties", ""))}</p>'
+        )
+        h += ach_record(a.get('date', a.get('year', '')), body)
+    h += '</div>'
+h += '</section>'
+
+# Awards & Honors
+h += '<section id="awards" class="achievement-section"><h2>Awards & Honors</h2>'
+for key, title in [('pi', 'Principal Investigator'), ('students', 'Students')]:
+    items = ac.get('awards', {}).get(key, [])
+    if not items:
+        continue
+    h += f'<div class="ach-group"><div class="ach-group-head"><h3>{esc(title)}</h3><span>{len(items)} records</span></div>'
+    for a in items:
+        detail = f'<p>{esc(a["detail"])}</p>' if a.get('detail') else ''
+        body = (
+            f'<h4>{esc(a.get("title", ""))}</h4>'
+            f'<p class="ach-people">{esc(a.get("recipient", ""))} · {esc(a.get("organization", ""))}</p>'
+            f'{detail}'
+            f'{ach_link(a.get("link", ""), "View")}'
+        )
+        h += ach_record(a.get('date', a.get('year', '')), body)
+    h += '</div>'
+h += '</section>'
+
+# Conferences
+h += '<section id="conferences" class="achievement-section"><h2>Conferences</h2>'
+pi_confs = ac.get('conferences', {}).get('pi', {})
+if pi_confs:
+    total_pi = sum(len(pi_confs.get(k, [])) for k in ('international', 'domestic'))
+    h += f'<div class="ach-group"><div class="ach-group-head"><h3>Principal Investigator</h3><span>{total_pi} records</span></div>'
+    for scope_key, scope_title in [('international', 'International'), ('domestic', 'Domestic')]:
+        items = pi_confs.get(scope_key, [])
+        if not items:
+            continue
+        h += f'<div class="ach-subgroup">{esc(scope_title)}</div>'
+        for a in items:
+            scope_class = scope_title.lower()
+            location = f' · {esc(a["location"])}' if a.get('location') else ''
+            body = (
+                f'<h4>{esc(a.get("title", ""))}</h4>'
+                f'<p class="ach-people">{esc(a.get("authors", ""))}</p>'
+                '<p class="ach-meta">'
+                f'<span class="ach-badge {scope_class}">{esc(scope_title)}</span>'
+                f'<span class="ach-badge">{esc(a.get("type", ""))}</span>'
+                f'<span>{esc(a.get("event", ""))}{location}</span>'
+                '</p>'
+            )
+            h += ach_record(a.get('date', a.get('year', '')), body)
+    h += '</div>'
+
+student_confs = ac.get('conferences', {}).get('students', [])
+if student_confs:
+    h += f'<div class="ach-group"><div class="ach-group-head"><h3>Students</h3><span>{len(student_confs)} records</span></div>'
+    for a in student_confs:
+        scope = a.get('scope', '')
+        scope_class = scope.lower()
+        note = f'<p class="ach-note">{esc(a["note"])}</p>' if a.get('note') else ''
+        body = (
+            f'<h4>{esc(a.get("title", ""))}</h4>'
+            f'<p class="ach-people">{esc(a.get("authors", ""))}</p>'
+            '<p class="ach-meta">'
+            f'<span class="ach-badge {scope_class}">{esc(scope)}</span>'
+            f'<span class="ach-badge">{esc(a.get("type", ""))}</span>'
+            f'<span>{esc(a.get("event", ""))}</span>'
+            '</p>'
+            f'{note}'
+        )
+        h += ach_record(a.get('date', a.get('year', '')), body)
+    h += '</div>'
+h += '</section>'
+
+# Talks outside conferences
+h += '<section id="talks" class="achievement-section"><h2>Talks</h2>'
+h += '<div class="ach-group"><div class="ach-group-head"><h3>Invited Seminars & External Talks</h3><span>Outside conferences</span></div>'
+for a in ac.get('talks', []):
+    heading = a.get('title') or a.get('host') or a.get('institution') or 'Talk'
+    institution = f'<p>{esc(a["institution"])}</p>' if a.get('institution') else ''
+    host = '' if heading == a.get('host') else f'<p>{esc(a.get("host", ""))}</p>'
+    body = (
+        f'<h4>{esc(heading)}</h4>'
+        f'{host}{institution}'
+        f'{ach_link(a.get("link", ""), "Watch")}'
+    )
+    h += ach_record(a.get('date', a.get('year', '')), body)
+h += '</div></section>'
 
 h += '</main>' + foot()
 (OUT / 'achievements.html').write_text(h, encoding='utf-8')
