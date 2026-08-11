@@ -1,79 +1,869 @@
 patents:
-- year: 2026
-  status: Pending
-  title: pH responsive radiative cooling material, and manufacturing method for the same
-  people: Dasol Lee, Seokgyu Kwon
-  number: KR 10-2026-0043656
-- year: 2026
-  status: Pending
-  title: Medical dressing, and manufacturing method for the same
-  people: Dasol Lee, Changhwan Hyeon
-  number: KR 10-2026-0013740
-- year: 2026
-  status: Pending
-  title: Membrane for radiative cooling, and manufacturing method for the same
-  people: Dasol Lee, Minseo Jeong
-  number: KR 10-2026-0010693
-- year: 2025
-  status: Registered
-  title: Light-localizable analog device
-  people: Minkyung Kim, Dasol Lee
-  number: KR 10-2877416
-- year: 2025
-  status: Pending
-  title: Real-time measurement system for spin Hall effect of light
-  people: Minkyung Kim, Junsuk Rho, Dasol Lee, et al.
-  number: KR 10-2025-0051048
 - year: 2021
+  scope: International
   status: Registered
-  title: Dielectric based metasurface hologram device and manufacturing method of same and display device having same
+  jurisdiction: US
+  title_ko: ''
+  title_en: Dielectric based metasurface hologram device and manufacturing method of same and display device having same
   people: I. Kim, D. Lee, J. Rho
-  number: US 11,042,119
-awards:
-- year: 2024
-  title: Best Student Presentation Award
-  recipient: Minseo Jeong
-  organization: KSMTE Annual Autumn Conference 2024
-- year: 2024
-  title: Poster Award · Gold & Silver
-  recipient: Changhwan Hyeon & Kyung-Hyun Yu
-  organization: IBEC 2024
-- year: 2023
-  title: Poster Award
-  recipient: Minseo Jeong
-  organization: IBEC 2023
-- year: 2019
-  title: Forbes 30 Under 30 Asia · Healthcare & Science
-  recipient: Dasol Lee
-  organization: Forbes
-conferences:
+  number: 11,042,119
+  date: 2021.06.22
+  date_label: Registered
 - year: 2026
-  type: Invited Talk
-  title: Radiative cooling materials for biomedical thermal management
-  event: UK-Korea Focal Point Workshop on Flat Optics for Structured and Entangled Light
-  location: Heriot-Watt University, United Kingdom
-  date: 2026.07.10
+  scope: Domestic
+  status: Pending
+  jurisdiction: KR
+  title_ko: pH 반응성 복사냉각 소재 및 이의 제조 방법
+  title_en: pH responsive radiative cooling material, and manufacturing method for the same
+  people: Dasol Lee, Seokgyu Kwon
+  number: 10-2026-0043656
+  date: 2026.03.11
+  date_label: Applied
+- year: 2026
+  scope: Domestic
+  status: Pending
+  jurisdiction: KR
+  title_ko: 치료용 드레싱 및 이의 제조 방법
+  title_en: Medical dressing, and manufacturing method for the same
+  people: Dasol Lee, Changhwan Hyeon
+  number: 10-2026-0013740
+  date: 2026.01.23
+  date_label: Applied
+- year: 2026
+  scope: Domestic
+  status: Pending
+  jurisdiction: KR
+  title_ko: 복사 냉각을 위한 멤브레인 및 이의 제조 방법
+  title_en: Membrane for radiative cooling, and manufacturing method for the same
+  people: Dasol Lee, Minseo Jeong
+  number: 10-2026-0010693
+  date: 2026.01.20
+  date_label: Applied
 - year: 2025
-  type: Oral
-  title: Chiral metasurface research
-  event: SPIE Digital Optical Technologies
-  location: Munich, Germany
-  date: 2025.06.23–26
+  scope: Domestic
+  status: Pending
+  jurisdiction: KR
+  title_ko: 투명 냉각 패널, 및 이의 제조 방법
+  title_en: Transparent cooling panel and manufacturing method thereof
+  people: Dasol Lee, Minseo Jeong, Minkyung Kim, Huu Lam Phan, Juhoon Baek
+  number: 10-2025-0119363
+  date: 2025.08.26
+  date_label: Applied
+- year: 2025
+  scope: Domestic
+  status: Pending
+  jurisdiction: KR
+  title_ko: 광 스핀 홀 효과의 실시간 측정 시스템
+  title_en: Real-time measurement system for spin Hall effect of light
+  people: Minkyung Kim, Junsuk Rho, Dasol Lee, Jinkyeong Lee, Jaekyung Kim, Sangmin Shim
+  number: 10-2025-0051048
+  date: 2025.04.18
+  date_label: Applied
+- year: 2023
+  scope: Domestic
+  status: Pending
+  jurisdiction: KR
+  title_ko: 광 스핀 홀 효과를 발생시키는 메타표면
+  title_en: A meta surface generating spin Hall effect of light
+  people: Junsuk Rho, Dasol Lee, Minkyung Kim, Yeseul Kim
+  number: 10-2023-0062812
+  date: 2023.05.16
+  date_label: Applied
+- year: 2023
+  scope: Domestic
+  status: Pending
+  jurisdiction: KR
+  title_ko: 수직형 하이퍼볼릭 메타물질 구조체, 이의 제조방법 및 음의 굴절 구현 시스템
+  title_en: Vertical hyperbolic metamaterial structure, manufacturing method thereof, and negative refraction realization system
+  people: Junsuk Rho, Hanlyun Cho, Younghwan Yang, Sunae So, Dasol Lee
+  number: 10-2023-0038663
+  date: 2023.03.24
+  date_label: Applied
+- year: 2025
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 빛 국소화가 가능한 아날로그 광소자
+  title_en: Light-localizable analog device
+  people: Minkyung Kim, Dasol Lee
+  number: 10-2877416
+  date: 2025.10.23
+  date_label: Registered
+- year: 2023
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 온도 반응형 상전이 냉각소자
+  title_en: ''
+  people: Minkyung Kim, Dasol Lee, Junsuk Rho
+  number: 10-2559424
+  date: 2023.07.20
+  date_label: Registered
+- year: 2023
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 투명 복사 냉각 소자
+  title_en: ''
+  people: Heon Lee, Junsuk Rho, Soomin Son, Dongwoo Chae, Dasol Lee, Minkyung Kim
+  number: 10-2514021
+  date: 2023.03.21
+  date_label: Registered
+- year: 2022
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 홀 패턴층 기반의 복사 냉각 소자
+  title_en: ''
+  people: Heon Lee, Junsuk Rho, Soomin Son, Dasol Lee
+  number: 10-2442491
+  date: 2022.09.06
+  date_label: Registered
+- year: 2020
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 듀얼 모드 암호화 표면 및 이의 제조 방법 및 이를 포함하는 디스플레이장치
+  title_en: ''
+  people: Gwanho Yoon, Dasol Lee, Junsuk Rho
+  number: 10-2150883
+  date: 2020.08.27
+  date_label: Registered
+- year: 2019
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 유전체 기반 메타표면 홀로그램 장치 및 이의 제조 방법 및 이를 포함하는 디스플레이 장치
+  title_en: ''
+  people: Inki Kim, Dasol Lee, Junsuk Rho
+  number: 10-2049749
+  date: 2019.11.22
+  date_label: Registered
+- year: 2019
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 구조 조명 현미경 및 촬영 방법
+  title_en: ''
+  people: Dasol Lee, Minkyung Kim, Jungho Mun, Gwanho Yoon, Inki Kim, Jaehyuk Jang, Junsuk Rho
+  number: 10-2019673
+  date: 2019.09.03
+  date_label: Registered
+- year: 2019
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 하이퍼렌즈를 이용한 초고해상도 스캐닝 현미경
+  title_en: ''
+  people: Dasol Lee, Minkyung Kim, Sunae So, Junsuk Rho
+  number: 10-2005258
+  date: 2019.07.24
+  date_label: Registered
+- year: 2019
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 플라즈몬 격자를 포함하는 편광 감응형 완전 흡수체 및 그 제조방법
+  title_en: ''
+  people: Dasol Lee, Dongwoo Lee, Heonyeong Jeong, Junsuk Rho
+  number: 10-1969313
+  date: 2019.04.10
+  date_label: Registered
+- year: 2016
+  scope: Domestic
+  status: Registered
+  jurisdiction: KR
+  title_ko: 뉴런이 고정된 하이퍼렌즈, 뉴런 고정 장치 및 하이퍼렌즈에 뉴런을고정하는 방법
+  title_en: ''
+  people: Minkyung Kim, Dasol Lee, Junsuk Rho
+  number: 10-1637183
+  date: 2016.07.01
+  date_label: Registered
+technology_transfer:
+- year: 2023
+  date: 2023.11.29
+  title: TiN 나노링 구조체 기반 광대역 나노 흡수체 설계에 관한 노하우
+  description: 노하우 1건 사용 계약
+  parties: 연세대학교 원주산학협력단 - 주식회사 지오디아
+awards:
+  pi:
+  - year: 2019
+    date: 2019.04.02
+    title: Forbes 30 Under 30 Asia 2019
+    detail: Healthcare & Science
+    recipient: Dasol Lee
+    organization: Forbes, USA
+    link: https://www.forbes.com/under30/list/2019/asia/
+  students:
+  - year: 2025
+    date: 2025.11.30-12.05
+    title: Best Poster Award Nominee
+    recipient: Changhwan Hyeon
+    organization: 2025 MRS Fall Meeting & Exhibit
+    detail: Poster nomination
+  - year: 2025
+    date: 2025.01.22
+    title: Grand Prize · 1st Place
+    recipient: Changhwan Hyeon
+    organization: BK startup competition
+    detail: ''
+  - year: 2024
+    date: 2024.12.12
+    title: Best Student Presentation Award
+    recipient: Minseo Jeong
+    organization: KSMTE Annual Autumn Conference 2024
+    detail: Poster award
+  - year: 2024
+    date: 2024.11.09
+    title: Poster Award · Gold & Silver
+    recipient: Changhwan Hyeon & Kyung-Hyun Yu
+    organization: IBEC 2024
+    detail: Legacy site reports Gold & Silver awards without assigning the individual colors.
+  - year: 2024
+    date: 2024.02.19
+    title: Excellence Award · 2nd Place
+    recipient: Changhwan Hyeon
+    organization: BK startup competition
+    detail: ''
+  - year: 2023
+    date: 2023.11.11
+    title: Poster Award
+    recipient: Minseo Jeong
+    organization: IBEC 2023
+    detail: ''
+  - year: 2023
+    date: 2023.10.28
+    title: Participation Prize
+    recipient: Kyung-Hyun Yu
+    organization: 2023 SNUBH-AWS ICU Datathon competition
+    detail: ''
+conferences:
+  pi:
+    international:
+    - year: 2026
+      date: 2026.07.10
+      authors: D. Lee
+      title: Radiative cooling materials for biomedical thermal management
+      event: UK-Korea Focal Point Workshop on Flat Optics for Structured and Entangled Light
+      location: Heriot-Watt University, United Kingdom
+      type: Invited Talk
+    - year: 2024
+      date: 2024.04.21-25
+      authors: D. Lee
+      title: Nanophotonic structures for perfect absorbers and radiative cooling
+      event: PIERS 2024
+      location: Chengdu, China
+      type: Invited Talk
+    - year: 2021
+      date: '2021.11'
+      authors: D. Lee
+      title: Nanostructure-based functional devices for imaging and sensing applications
+      event: IBEC2021 & ICBHI2021
+      location: Republic of Korea
+      type: Invited Talk
+    - year: 2021
+      date: '2021.04'
+      authors: D. Lee, M. Kim & J. Rho
+      title: Sub-ambient daytime radiative cooling by silica-coated porous anodic aluminum oxide
+      event: 2021 Virtual MRS Spring Meeting & Exhibit
+      location: USA / Virtual
+      type: Oral
+    - year: 2020
+      date: '2020.11'
+      authors: D. Lee & J. Rho
+      title: All-dielectric metasurface imaging platform for resolution enhancement and applicability to conventional optical system
+      event: Asia-Pacific Conference on Fracture and Strength 2020
+      location: Republic of Korea
+      type: Oral
+    - year: 2020
+      date: '2020.08'
+      authors: D. Lee, M. Kim & J. Rho
+      title: Dielectric metasurface imaging platform for resolution enhancement and applicability to conventional optical system
+      event: SPIE Optics + Photonics 2020
+      location: USA
+      type: Poster
+    - year: 2020
+      date: '2020.08'
+      authors: D. Lee, M. Kim & J. Rho
+      title: A vertical hyperbolic metamaterial to enhance the optical spin Hall effect
+      event: SPIE Optics + Photonics 2020
+      location: USA
+      type: Poster
+    - year: 2019
+      date: '2019.08'
+      authors: D. Lee, M. Kim, J. Kim, T. Badloe & J. Rho
+      title: Dielctric metasurface imaging platform applicable to laser scanning microscopy with enhanced axial resolution
+      event: The 4th A3 Metamaterials Forum
+      location: Japan
+      type: Poster
+    - year: 2018
+      date: '2018.08'
+      authors: D. Lee & J. Rho
+      title: Polarization-sensitive perfect absorber in visible-near-infrared regimes
+      event: The 3rd A3 Metamaterials Forum
+      location: Republic of Korea
+      type: Poster
+    - year: 2018
+      date: '2018.08'
+      authors: D. Lee, S. Bang, J. Kim, D. M. Nguyen & J. Rho
+      title: Polarization-sensitive tunable perfect absorber in VIS-NIR regimes
+      event: The 40th Progress in Electromagnetics Research Symposium (PIERS 2018)
+      location: Japan
+      type: Poster
+    - year: 2018
+      date: '2018.08'
+      authors: D. Lee, M. Kim, S. So, J. Mun, T. Lee & J. Rho
+      title: Realization of hyperlens imaging platform for high-throughput super-resolution imaging
+      event: The 40th Progress in Electromagnetics Research Symposium (PIERS 2018)
+      location: Japan
+      type: Oral
+    - year: 2018
+      date: '2018.04'
+      authors: D. Lee
+      title: Realization of hyperlens imaging platform for high-throughput biomolecular imaging
+      event: International Workshop Meta-Optics and Metamaterials
+      location: Republic of Korea
+      type: Poster
+    - year: 2017
+      date: '2017.07'
+      authors: D. Lee, Y. D. Kim, M. Kim, H.-J. Choi, J. Mun, S. So, D. M. Nguyen, K. Kim, J. Ok, H. Lee & J. Rho
+      title: Wafer-scale hyperlens device for biomolecular super-resolution imaging
+      event: The 8th International Conference on Metamaterials, Photonic Crystals and Plasmonics (META’17)
+      location: Republic of Korea
+      type: Oral
+    - year: 2017
+      date: '2017.05'
+      authors: D. Lee, Y. D. Kim, M. Kim, J. Mun, D. M. Nguyen, H. Lee & J. Rho
+      title: Hyperlens imaging platform for biomolecular imaging
+      event: The 8th International Conference on Surface Plasmon Photonics (SPP8)
+      location: Thailand
+      type: Poster
+    - year: 2016
+      date: '2016.11'
+      authors: D. Lee, Y. D. Kim, H.-J. Choi, J. Mun, M. Kim, H. Lee & J. Rho
+      title: Nano-imprinted hexagonal hyperlens array for high-throughput super-resolution imaging
+      event: MRS Fall Meeting
+      location: USA
+      type: Oral
+    - year: 2016
+      date: '2016.11'
+      authors: D. Lee, Y. D. Kim, M. Kim, H.-J. Choi, J. Mun, D. M. Nguyen, H. Lee & J. Rho
+      title: Wafer scale hyperlens platform for bio-imaging
+      event: The 3rd International Conference & Exhibition for Nanotechnology (NANOPIA 2016)
+      location: Republic of Korea
+      type: Poster
+    - year: 2016
+      date: '2016.07'
+      authors: D. Lee, Y. D. Kim, H.-J. Choi, J. Mun, M. Kim, H. Lee & J. Rho
+      title: Nano-imprinted hexagonal hyperlens array for high-throughput super-resolution biological imaging
+      event: The 14th International Nanotech Symposium and Nanoconvergence Expo (Nano Korea 2016)
+      location: Republic of Korea
+      type: Poster
+    domestic:
+    - year: 2026
+      date: 2026.05.08
+      authors: D. Lee
+      title: Nanophotonics Platforms for Biomedical Imaging, Sensing, and Thermal management (2026 의료기기산업학과 학술심포지엄)
+      event: 2026년도 대한의용생체공학회 춘계학술대회
+      location: Republic of Korea
+      type: Plenary Talk
+    - year: 2025
+      date: '2025.10'
+      authors: D. Lee
+      title: Radiative cooling materials for thermal management in wearable and biomedical applications
+      event: 2025 KPS Fall Meeting
+      location: Republic of Korea
+      type: Invited Talk
+    - year: 2024
+      date: '2024.11'
+      authors: D. Lee
+      title: Metasurface-enhanced sensing and lens applications
+      event: Photonics Conference 2024 (PC 2024)
+      location: Republic of Korea
+      type: Invited Talk
+    - year: 2024
+      date: '2024.10'
+      authors: D. Lee
+      title: 메타물질과 복사냉각 소재를 활용한 의공학적 기술 연구
+      event: 2024년도 대한금속·재료학회 추계학술대회
+      location: Republic of Korea
+      type: Invited Talk
+    - year: 2022
+      date: '2022.12'
+      authors: D. Lee
+      title: Nanophotonic-assisted imaging and sensing techniques for biomedical applications
+      event: Photonics Conference 2022 (PC 2022)
+      location: Republic of Korea
+      type: Invited Talk
+    - year: 2020
+      date: '2020.07'
+      authors: D. Lee, M. Kim & J. Rho
+      title: Selective emitter for daytime radiative cooling by silica coated porous anodic aluminum oxide
+      event: The Korean Society of Mechanical Engineers in Micro/Nano Engineering 2020
+      location: Republic of Korea
+      type: Poster
+    - year: 2019
+      date: '2019.05'
+      authors: D. Lee, M. Kim, J. Kim & J. Rho
+      title: 유전체 메타표면을 통한 레이저 스캐닝 현미경의 축방향 해상도 향상
+      event: The Korean Society of Mechanical Engineers in Micro/Nano Engineering 2019
+      location: Republic of Korea
+      type: Poster
+    - year: 2018
+      date: '2018.12'
+      authors: D. Lee & J. Rho
+      title: 플라즈모닉 격자구조를 이용한 편광감응형 가변 흡수체
+      event: The Korean Society of Mechanical Engineers 2018
+      location: Republic of Korea
+      type: Poster
+    - year: 2018
+      date: '2018.11'
+      authors: D. Lee & J. Rho
+      title: 플라즈모닉 격자 구조를 활용한 편광 감응형 가변 흡수체
+      event: The Korean Institute of Surface Engineering (KISE) Fall Meeting
+      location: Republic of Korea
+      type: Poster
+    - year: 2018
+      date: '2018.05'
+      authors: D. Lee & J. Rho
+      title: Polarization-sensitive tunable perfect absorber in VIS-NIR regimes
+      event: The Korean Society of Industrial and Engineering Chemistry Spring Meeting
+      location: Republic of Korea
+      type: Poster
+    - year: 2018
+      date: '2018.05'
+      authors: D. Lee & J. Rho
+      title: Realization of hyperlens imaging for high-throughput super-resolution imaging
+      event: The Korean Society of Industrial and Engineering Chemistry Spring Meeting
+      location: Republic of Korea
+      type: Poster
+    - year: 2018
+      date: '2018.02'
+      authors: D. Lee, Y. D. Kim, M. Kim, H. Lee & J. Rho
+      title: Realization of wafer-scale hyperlens device for sub-diffractional biomolecular imaging
+      event: The 7th nano-Imprint-Molding-Print Forum (nano-IMP 2018)
+      location: Republic of Korea
+      type: Poster
+    - year: 2017
+      date: '2017.02'
+      authors: D. Lee, Y. D. Kim, M. Kim, H. Lee & J. Rho
+      title: Nano-imprinted hyperlens array for high-throughput super-resolution imaging
+      event: The 6th nano-Imprint-Molding-Print Forum (nano-IMP 2017)
+      location: Republic of Korea
+      type: Poster
+  students:
+  - year: 2026
+    date: '2026.05'
+    scope: Domestic
+    type: Oral
+    authors: Marjona, Dasol Lee
+    title: Photodynamic therapy responsive core-shell nanofibrous dressing for diabetic wound healing
+    event: 2026년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2026
+    date: '2026.05'
+    scope: Domestic
+    type: Poster
+    authors: Lawrence, Dasol Lee
+    title: PVA/SiO2/Al2O3 Nanofiber membranes for filteration and cooling applications
+    event: 2026년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2026
+    date: '2026.05'
+    scope: Domestic
+    type: Poster
+    authors: Kyung-Hyun Yu, Dasol Lee
+    title: Voltage-Tunable Multi-Wavelength Spin-Dependent Optical Response Technology for Molecular Scale Optical Sensing
+    event: 2026년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2026
+    date: '2026.05'
+    scope: Domestic
+    type: Poster
+    authors: Wooju Choi, Dasol Lee
+    title: Antibacterial Radiative Cooing Nanofibers with Silver Coating
+    event: 2026년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2025
+    date: 2025.11.30-12.05
+    scope: International
+    type: Oral
+    authors: Seokgyu Kwon, Changhwan Hyeon, Minseo Jeong, Dasol Lee
+    title: pH-responsive radiative cooling nanofibers as multifunctional platform
+    event: 2025 MRS Fall Meeting & Exhibit
+    note: ''
+  - year: 2025
+    date: 2025.11.30-12.05
+    scope: International
+    type: Oral
+    authors: Minseo Jeong, Seokgyu Kwon, Changhwan Hyeon, Dasol Lee
+    title: Sustainable radiative cooling via high-performance, hydrophobic nanofibers
+    event: 2025 MRS Fall Meeting & Exhibit
+    note: ''
+  - year: 2025
+    date: 2025.11.30-12.05
+    scope: International
+    type: Poster
+    authors: Changhwan Hyeon, Woo-Seung Kim, So-Min Kim, Ki-Ju Kwon, Ki-Jong Rhee, Dasol Lee
+    title: Radiative cooling-based dressing for enhanced healing of skin wounds under sunlight exposure
+    event: 2025 MRS Fall Meeting & Exhibit
+    note: BEST POSTER AWARD NOMINEE
+  - year: 2025
+    date: '2025.07'
+    scope: Domestic
+    type: Poster
+    authors: Kyung-Hyun Yu, Sangmin Shim, Dasol Lee
+    title: Development of a precision laser surgical device based on metasurface device
+    event: 2025년도 한국생산제조학회 춘계학술대회
+    note: ''
+  - year: 2025
+    date: '2025.07'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Kyung-Hyun Yu, Dasol Lee
+    title: Control of circular polarization reflection using an ITO-based metasurface
+    event: 2025년도 한국생산제조학회 춘계학술대회
+    note: ''
+  - year: 2025
+    date: '2025.06'
+    scope: International
+    type: Oral
+    authors: Semere Araya Asefa, Dasol Lee
+    title: Optimized scythe-shaped chiroptical metasurface for biosensing application
+    event: SPIE Digital Optical Technologies
+    note: ''
+  - year: 2025
+    date: '2025.05'
+    scope: Domestic
+    type: Poster
+    authors: Kyung-Hyun Yu, Sangmin Shim, Dasol Lee
+    title: Compact metalens for laser steering in minimally invasive endoscopic surgery
+    event: 2025년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2025
+    date: '2025.05'
+    scope: Domestic
+    type: Poster
+    authors: Seokgyu Kwon, Changhwan Hyeon, Minseo Jeong, Dasol Lee
+    title: pH responsive nanofibers with radiative cooling
+    event: 2025년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2025
+    date: '2025.05'
+    scope: Domestic
+    type: Poster
+    authors: Minseo Jeong, Seokgyu Kwon, Changhwan Hyeon, Dasol Lee
+    title: Fabrication of hydrophobic radiative cooling textile fibers for drug release
+    event: 2025년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2025
+    date: '2025.05'
+    scope: Domestic
+    type: Poster
+    authors: Changhwan Hyeon, Minseo Jeong, Seokgyu Kwon, Dasol Lee
+    title: Radiative cooling-based dressing for enhanced healing of skin wounds under sunlight exposure
+    event: 2025년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2025
+    date: '2025.02'
+    scope: Domestic
+    type: Poster
+    authors: Kyung-Hyun Yu, Sangmin Shim, Dasol Lee
+    title: Laser Control Based on Polarization Using a Metalens for Surgical Devices
+    event: OSK 2025 (한국광학회 2025 동계학술대회)
+    note: ''
+  - year: 2025
+    date: '2025.02'
+    scope: Domestic
+    type: Poster
+    authors: Minseo Jeong, Seokgyu Kwon, Changhwan Hyeon, Dasol Lee
+    title: 'Complementary Optical Properties of Al2O3 and SiO2 Nanoparticles for Enhanced Radiative Cooling in PVA/Zein Nanofibers: Outdoor Temperature Reduction Performance'
+    event: OSK 2025 (한국광학회 2025 동계학술대회)
+    note: ''
+  - year: 2025
+    date: '2025.02'
+    scope: Domestic
+    type: Poster
+    authors: Seokgyu Kwon, Changhwan Hyeon, Minseo Jeong, Dasol Lee
+    title: pH responsive crosslinked electrospun nanofibers with radiative cooling
+    event: OSK 2025 (한국광학회 2025 동계학술대회)
+    note: ''
+  - year: 2025
+    date: '2025.02'
+    scope: Domestic
+    type: Poster
+    authors: Changhwan Hyeon, Minseo Jeong, Seokgyu Kwon, Dasol Lee
+    title: Dual-Layer radiative cooling and bioactive dressing for accelerated wound healing under sunlight exposure
+    event: OSK 2025 (한국광학회 2025 동계학술대회)
+    note: ''
+  - year: 2025
+    date: '2025.02'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Kyung-Hyun Yu, Dasol Lee
+    title: Electrically Tunable ITO-based Metasurface for Spin Hall Effect of Light
+    event: OSK 2025 (한국광학회 2025 동계학술대회)
+    note: ''
+  - year: 2024
+    date: '2024.11'
+    scope: International
+    type: Poster
+    authors: Seokgyu Kwon, Changhwan Hyeon, Minseo Jeong, Dasol Lee
+    title: PVA/SiO2/CA electrospun nanofiber with radiative cooling
+    event: IBEC 2024
+    note: ''
+  - year: 2024
+    date: '2024.11'
+    scope: International
+    type: Poster
+    authors: Sangmin Shim, Kyung-Hyun Yu, Dasol Lee
+    title: Tunable SHEL Based on ITO Metasurface for Chiral Molecules Detection
+    event: IBEC 2024
+    note: ''
+  - year: 2024
+    date: '2024.11'
+    scope: International
+    type: Poster
+    authors: Changhwan Hyeon, Minseo Jeong, Seokgyu Kwon, Dasol Lee
+    title: Radiative cooling fiber for thermal management of wearable healthcare devices
+    event: IBEC 2024
+    note: ''
+  - year: 2024
+    date: '2024.11'
+    scope: International
+    type: Poster
+    authors: Kyung-Hyun Yu, Sangmin Shim, Dasol Lee
+    title: Metasurface-Based Lens Design for Rigid Endoscopic Laser Device
+    event: IBEC 2024
+    note: ''
+  - year: 2024
+    date: '2024.11'
+    scope: International
+    type: Poster
+    authors: Minseo Jeong, Seokgyu Kwon, Changhwan Hyeon, Dasol Lee
+    title: Radiative cooling nanofiber materials with menthol for pruritus relief and skin cooling in atopic dermatitis
+    event: IBEC 2024
+    note: ''
+  - year: 2024
+    date: '2024.07'
+    scope: Domestic
+    type: Poster
+    authors: Changhwan Hyeon, Minseo Jeong, Seokgyu Kwon, Dasol Lee
+    title: 웨어러블 기기의 야외 작동 성능 향상을 위한 복사냉각 기반 쿨링 케이스
+    event: 한국생산제조학회 춘계학술대회
+    note: ''
+  - year: 2024
+    date: '2024.07'
+    scope: Domestic
+    type: Poster
+    authors: Minseo Jeong, Seokgyu Kwon, Changhwan Hyeon, Dasol Lee
+    title: 전기방사를 이용한 복사냉각 나노섬유의 설계 및 야외온도 측정
+    event: 한국생산제조학회 춘계학술대회
+    note: ''
+  - year: 2024
+    date: '2024.07'
+    scope: Domestic
+    type: Poster
+    authors: Seokgyu Kwon, Changhwan Hyeon, Minseo Jeong, Dasol Lee
+    title: 시트르산을 활용한 PVA/SiO2 복사냉각 나노섬유
+    event: 한국생산제조학회 춘계학술대회
+    note: ''
+  - year: 2024
+    date: '2024.05'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Kyung-Hyun Yu, Dasol Lee
+    title: Enhancing the Spin Hall effect of light through electrical modulation in ITO metasurfaces
+    event: 2024년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2024
+    date: '2024.05'
+    scope: Domestic
+    type: Poster
+    authors: Changhwan Hyeon, Minseo Jeong, Seokgyu Kwon, Dasol Lee
+    title: Wearable sensor for managing heat-related illnesses with nanofabric radiative cooler
+    event: 2024년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2024
+    date: '2024.05'
+    scope: Domestic
+    type: Poster
+    authors: Seokgyu Kwon, Changhwan Hyeon, Minseo Jeong, Dasol Lee
+    title: 웨어러블 디바이스 열관리를 위한 PVA/ND/Al2O3 복사냉각 나노섬유
+    event: 2024년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2024
+    date: '2024.05'
+    scope: Domestic
+    type: Poster
+    authors: Minseo Jeong, Seokgyu Kwon, Changhwan Hyeon, Dasol Lee
+    title: PVA의 내수성을 개선한 복사냉각 나노섬유 (Improving the hygroscopicity of PVA for radiative cooling nano fibers)
+    event: 2024년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2024
+    date: '2024.05'
+    scope: Domestic
+    type: Poster
+    authors: Kyung-Hyun Yu, Sangmin Shim, Dasol Lee
+    title: The application of dual steering metalens for improved endoscopic laser device
+    event: 2024년도 대한의용생체공학회 춘계학술대회
+    note: ''
+  - year: 2023
+    date: '2023.12'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Kyung-Hyun Yu, Dasol Lee
+    title: Hydrogenated Amorphous Silicon 메타표면을 이용한 빛의 스핀 홀 효과 강화
+    event: Photonics Conference 2023 (PC 2023)
+    note: ''
+  - year: 2023
+    date: '2023.12'
+    scope: Domestic
+    type: Poster
+    authors: Kyung-Hyun Yu, Sangmin Shim, Dasol Lee
+    title: Ideal nanoring narrowband absorption sensor design and its application as a biosensor
+    event: Photonics Conference 2023 (PC 2023)
+    note: ''
+  - year: 2023
+    date: '2023.11'
+    scope: International
+    type: Poster
+    authors: Sangmin Shim, Kyung-Hyun Yu, Dasol Lee
+    title: 가속화된 PCR 센서 열주기를 위한 TiN 나노링 다파장 흡수체
+    event: IBEC 2023
+    note: ''
+  - year: 2023
+    date: '2023.11'
+    scope: International
+    type: Poster
+    authors: Semere Araya Asefa, Dasol Lee
+    title: The effect of number of layers on chioptical response of crescent chiral metasurface
+    event: IBEC 2023
+    note: ''
+  - year: 2023
+    date: '2023.11'
+    scope: International
+    type: Poster
+    authors: Changhwan Hyeon, Minseo Jeong, Seokgyu Kwon, Dasol Lee
+    title: 전기방사를 이용한 SiO2, Al2O3가 첨가된 PVA기반 섬유의 복사냉각 성능 비교연구
+    event: IBEC 2023
+    note: ''
+  - year: 2023
+    date: '2023.11'
+    scope: International
+    type: Poster
+    authors: Kyung-Hyun Yu, Sangmin Shim, Dasol Lee
+    title: 메타 홀로그램을 이용한 레이저 스페클 대조 이미지 개선
+    event: IBEC 2023
+    note: ''
+  - year: 2023
+    date: '2023.11'
+    scope: International
+    type: Poster
+    authors: Minseo Jeong, Seokgyu Kwon, Changhwan Hyeon, Dasol Lee
+    title: 전기방사를 이용한 복사냉각 열전도섬유의 제조 및 성능에 관한 연구
+    event: IBEC 2023
+    note: ''
+  - year: 2023
+    date: '2023.11'
+    scope: International
+    type: Poster
+    authors: Seokgyu Kwon, Changhwan Hyeon, Minseo Jeong, Dasol Lee
+    title: PVA/SiO2/ND nanofiber with radiative cooling for thermal management of wearable devices
+    event: IBEC 2023
+    note: ''
+  - year: 2023
+    date: '2023.07'
+    scope: International
+    type: Oral
+    authors: Semere Asefa Araya, Dasol Lee
+    title: Twisted bilayer chiral metasurface for biomedical sensing
+    event: ICOST Conference
+    note: ''
+  - year: 2023
+    date: '2023.05'
+    scope: Domestic
+    type: Poster
+    authors: Semere Asefa Araya, Dasol Lee
+    title: Deep-learning-based design of multi-layered chiral metasurface
+    event: 대한의용생체공학회 2023년도 춘계학술대회
+    note: ''
+  - year: 2023
+    date: '2023.05'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Dasol Lee
+    title: A comparative study of the suitability of nanoring and nanodisk for sensor
+    event: 대한의용생체공학회 2023년도 춘계학술대회
+    note: ''
+  - year: 2023
+    date: '2023.02'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Dasol Lee
+    title: Skin cancer detection using refractive index sensing composed of nanoring
+    event: 한국광학회 2023 동계학술발표회
+    note: ''
+  - year: 2022
+    date: '2022.12'
+    scope: Domestic
+    type: Poster
+    authors: Semere Asefa Araya, Dasol Lee
+    title: Twisted bilayer crescent chiral metasurface
+    event: Photonics Conference 2022 (PC 2022)
+    note: ''
+  - year: 2022
+    date: '2022.12'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Dasol Lee
+    title: Large-scale fabrication of absorbers based on nanosphere lithography
+    event: Photonics Conference 2022 (PC 2022)
+    note: ''
+  - year: 2022
+    date: '2022.05'
+    scope: Domestic
+    type: Poster
+    authors: Semere Asefa Araya, Dasol Lee
+    title: Transcutaneous electical nerve stimulation of Bladder20 acupoint for mitigation of nausea
+    event: 대한의용생체공학회 2022년도 온라인 춘계학술대회 (2022 KOSOMBE Virtual Conference)
+    note: ''
+  - year: 2022
+    date: '2022.05'
+    scope: Domestic
+    type: Poster
+    authors: Sangmin Shim, Dasol Lee
+    title: Narrowband perfect absorber using Al2O3 nanodisk for refractive index sensing
+    event: 대한의용생체공학회 2022년도 온라인 춘계학술대회 (2022 KOSOMBE Virtual Conference)
+    note: ''
+talks:
 - year: 2024
-  type: Invited Talk
-  title: Invited research presentation
-  event: Photonics Conference 2024
-  location: Republic of Korea
-  date: 2024.11.27
-- year: 2024
-  type: Invited Talk
-  title: Invited research presentation
-  event: Department of Biomedical Engineering, Seoul National University
-  location: Seoul, Republic of Korea
   date: 2024.06.05
+  host: Department of Biomedical Engineering
+  institution: Seoul National University
+  title: ''
+  link: ''
 - year: 2024
-  type: Invited Talk
-  title: Invited research presentation
-  event: PIERS 2024
-  location: ''
-  date: 2024.04.22
+  date: 2024.04.01
+  host: Department of Electro-Mechanical Systems Engineering
+  institution: Korea University Sejong Campus
+  title: ''
+  link: ''
+- year: 2023
+  date: 2023.08.22
+  host: Department of Materials Science and Engineering
+  institution: Seoul National University
+  title: ''
+  link: ''
+- year: 2022
+  date: 2022.07.21
+  host: Department of Physics Education
+  institution: Daegu University
+  title: ''
+  link: ''
+- year: 2021
+  date: 2021.12.17
+  host: '[Merric] Webinar'
+  institution: ''
+  title: ''
+  link: https://www.youtube.com/watch?v=cWez5i5ZmTE
