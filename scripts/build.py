@@ -24,7 +24,7 @@ pubs = D['publications']
 projs = D['projects']
 news = D['news']
 ac = D['achievements']
-SHORT_NAME = s.get('short_name', 'SOL')
+SHORT_NAME = s.get('short_name', 'Photonics Lab.')
 
 
 def esc(value):
