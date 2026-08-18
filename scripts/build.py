@@ -1057,3 +1057,48 @@ h += foot()
 # --------------------------------------------------
 
 shutil.copytree(ROOT / 'assets', OUT / 'assets')
+
+# --------------------------------------------------
+# SEO: sitemap.xml and robots.txt
+# --------------------------------------------------
+
+BASE_URL = 'https://photon.yonsei.ac.kr'
+
+SITEMAP_PAGES = [
+    '/',
+    '/people.html',
+    '/research.html',
+    '/publications.html',
+    '/achievements.html',
+    '/news.html',
+    '/join.html',
+]
+
+sitemap_urls = '\n'.join(
+    f'''  <url>
+    <loc>{BASE_URL}{path}</loc>
+  </url>'''
+    for path in SITEMAP_PAGES
+)
+
+sitemap_xml = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{sitemap_urls}
+</urlset>
+'''
+
+(OUT / 'sitemap.xml').write_text(
+    sitemap_xml,
+    encoding='utf-8'
+)
+
+robots_txt = f'''User-agent: *
+Allow: /
+
+Sitemap: {BASE_URL}/sitemap.xml
+'''
+
+(OUT / 'robots.txt').write_text(
+    robots_txt,
+    encoding='utf-8'
+)
