@@ -211,18 +211,98 @@ def head(title, active=''):
         ('News', 'news.html'),
         ('Join Us', 'join.html'),
     ]
+
     nav = ''.join(
         f'<a class="{"active" if n == active else ""}" href="{u}">{n}</a>'
         for n, u in links
     )
+
+    base_url = 'https://photon.yonsei.ac.kr'
+
+    page_urls = {
+        'Home': f'{base_url}/',
+        'People': f'{base_url}/people.html',
+        'Research': f'{base_url}/research.html',
+        'Publications': f'{base_url}/publications.html',
+        'Achievements': f'{base_url}/achievements.html',
+        'News': f'{base_url}/news.html',
+        'Join Us': f'{base_url}/join.html',
+    }
+
+    seo_titles = {
+        'Home': f'Dasol Lee | {s["lab_name"]} | {s["university"]}',
+        'People': f'Dasol Lee & Lab Members | {s["lab_name"]} | {s["university"]}',
+        'Research': f'Research | {s["lab_name"]} | {s["university"]}',
+        'Publications': f'Publications | Dasol Lee | {s["university"]}',
+        'Achievements': f'Achievements | Dasol Lee | {s["university"]}',
+        'News': f'News | {s["lab_name"]} | {s["university"]}',
+        'Join Us': f'Join Us | {s["lab_name"]} | {s["university"]}',
+    }
+
+    seo_descriptions = {
+        'Home': (
+            f'Official website of Dasol Lee and {s["lab_name"]} at '
+            f'{s["university"]}. Research in optical imaging, sensing, '
+            f'thermal photonics, and optical systems.'
+        ),
+        'People': (
+            f'Dasol Lee and members of {s["lab_name"]}, '
+            f'{s["department"]}, {s["university"]}.'
+        ),
+        'Research': (
+            f'Research from {s["lab_name"]} at {s["university"]} '
+            f'in optical imaging, sensing, thermal photonics, '
+            f'and optical systems.'
+        ),
+        'Publications': (
+            f'Peer-reviewed publications from Dasol Lee and '
+            f'{s["lab_name"]} at {s["university"]}.'
+        ),
+        'Achievements': (
+            f'Patents, awards, conferences, invited talks, and academic '
+            f'activities of Dasol Lee and {s["lab_name"]}.'
+        ),
+        'News': (
+            f'Latest research, publication, achievement, and laboratory '
+            f'updates from {s["lab_name"]} at {s["university"]}.'
+        ),
+        'Join Us': (
+            f'Graduate student, undergraduate researcher, and collaboration '
+            f'opportunities at {s["lab_name"]}, {s["university"]}.'
+        ),
+    }
+
+    seo_title = seo_titles.get(
+        title,
+        f'{title} | {s["lab_name"]} | {s["university"]}'
+    )
+
+    description = seo_descriptions.get(
+        title,
+        f'{title} page of {s["lab_name"]} at {s["university"]}.'
+    )
+
+    canonical = page_urls.get(title, f'{base_url}/')
 
     return f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <meta name="google-site-verification" content="tI54YZfk5YNNvyT6SR_VK4kN9zCZRI2usKHY-R5lmJs" />
-<title>{esc(title)} · {esc(SHORT_NAME)}</title>
+
+<title>{esc(seo_title)}</title>
+<meta name="description" content="{href(description)}">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="{href(canonical)}">
+
+<meta property="og:title" content="{href(seo_title)}">
+<meta property="og:description" content="{href(description)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{href(canonical)}">
+<meta property="og:site_name" content="{href(s["lab_name"])}">
+
 <style>{CSS}</style>
 </head>
 <body>
