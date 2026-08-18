@@ -230,37 +230,36 @@ def head(title, active=''):
     }
 
     seo_titles = {
-        'Home': f'Dasol Lee | {s["lab_name"]} | {s["university"]}',
-        'People': f'Dasol Lee & Lab Members | {s["lab_name"]} | {s["university"]}',
+        'Home': f'Dasol Lee (이다솔) | {s["lab_name"]} | {s["university"]}',
+        'People': f'Dasol Lee (이다솔) & Lab Members | {s["university"]}',
         'Research': f'Research | {s["lab_name"]} | {s["university"]}',
-        'Publications': f'Publications | Dasol Lee | {s["university"]}',
-        'Achievements': f'Achievements | Dasol Lee | {s["university"]}',
+        'Publications': f'Publications | Dasol Lee (이다솔) | {s["university"]}',
+        'Achievements': f'Achievements | Dasol Lee (이다솔) | {s["university"]}',
         'News': f'News | {s["lab_name"]} | {s["university"]}',
         'Join Us': f'Join Us | {s["lab_name"]} | {s["university"]}',
     }
 
     seo_descriptions = {
         'Home': (
-            f'Official website of Dasol Lee and {s["lab_name"]} at '
+            f'Official website of Dasol Lee (이다솔) and {s["lab_name"]} at '
             f'{s["university"]}. Research in optical imaging, sensing, '
             f'thermal photonics, and optical systems.'
         ),
         'People': (
-            f'Dasol Lee and members of {s["lab_name"]}, '
+            f'Dasol Lee (이다솔) and members of {s["lab_name"]}, '
             f'{s["department"]}, {s["university"]}.'
         ),
         'Research': (
             f'Research from {s["lab_name"]} at {s["university"]} '
-            f'in optical imaging, sensing, thermal photonics, '
-            f'and optical systems.'
+            f'in optical imaging, sensing, thermal photonics, and optical systems.'
         ),
         'Publications': (
-            f'Peer-reviewed publications from Dasol Lee and '
+            f'Peer-reviewed publications from Dasol Lee (이다솔) and '
             f'{s["lab_name"]} at {s["university"]}.'
         ),
         'Achievements': (
             f'Patents, awards, conferences, invited talks, and academic '
-            f'activities of Dasol Lee and {s["lab_name"]}.'
+            f'activities of Dasol Lee (이다솔) and {s["lab_name"]}.'
         ),
         'News': (
             f'Latest research, publication, achievement, and laboratory '
