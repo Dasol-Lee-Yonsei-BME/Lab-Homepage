@@ -215,7 +215,7 @@ def head(title, active=''):
         f'<a class="{"active" if n == active else ""}" href="{u}">{n}</a>'
         for n, u in links
     )
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · {esc(SHORT_NAME)}</title><style>{CSS}</style></head><body><header class="site-header"><div class="header"><a class="brand" href="index.html">{esc(SHORT_NAME)}</a><nav class="nav">{nav}</nav></div></header>'''
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
 def foot():
