@@ -69,13 +69,19 @@ current:
 
   - name: Marjona Kiyomova
     role: M.S. Student
-    interest: Functional biomedical dressing · Radiative cooling · Electrospinning
+    interest: Functional biomedical dressing · Electrospinning
     email: qiyomovamarjona@yonsei.ac.kr
     photo: assets/images/people/marjona.jpg
 
+  - name: Mabirizi Hassan Wasswa
+    role: M.S. Student
+    interest: Functional biomedical dressing
+    email: -@yonsei.ac.kr
+    photo: ''
+
   - name: Wooju Choi
     role: Undergraduate Researcher
-    interest: Radiative cooling · Electrospinning
+    interest: Radiative cooling
     email: chldnwn@yonsei.ac.kr
     photo: assets/images/people/wooju.jpg
 
