@@ -487,6 +487,14 @@ conferences:
       type: Poster
   students:
   - year: 2026
+    date: '2026.07'
+    scope: Domestic
+    type: Poster
+    authors: Kyung-Hyun Yu, Dasol Lee
+    title: Electrically Reconfigurable Spin Hall Reflection in an ITO-based Metasurface
+    event: OPC 2026
+    note: ''
+  - year: 2026
     date: '2026.05'
     scope: Domestic
     type: Oral
