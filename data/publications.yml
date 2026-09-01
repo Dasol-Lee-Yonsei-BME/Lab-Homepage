@@ -40,8 +40,8 @@
   url: 'https://pubs.acs.org/acsodf/article/11/19/28053/5070370/Angularly-Tunable-Circular-Dichroism-in-a-Bilayer'
   image: ''
   highlight: false
-  impact_factor: 4.3
-  jcr_percent: 34
+  impact_factor: 5.2
+  jcr_percent: 33
   jcr_category: Chemistry, Multidisciplinary
   jcr_year: 2025
 - id: 2026-02
@@ -58,7 +58,7 @@
   image: assets/images/publications/2026-02.png
   highlight: true
   home_highlight: true
-  impact_factor: 9.9
+  impact_factor: 11.1
   jcr_percent: 1
   jcr_category: Instruments & Instrumentation
   jcr_year: 2025
@@ -75,8 +75,8 @@
   url: 'https://pubs.acs.org/aamick/article/18/15/21363/5142154/Recent-Advances-in-Radiative-Cooling-From'
   image: ''
   highlight: true
-  impact_factor: 8.2
-  jcr_percent: 18
+  impact_factor: 7.8
+  jcr_percent: 23
   jcr_category: Materials Science, Multidisciplinary
   jcr_year: 2025
 - id: 2026-04
@@ -92,8 +92,8 @@
   url: 'https://onlinelibrary.wiley.com/doi/10.1002/nap2.70036'
   image: ''
   highlight: true
-  impact_factor: 6.6
-  jcr_percent: 15
+  impact_factor: 6.8
+  jcr_percent: 13
   jcr_category: Optics
   jcr_year: 2025
 - id: 2026-05
@@ -109,8 +109,8 @@
   url: 'https://www.light-am.com/article/doi/10.37188/lam.2026.023'
   image: ''
   highlight: true
-  impact_factor: 10.6
-  jcr_percent: 7
+  impact_factor: 10.2
+  jcr_percent: 8
   jcr_category: Optics
   jcr_year: 2025
 - id: 2026-06
@@ -126,7 +126,7 @@
   url: 'https://link.springer.com/article/10.1007/s12221-025-01219-1'
   image: ''
   highlight: false
-  impact_factor: 2.3
+  impact_factor: 3.1
   jcr_percent: 28
   jcr_category: Materials Science, Textiles
   jcr_year: 2025
