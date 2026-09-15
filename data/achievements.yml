@@ -487,6 +487,38 @@ conferences:
       type: Poster
   students:
   - year: 2026
+    date: '2026.11'
+    scope: International
+    type: Poster
+    authors: Kyung-Hyun Yu, Jihoon Yang, Dasol Lee
+    title: Wavelength-Resolved Spin Hall Effect of Light for Label-Free Refractive-Index Sensing
+    event: The 13th IFMBE Asian Pacific Conference on Medical & Biological Engineering (APCMBE)
+    note: ''
+  - year: 2026
+    date: '2026.11'
+    scope: International
+    type: Poster
+    authors: Jihoon Yang, Kyung-Hyun Yu, Dasol Lee
+    title: Metalens-Based Illumination for High-Resolution and Wide-Field Light-Sheet Microscopy
+    event: The 13th IFMBE Asian Pacific Conference on Medical & Biological Engineering (APCMBE)
+    note: ''
+  - year: 2026
+    date: '2026.11'
+    scope: International
+    type: Poster
+    authors: Wooju Choi, Taejun Lee, Dasol Lee
+    title: Silver-Coated Antibacterial Nanofibers for Passive Radiative Cooling
+    event: The 13th IFMBE Asian Pacific Conference on Medical & Biological Engineering (APCMBE)
+    note: ''
+  - year: 2026
+    date: '2026.11'
+    scope: International
+    type: Oral
+    authors: Marjona, Dasol Lee
+    title: Photodynamic Theraphy-Responsive Nanofibrous Dressings for Diabetic Wound Healing
+    event: The 13th IFMBE Asian Pacific Conference on Medical & Biological Engineering (APCMBE)
+    note: ''
+  - year: 2026
     date: '2026.07'
     scope: Domestic
     type: Poster
