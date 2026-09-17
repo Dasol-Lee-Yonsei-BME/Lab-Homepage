@@ -6,9 +6,14 @@
 # are merged into the News page automatically by scripts/build.py.
 # ================================================================
 
+- date: 2026.09.16
+  category: People
+  title: Marjona met with the President of Uzbekistan during his state visit to Korea.
+  summary: Marjona had the opportunity to meet President Shavkat Mirziyoyev and share her studies at Yonsei University, her community activities, and her ideas for advancing biomedical engineering in Uzbekistan.
+
 - date: 2026.09.01
   category: People
-  title: Mabirizi joined our laboratory as an M.S. student.
+  title: Mabirizi Hassan joined our laboratory as an M.S. student.
 
 - date: 2026.09.01
   category: LAB
