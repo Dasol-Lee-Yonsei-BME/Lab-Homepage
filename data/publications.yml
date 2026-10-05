@@ -27,6 +27,69 @@
 #   jcr_year uses the preceding year's JCR for each publication year.
 # ================================================================
 
+- id: in-progress-03
+  year: 2026
+  status: in_progress
+  stage: submitted
+  authors: Taejun Lee†, Wooju Choi†, Dasol Lee*, Junsuk Rho*
+  title: Atmospheric temperature effects on optimal emissivity spectra in radiative cooling
+  journal: ''
+  issn: ''
+  volume: '-'
+  issue: '-'
+  pages: '-'
+  date: ''
+  url: ''
+  image: ''
+  highlight: false
+  home_highlight: false
+  impact_factor: null
+  jcr_percent: null
+  jcr_category: ''
+  jcr_year: null
+
+- id: in-progress-02
+  year: 2026
+  status: in_progress
+  stage: submitted
+  authors: Kyung-Hyun Yu†, Jihoon Yang, Sujeong Park, Sangmin Shim, Minkyung Kim*, Dasol Lee*
+  title: Wavelength-resolved spin Hall effect of light at a surface-plasmon-resonance interface for refractive index sensing
+  journal: ''
+  issn: ''
+  volume: '-'
+  issue: '-'
+  pages: '-'
+  date: ''
+  url: ''
+  image: ''
+  highlight: false
+  home_highlight: false
+  impact_factor: null
+  jcr_percent: null
+  jcr_category: ''
+  jcr_year: null
+
+- id: in-progress-01
+  year: 2026
+  status: in_progress
+  stage: submitted
+  authors: Dasol Lee†, Minkyung Kim*
+  title: Direct readout of anomalous beam shifts using full spatial information from weak measurement
+  journal: ''
+  issn: ''
+  volume: '-'
+  issue: '-'
+  pages: '-'
+  date: ''
+  url: ''
+  image: ''
+  highlight: false
+  home_highlight: false
+  impact_factor: null
+  jcr_percent: null
+  jcr_category: ''
+  jcr_year: null
+
 - id: 2026-01
   year: 2026
   authors: Semere Araya Asefa†,*, Bibhatsu Kuiri, Dasol Lee
