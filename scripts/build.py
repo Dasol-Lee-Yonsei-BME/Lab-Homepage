@@ -44,7 +44,10 @@ for p in pubs:
             f"Publication year must be a 4-digit number: {p.get('title')}"
         )
 
-PUBLICATION_YEARS = sorted({p['year'] for p in pubs}, reverse=True)
+PUBLICATION_YEARS = sorted(
+    {p['year'] for p in pubs if p.get('status') != 'in_progress'},
+    reverse=True
+)
 CSS = (ROOT / 'assets' / 'style.css').read_text(encoding='utf-8')
 
 
@@ -372,7 +375,7 @@ for n in news:
 
 # Publication highlights automatically become News items.
 for p in pubs:
-    if not p.get('highlight'):
+    if p.get('status') == 'in_progress' or not p.get('highlight'):
         continue
     title = p.get('news_title') or p.get('title', '')
     summary = p.get('news_summary') or f'Published in {p.get("journal", "")}.'.strip()
@@ -476,7 +479,7 @@ news_sorted = sorted(news_items, key=lambda n: n['_date_obj'], reverse=True)
 # Eligible items are sorted by date, and only the latest three are displayed.
 hl = []
 for p in pubs:
-    if p.get('home_highlight'):
+    if p.get('status') != 'in_progress' and p.get('home_highlight'):
         hl.append((
             'Publication',
             p['title'],
@@ -758,12 +761,16 @@ h = (
         f'<a class="chip" href="#year-{y}">{y}</a>'
         for y in PUBLICATION_YEARS
     )
+    + '<a class="chip" href="#manuscripts-in-progress">Manuscripts in Progress</a>'
     + '</nav>'
 )
 
 for y in PUBLICATION_YEARS:
     h += f'<h2 class="pub-year" id="year-{y}">{y}</h2><div class="pub-grid">'
-    year_pubs = [x for x in pubs if x['year'] == y]
+    year_pubs = [
+        x for x in pubs
+        if x['year'] == y and x.get('status') != 'in_progress'
+    ]
     year_pubs.sort(key=lambda x: str(x.get('date', '')), reverse=True)
 
     for p in year_pubs:
@@ -796,6 +803,48 @@ for y in PUBLICATION_YEARS:
             f'<div class="pub-authors">{authors_html}</div>'
             f'<div class="pub-biblio">{biblio_html}</div>'
             f'<div class="pub-metrics">{metrics}</div>'
+            f'{link_html}'
+            '</div></article>'
+        )
+
+    h += '</div>'
+
+# Manuscripts in Progress
+in_progress_pubs = [
+    p for p in pubs
+    if p.get('status') == 'in_progress'
+]
+
+if in_progress_pubs:
+    h += (
+        '<h2 class="pub-year" id="manuscripts-in-progress">'
+        'Manuscripts in Progress'
+        '</h2><div class="pub-grid">'
+    )
+
+    for p in in_progress_pubs:
+        authors_html = format_authors(p.get('authors', ''))
+        stage = p.get('stage', 'In progress')
+
+        link_html = ''
+        if p.get('url'):
+            link_html = (
+                f'<a class="pub-link" href="{href(p["url"])}" '
+                'target="_blank" rel="noopener">VIEW LINK &#8599;</a>'
+            )
+
+        card_classes = ['pub-card', 'has-image' if p.get('image') else 'no-image']
+        if len(str(p.get('authors', ''))) > 420:
+            card_classes.append('long-authors')
+        card_class = ' '.join(card_classes)
+
+        h += (
+            f'<article class="{card_class}">'
+            f'{publication_visual(p)}'
+            '<div class="pub-copy">'
+            f'<div class="pub-journal">{esc(stage)}</div>'
+            f'<h3>{esc(p["title"])}</h3>'
+            f'<div class="pub-authors">{authors_html}</div>'
             f'{link_html}'
             '</div></article>'
         )
