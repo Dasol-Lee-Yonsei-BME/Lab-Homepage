@@ -27,6 +27,27 @@
 #   jcr_year uses the preceding year's JCR for each publication year.
 # ================================================================
 
+- id: in-progress-04
+  year: 2026
+  status: in_progress
+  stage: submitted
+  authors: Jihoon Yang†, Kyung-Hyun Yu†, Sangmin Shim, , Minkyung Kim*, Dasol Lee*
+  title: Dual-color metasurface for spatially matched light-sheet illumination
+  journal: ''
+  issn: ''
+  volume: '-'
+  issue: '-'
+  pages: '-'
+  date: ''
+  url: ''
+  image: ''
+  highlight: false
+  home_highlight: false
+  impact_factor: null
+  jcr_percent: null
+  jcr_category: ''
+  jcr_year: null
+
 - id: in-progress-03
   year: 2026
   status: in_progress
