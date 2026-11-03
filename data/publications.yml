@@ -27,6 +27,27 @@
 #   jcr_year uses the preceding year's JCR for each publication year.
 # ================================================================
 
+- id: in-progress-05
+  year: 2026
+  status: in_progress
+  stage: submitted
+  authors: Donghwan Ko†, Dasol Lee, Byungjo Jung*
+  title: Optical and thermal characterization of an optical fiber-coupled intestitial probe for deep-tissue photobiomodulation
+  journal: ''
+  issn: ''
+  volume: '-'
+  issue: '-'
+  pages: '-'
+  date: ''
+  url: ''
+  image: ''
+  highlight: false
+  home_highlight: false
+  impact_factor: null
+  jcr_percent: null
+  jcr_category: ''
+  jcr_year: null
+
 - id: in-progress-04
   year: 2026
   status: in_progress
