@@ -3,6 +3,11 @@ name: Build and deploy BNSL
 on:
   push:
     branches: ["main"]
+
+  schedule:
+    # Every day at 04:17 KST (= 19:17 UTC on the previous day)
+    - cron: "17 19 * * *"
+
   workflow_dispatch:
 
 permissions:
@@ -28,6 +33,12 @@ jobs:
 
       - name: Install builder dependency
         run: pip install pyyaml
+
+      - name: Update Google Scholar metrics
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python scripts/update_scholar.py
+        continue-on-error: true
 
       - name: Build static site
         run: python scripts/build.py
