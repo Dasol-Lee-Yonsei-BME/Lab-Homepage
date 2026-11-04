@@ -24,6 +24,7 @@ pubs = D['publications']
 projs = D['projects']
 news = D['news']
 ac = D['achievements']
+scholar = D.get('scholar_metrics') or {}
 SHORT_NAME = s.get('short_name', 'Photonics Lab.')
 
 
@@ -81,6 +82,65 @@ PEOPLE_CSS = r'''
 .people-cv .record h3 { margin: 0 0 4px; }
 .people-cv .record p { margin: 2px 0; }
 
+.scholar-impact {
+  margin-top: 22px;
+  max-width: 520px;
+}
+
+.scholar-impact-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.scholar-impact-title {
+  color: var(--navy2);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+.scholar-impact-note {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.scholar-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.scholar-metric {
+  padding: 13px 16px 13px 0;
+}
+
+.scholar-metric + .scholar-metric {
+  padding-left: 16px;
+  border-left: 1px solid var(--line);
+}
+
+.scholar-value {
+  display: block;
+  color: var(--navy2);
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+.scholar-label {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
 @media (max-width: 760px) {
   .people-major-section { margin-bottom: 78px; }
   .people-major-section > .section-head { margin-bottom: 28px; }
@@ -93,6 +153,29 @@ PEOPLE_CSS = r'''
     padding: 18px 0;
   }
   .people-cv .record-year { white-space: normal; }
+}
+
+@media (max-width: 520px) {
+  .scholar-impact-head {
+    display: block;
+  }
+
+  .scholar-impact-note {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .scholar-metric {
+    padding: 12px 10px 12px 0;
+  }
+
+  .scholar-metric + .scholar-metric {
+    padding-left: 10px;
+  }
+
+  .scholar-value {
+    font-size: 20px;
+  }
 }
 '''
 CSS += PEOPLE_CSS
@@ -614,7 +697,50 @@ h += (
     f'<br><b>Tel</b> {esc(pi["phone"])}'
     f'<br><b>Email</b> {esc(pi["email"])}</p>'
 )
+
 h += external_link(pi.get('scholar', ''), 'Google Scholar')
+
+
+def scholar_metric(value):
+    if value in (None, ''):
+        return '—'
+    try:
+        return f'{int(value):,}'
+    except (TypeError, ValueError):
+        return str(value)
+
+
+citations = scholar_metric(scholar.get('citations'))
+h_index = scholar_metric(scholar.get('h_index'))
+i10_index = scholar_metric(scholar.get('i10_index'))
+
+if any(
+    scholar.get(key) not in (None, '')
+    for key in ('citations', 'h_index', 'i10_index')
+):
+    h += (
+        '<div class="scholar-impact">'
+        '<div class="scholar-impact-head">'
+        '<span class="scholar-impact-title">Research Impact</span>'
+        '<span class="scholar-impact-note">Updated daily from Google Scholar</span>'
+        '</div>'
+        '<div class="scholar-metrics">'
+        '<div class="scholar-metric">'
+        f'<span class="scholar-value">{esc(citations)}</span>'
+        '<span class="scholar-label">Citations</span>'
+        '</div>'
+        '<div class="scholar-metric">'
+        f'<span class="scholar-value">{esc(h_index)}</span>'
+        '<span class="scholar-label">h-index</span>'
+        '</div>'
+        '<div class="scholar-metric">'
+        f'<span class="scholar-value">{esc(i10_index)}</span>'
+        '<span class="scholar-label">i10-index</span>'
+        '</div>'
+        '</div>'
+        '</div>'
+    )
+
 h += '</div></div>'
 
 # PI curriculum vitae
