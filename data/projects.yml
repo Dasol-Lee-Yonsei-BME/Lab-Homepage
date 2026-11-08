@@ -7,6 +7,13 @@
   highlight_order: 2
 
 - status: Ongoing
+  title: 메타표면 기반 단일영상 광 스핀 홀 효과를 이용한 실시간 라벨프리 바이오센싱 플랫폼 개발
+  agency: 연세대학교 미래캠퍼스
+  period: 2026.11.01 – 2028.10.31
+  area: sensing
+  highlight: false
+
+- status: Ongoing
   title: 표적 깊이 적응형 Photobiomodulation 치료 플랫폼 개발 및 전임상 검증
   agency: 강원지역혁신중심 대학지원체계 (RISE)
   period: 2026.03.01 – 2027.02.28
