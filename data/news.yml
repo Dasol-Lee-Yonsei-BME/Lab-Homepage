@@ -6,6 +6,11 @@
 # are merged into the News page automatically by scripts/build.py.
 # ================================================================
 
+- date: 2026.11.01
+  category: Fellowship
+  title: Prof. Dasol Lee was selected for the Mirae Frontier Fellowship (MFF) Type I program at Yonsei University MIRAE Campus.
+  summary: The fellowship project will run from November 1, 2026 to October 31, 2028.
+
 - date: 2026.09.16
   category: People
   title: Marjona met with the President of Uzbekistan during his state visit to Korea.
