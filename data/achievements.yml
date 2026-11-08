@@ -943,6 +943,11 @@ talks:
   link: https://www.youtube.com/watch?v=cWez5i5ZmTE
 
 academic_service:
+- year: 2026
+  date: 2026.11.06
+  role: Session Chair
+  event: The 13th IFMBE Asian Pacific Conference on Medical and Biological Engineering (APCMBE 2026) – Dr. LEE Jong-wook Fellowship Degree Program (Biomedical Engineering) Special Session
+  detail: International conference
 - year: 2024
   date: 2024.11.07
   role: Local Committee Member & Poster Award Chair
@@ -952,7 +957,7 @@ academic_service:
   date: 2024.05.09
   role: Organizing Committee Member
   event: 2024년도 제63회 대한의용생체공학회 춘계학술대회
-  detail: The Korean Society of Medical & Biological Engineering (KOSOMBE)
+  detail: Domestic conference
 - year: 2023
   date: 2023.11.10
   role: Session Chair
