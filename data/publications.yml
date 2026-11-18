@@ -23,6 +23,12 @@
 #   home_highlight: true  -> appears in the Home Selected Highlights section (maximum 3 shown).
 #   The two flags are independent. Optional news_title / news_summary can override News text.
 #
+# Manuscripts in progress (status: in_progress):
+#   stage: submitted / under review -> the journal is not shown, even if filled in.
+#   stage: accepted                 -> the card shows "journal (ISSN) · accepted".
+#   Once the publication date is known, turn the entry into a regular paper
+#   (remove status and stage, fill in date) so it moves to its year section.
+#
 # JCR convention:
 #   jcr_year uses the preceding year's JCR for each publication year.
 # ================================================================

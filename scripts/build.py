@@ -952,6 +952,15 @@ if in_progress_pubs:
         authors_html = format_authors(p.get('authors', ''))
         stage = p.get('stage', 'In progress')
 
+        # Once a manuscript is accepted, show the journal with the stage.
+        # Earlier stages (submitted, under review) never show the journal.
+        stage_label = esc(stage)
+        if str(stage).strip().lower() in ('accepted', 'in press') and p.get('journal'):
+            stage_label = esc(p['journal'])
+            if p.get('issn'):
+                stage_label += f' <span class="pub-issn">(ISSN {esc(p["issn"])})</span>'
+            stage_label += f' <span class="pub-issn">· {esc(stage)}</span>'
+
         link_html = ''
         if p.get('url'):
             link_html = (
@@ -968,7 +977,7 @@ if in_progress_pubs:
             f'<article class="{card_class}">'
             f'{publication_visual(p)}'
             '<div class="pub-copy">'
-            f'<div class="pub-journal">{esc(stage)}</div>'
+            f'<div class="pub-journal">{stage_label}</div>'
             f'<h3>{esc(p["title"])}</h3>'
             f'<div class="pub-authors">{authors_html}</div>'
             f'{link_html}'
