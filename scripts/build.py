@@ -59,6 +59,35 @@ PEOPLE_CSS = r'''
 .people-major-section > .section-head { margin-bottom: 42px; }
 .people-major-section .pi { padding-bottom: 46px; border-bottom: 0; }
 
+/* Current members: framed cards, one row when the team fits, centred otherwise */
+.people-major-section .member-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.people-major-section .member {
+  flex: 0 1 calc((100% - (var(--member-cols, 5) - 1) * 20px) / var(--member-cols, 5));
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.people-major-section .member img { display: block; aspect-ratio: 1 / 1; object-position: center 20%; }
+.people-major-section .member .member-body { padding: 14px 16px 16px; border-top: 2px solid var(--navy); }
+.people-major-section .member h3 { margin: 0 0 3px; font-size: 16.5px; line-height: 1.3; color: var(--navy2); }
+.people-major-section .member .member-role {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.people-major-section .member p { font-size: 13px; line-height: 1.5; }
+.people-major-section .member .member-email { margin-top: 8px; font-size: 12px; overflow-wrap: anywhere; }
+
 /* PI curriculum vitae: compact cards, two per row */
 .people-cv {
   margin-top: 44px;
@@ -88,9 +117,15 @@ PEOPLE_CSS = r'''
 .cv-item p { margin: 0; color: #46535f; font-size: 13.5px; line-height: 1.5; }
 .cv-item .text-link, .cv-item a { font-size: 12.5px; }
 
+@media (max-width: 980px) {
+  .people-major-section .member { flex-basis: calc((100% - 40px) / 3); }
+}
+
 @media (max-width: 760px) {
   .people-major-section { margin-bottom: 78px; }
   .people-major-section > .section-head { margin-bottom: 28px; }
+  .people-major-section .member-grid { gap: 14px; }
+  .people-major-section .member { flex-basis: calc((100% - 14px) / 2); }
   .people-cv { margin-top: 32px; grid-template-columns: 1fr; gap: 14px; }
   .cv-card { padding: 18px 18px 6px; }
 }
@@ -703,11 +738,20 @@ h += cv_section('Academic Service', pi.get('service', []), wide=True)
 h += '</div></section>'
 
 # 02 - Team
-h += '''<section class="section people-major-section"><div class="section-head"><div><div class="label">02 &middot; Team</div><h2>Current Members</h2></div></div><div class="member-grid">'''
+current_members = pe.get('current', [])
+# Columns per row: 5 or fewer members sit in one row; larger teams use the
+# width (5, 4 or 3) that leaves the fullest last row.
+n_members = len(current_members)
+if n_members <= 5:
+    member_cols = max(n_members, 3)
+else:
+    member_cols = max((5, 4, 3), key=lambda c: (n_members % c == 0, n_members % c, c))
 
-for p in pe.get('current', []):
-    email_line = f'<p>{esc(p["email"])}</p>' if p.get('email') else ''
-    h += f'''<div class="member">{img(p['photo'], p['name'])}<h3>{esc(p['name'])}</h3><p><b>{esc(p['role'])}</b></p><p>{esc(p['interest'])}</p>{email_line}</div>'''
+h += f'''<section class="section people-major-section"><div class="section-head"><div><div class="label">02 &middot; Team</div><h2>Current Members</h2></div></div><div class="member-grid" style="--member-cols:{member_cols}">'''
+
+for p in current_members:
+    email_line = f'<p class="member-email">{esc(p["email"])}</p>' if p.get('email') else ''
+    h += f'''<div class="member">{img(p['photo'], p['name'])}<div class="member-body"><h3>{esc(p['name'])}</h3><p class="member-role">{esc(p['role'])}</p><p>{esc(p['interest'])}</p>{email_line}</div></div>'''
 
 h += '</div></section>'
 
