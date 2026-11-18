@@ -57,31 +57,31 @@ pi:
 current:
   - name: Kyung-Hyun Yu
     role: M.S./Ph.D. Student
-    interest: Optical imaging systems · Spin Hall effect of light
+    interest: Optical imaging & sensing
     email: ykh5924@yonsei.ac.kr
     photo: assets/images/people/kyung-hyun.jpg
 
   - name: Jihoon Yang
     role: M.S./Ph.D. Student
-    interest: Optical imaging systems
+    interest: Optical imaging & sensing
     email: ygh1238@yonsei.ac.kr
     photo: assets/images/people/jihoon.jpg
 
   - name: Marjona Kiyomova
     role: M.S. Student
-    interest: Functional biomedical dressing · Electrospinning
+    interest: Biomedical dressing
     email: qiyomovamarjona@yonsei.ac.kr
     photo: assets/images/people/marjona.jpg
 
   - name: Mabirizi Hassan Wasswa
     role: M.S. Student
-    interest: Functional biomedical dressing
+    interest: Optical device design
     email: mabirizihassan0214@yonsei.ac.kr
     photo: assets/images/people/Mabirizi.png
 
   - name: Wooju Choi
     role: Undergraduate Researcher
-    interest: Radiative cooling
+    interest: Optical imaging & sensing
     email: chldnwn@yonsei.ac.kr
     photo: assets/images/people/wooju.jpg
 
