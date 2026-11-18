@@ -59,100 +59,40 @@ PEOPLE_CSS = r'''
 .people-major-section > .section-head { margin-bottom: 42px; }
 .people-major-section .pi { padding-bottom: 46px; border-bottom: 0; }
 
-.people-cv { margin-top: 58px; }
-.people-cv-section { padding: 34px 0 10px; border-top: 1px solid var(--line); }
-.people-cv-section:first-child { border-top: 1px solid #9aacbb; }
-.people-cv-section .cv-heading {
-  margin: 0 0 18px;
-  color: var(--navy2);
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: -.02em;
+/* PI curriculum vitae: compact cards, two per row */
+.people-cv {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
-.people-cv .record {
-  grid-template-columns: minmax(230px, 260px) minmax(0, 1fr);
-  gap: 28px;
-  padding: 20px 0;
+.cv-card {
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--navy);
+  background: #fff;
+  padding: 20px 22px 8px;
 }
-.people-cv .record-year {
-  white-space: nowrap;
-  font-size: 14px;
-  line-height: 1.45;
-}
-.people-cv .record h3 { margin: 0 0 4px; }
-.people-cv .record p { margin: 2px 0; }
-
-.scholar-impact {
-  margin-top: 22px;
-  max-width: 520px;
-}
-
-.scholar-impact-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 10px;
-}
-
-.scholar-impact-title {
-  color: var(--navy2);
+.cv-card.wide { grid-column: 1 / -1; }
+.cv-card .cv-heading {
+  margin: 0 0 6px;
+  color: var(--blue);
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: .10em;
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
-
-.scholar-impact-note {
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.scholar-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.scholar-metric {
-  padding: 13px 16px 13px 0;
-}
-
-.scholar-metric + .scholar-metric {
-  padding-left: 16px;
-  border-left: 1px solid var(--line);
-}
-
-.scholar-value {
-  display: block;
-  color: var(--navy2);
-  font-size: 23px;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -.02em;
-}
-
-.scholar-label {
-  display: block;
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.3;
-}
+.cv-item { padding: 11px 0; border-top: 1px solid var(--line); }
+.cv-item:first-of-type { border-top: 0; }
+.cv-item .cv-period { color: var(--muted); font-size: 12.5px; line-height: 1.4; }
+.cv-item h4 { margin: 1px 0 1px; color: var(--navy2); font-size: 15.5px; line-height: 1.35; }
+.cv-item p { margin: 0; color: #46535f; font-size: 13.5px; line-height: 1.5; }
+.cv-item .text-link, .cv-item a { font-size: 12.5px; }
 
 @media (max-width: 760px) {
   .people-major-section { margin-bottom: 78px; }
   .people-major-section > .section-head { margin-bottom: 28px; }
-  .people-cv { margin-top: 40px; }
-  .people-cv-section { padding-top: 28px; }
-  .people-cv-section .cv-heading { font-size: 23px; }
-  .people-cv .record {
-    grid-template-columns: 1fr;
-    gap: 7px;
-    padding: 18px 0;
-  }
-  .people-cv .record-year { white-space: normal; }
+  .people-cv { margin-top: 32px; grid-template-columns: 1fr; gap: 14px; }
+  .cv-card { padding: 18px 18px 6px; }
 }
 
 @media (max-width: 520px) {
@@ -655,14 +595,14 @@ def external_link(url, label='View link'):
 
 
 def cv_record(period, title, organization, link=''):
-    period_text = esc(period) if period else '\u2014'
-    return f'''<div class="record"><div class="record-year">{period_text}</div><div><h3>{esc(title)}</h3><p>{esc(organization)}</p>{external_link(link)}</div></div>'''
+    period_html = f'<div class="cv-period">{esc(period)}</div>' if period else ''
+    return f'''<div class="cv-item">{period_html}<h4>{esc(title)}</h4><p>{esc(organization)}</p>{external_link(link)}</div>'''
 
 
-def cv_section(title, items, year_key='period', title_key='title', org_key='organization'):
+def cv_section(title, items, year_key='period', title_key='title', org_key='organization', wide=False):
     if not items:
         return ''
-    out = f'<div class="people-cv-section"><h3 class="cv-heading">{esc(title)}</h3>'
+    out = f'<div class="cv-card{" wide" if wide else ""}"><h3 class="cv-heading">{esc(title)}</h3>'
     for item in items:
         out += cv_record(
             item.get(year_key, ''),
@@ -746,8 +686,6 @@ h += '</div></div>'
 # PI curriculum vitae
 h += '<div class="people-cv">'
 h += cv_section('Academic Appointments', pi.get('appointments', []))
-h += cv_section('Academic Leadership', pi.get('leadership', []))
-h += cv_section('Academic Service', pi.get('service', []))
 h += cv_section(
     'Education',
     pi.get('education', []),
@@ -755,11 +693,13 @@ h += cv_section(
     title_key='degree',
     org_key='institution'
 )
+h += cv_section('Academic Leadership', pi.get('leadership', []))
 h += cv_section(
     'Honors & Awards',
     pi.get('honors', []),
     year_key='year'
 )
+h += cv_section('Academic Service', pi.get('service', []), wide=True)
 h += '</div></section>'
 
 # 02 - Team
