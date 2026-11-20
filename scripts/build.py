@@ -55,6 +55,65 @@ CSS = (ROOT / 'assets' / 'style.css').read_text(encoding='utf-8')
 # People-page layout refinements. These rules are appended to the shared CSS
 # so the People page can be updated without editing assets/style.css separately.
 PEOPLE_CSS = r'''
+.scholar-impact {
+  margin-top: 22px;
+  max-width: 520px;
+}
+
+.scholar-impact-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.scholar-impact-title {
+  color: var(--navy2);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+.scholar-impact-note {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.scholar-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.scholar-metric {
+  padding: 13px 16px 13px 0;
+}
+
+.scholar-metric + .scholar-metric {
+  padding-left: 16px;
+  border-left: 1px solid var(--line);
+}
+
+.scholar-value {
+  display: block;
+  color: var(--navy2);
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+.scholar-label {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
 .people-major-section { margin-bottom: 110px; }
 .people-major-section > .section-head { margin-bottom: 42px; }
 .people-major-section .pi { padding-bottom: 46px; border-bottom: 0; }
